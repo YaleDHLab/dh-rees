@@ -1,6 +1,6 @@
 ## About
 
-This repository houses the source code for a WordPress theme for the Digital Humanities and Russian and East European Studies website at Yale. The theme is built on the (_s (alias undscores) theme)[https://github.com/Automattic/_s].
+This repository houses the source code for a WordPress theme for the Digital Humanities and Russian and East European Studies website at Yale. The theme is built on the [_s theme](https://github.com/Automattic/_s).
 
 #### Adding Content
 
