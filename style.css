@@ -897,9 +897,27 @@ object {
 * Theme Styles *
 * *************/
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/***
+* Helpers
+***/
+
+.clear-both {
+  clear: both;
+}
+
+
 /***
 * Header
 ***/
+
+.site-header {
+  height: 130px;
+}
 
 .site-branding * {
   display: inline-block;
@@ -970,14 +988,6 @@ img.site-logo {
 }
 
 /***
-* Site Content
-***/
-
-.site-content {
-  margin-top: 130px;
-}
-
-/***
 * Featured Project
 ***/
 
@@ -1030,6 +1040,32 @@ img.site-logo {
   min-height:110%;
 }
 
+.featured-project-button-container {
+  width: 140px;
+  height: 40px;
+  position: absolute;
+  top: 242px;
+  left: 75%;
+  margin-left: -75px;
+}
+
+.featured-project-button-container a {
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+}
+
+.featured-project-button {
+  background: #000;
+  color: #fff;
+  box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding-top: 9px;
+  text-transform: uppercase;
+}
+
 /***
 * Project cards
 ***/
@@ -1042,7 +1078,6 @@ img.site-logo {
 .showcase-project-container {
   margin-top: 23px;
   width: 740px;
-  height: 440px;
   position: relative;
   left: 50%;
   margin-left: -370px;
@@ -1085,6 +1120,43 @@ img.site-logo {
   color: #000;
 }
 
+
+/***
+* Footer
+***/
+
+.site {
+  height: 100%;
+}
+
+.site-content {
+  height: 100%;
+}
+
+.content-area {
+  min-height: 100%;
+}
+
+.push {
+  height: 40px;
+}
+
+.footer {
+  height: 100px;
+}
+
+/***
+* Contact us
+***/
+
+
+.contact-us-container {
+  width: 100%;
+  height: 100px;
+  background: lightgray;
+}
+
+
 /***
 * Widget area
 ***/
@@ -1092,3 +1164,37 @@ img.site-logo {
 .widget-area {
   display: none;
 }
+
+
+/********************
+* Smaller viewports *
+********************/
+
+@media (max-width: 1000px) {
+  .featured-project-text-container {
+    width: 30%;
+  }
+}
+
+@media (max-width: 800px) {
+  .featured-project-text-container {
+    width: 80%;
+    left: 10%;
+  }
+
+  .featured-project-image-container {
+    width: 100%;
+    padding: 60px 30px 0 30px;
+  }
+
+  .featured-project-image-wrapper {
+    opacity: .2;
+  }
+  
+  .featured-project-button-container {
+    left: 50%;
+  }
+
+}
+
+  

@@ -15,7 +15,13 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-    </div><!-- .site-info -->
+ 
+      <div class="contact-us-container">
+        <div class="contact-us-blurb">Want to share feedback or connect to our team? Get in touch with us!</div>
+        <div class-"contact-button-container">Contact</div>
+      </div>
+
+   </div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
