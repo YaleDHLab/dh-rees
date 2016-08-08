@@ -17,36 +17,44 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-		if ( have_posts() ) :
+    <!-- Featured project carosel -->
+    <div class="featured-project-container">
+      <?php $query = new WP_Query( array( 'category_name' => 'featured-project' ) );
+        if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+        <div class="featured-project-text-container">
+          <div class="featured-project-title"><?php the_title(); ?></div>
+            <div class="featured-project-blurb"><?php echo get_post_meta($post->ID, 'project-blurb', true); ?>
+          </div> 
+        </div>
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+        <div class="featured-project-image-container">
+          <div class="featured-project-image-wrapper">
+            <img class="featured-project-image" src="<?php the_post_thumbnail_url('original'); ?>" />
+          </div>
+        </div>
+      <?php endwhile; endif; ?>
+    </div>
 
-			<?php
-			endif;
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+    <!-- Showcase project grid -->
+    <div class="showcase-project-container">
+      <?php $query = new WP_Query( array( 'category_name' => 'showcase-project' ) );
+        if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+        <a href="<?php echo esc_url( get_permalink() ); ?>">
+          <div class="showcase-project">
+            <div class="showcase-project-thumbnail-container">
+              <div class="showcase-project-thumbnail">
+                <img src="<?php the_post_thumbnail_url('large'); ?>"/>
+              </div>
+            </div>
+            <div class="showcase-project-title"><?php the_title(); ?></div>
+            <div class="showcase-project-author">By <?php echo get_post_meta($post->ID, 'project-author', true); ?></div>
+          </div>
+        </a>
+      <?php endwhile; endif; ?>
+    </div><!-- ,showcase-project-container -->
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
+    <h2 class="cats"><?php echo get_theme_mod( 'good-looking-cats', 'meow' ); ?></h2>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
