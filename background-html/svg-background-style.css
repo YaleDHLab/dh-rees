@@ -7,7 +7,6 @@ body, html {
 
 body {
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 .header-blue {
@@ -33,7 +32,7 @@ body {
 }
 
 .navigation-blue {
-  background: #213556;
+  background: #00356B;
   position: absolute;
   top: 50px;
   height: 48.25px;
@@ -44,7 +43,8 @@ body {
 }
 
 .navigation-gray {
-  background: rgba(216, 216, 216, 0.6);
+  background: #F1E5D9;
+  opacity: 0.5;
   position: absolute;
   top: 50px;
   height: 48.25px;
@@ -65,18 +65,18 @@ body {
 }
 
 .baby-blue-stripe {
-  background: #c9e7dd;
+  background: #C9E7DD;
   width: 11.63%;
-  opacity: .7;
+  opacity: .5;
   transform: rotate(45deg);
   position: absolute;
   z-index: 1;
 }
 
 .cream-stripe {
-  background: #f1e5d9;
-  width: 63.54%;
-  opacity: .7;
+  background: #F1E5D9;
+  width: 44.9%;
+  opacity: .4;
   transform: rotate(-45deg);
   position: absolute;
   left: 50%;
@@ -128,4 +128,15 @@ body {
   width: 100%;
   background: #213556;
   z-index: 4;
+}
+
+.page-content {
+  height: 1000px;
+  width: 58.5%;
+  left: 20.75%;
+  background: #F1E5D9;
+  position: absolute;
+  z-index: 10;
+  opacity: .9;
+  top: 151px;
 }
