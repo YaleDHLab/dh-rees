@@ -5,6 +5,11 @@ body, html {
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .header-blue {
   height: 240px;
   width: 240px;
@@ -61,18 +66,16 @@ body, html {
 
 .baby-blue-stripe {
   background: #c9e7dd;
-  width: 11.27%;
+  width: 11.63%;
   opacity: .7;
   transform: rotate(45deg);
   position: absolute;
-  top: -145.5%;
   z-index: 1;
 }
 
 .cream-stripe {
   background: #f1e5d9;
-  width: 20%;
-  height: 10000px;
+  width: 63.54%;
   opacity: .7;
   transform: rotate(-45deg);
   position: absolute;
