@@ -1,0 +1,137 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(Background-wide.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header-blue {
+  height: 240px;
+  width: 240px;
+  position: absolute;
+  transform: rotate(45deg);
+  background: #213556;
+  top: -120px;
+  left: -120px;
+  z-index: 4;
+}
+
+.header-salmon {
+  height: 384px;
+  width: 384px;
+  position: absolute;
+  transform: rotate(45deg);
+  background: #ef6362;
+  top: -192px;
+  left: -192px;
+  z-index: 3;
+}
+
+.navigation-blue {
+  background: #213556;
+  position: absolute;
+  top: 40px;
+  height: 30px;
+  width: 38%;
+  left: 12.9366%;
+  transform: skewX(-45deg);
+  z-index: 3;
+}
+
+.navigation-gray {
+  background: rgba(216, 216, 216, 0.6);
+  position: absolute;
+  top: 40px;
+  height: 30px;
+  width: 8.4087%;
+  left: 82.826%;
+  transform: skewX(-45deg);
+  z-index: 4;
+}
+
+.main-blue-triangle {
+  background: #213556;
+  -webkit-clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+  clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+  position: fixed;
+  right: 0;
+  z-index: 0;
+  height: 0;
+}
+
+.baby-blue-stripe {
+  background: #c9e7dd;
+  width: 11%;
+  height: 400%;
+  opacity: .7;
+  transform: rotate(45deg);
+  position: fixed;
+  top: -145.5%;
+  z-index: 1;
+}
+
+.cream-stripe {
+  background: #f1e5d9;
+  width: 310px;
+  height: 400%;
+  opacity: .7;
+  transform: rotate(-45deg);
+  position: fixed;
+  left: 50%;
+  top: -120%;
+  z-index: 2
+}
+
+.baby-blue-parallelogram {
+  background: #c9e7dd;
+  width: 41.5%;
+  height: 13%;
+  opacity: 0.7;
+  transform: skewX(45deg);
+  position: fixed;
+  bottom: 20.2%;
+  left: 18%;
+  z-index: 4;
+  display: none;
+}
+
+.gray-parallelogram {
+  background: #d8d8d8;
+  opacity: 0.7;
+  width: 29.5%;
+  height: 13%;
+  opacity: 0.8;
+  transform: skewX(45deg);
+  position: fixed;
+  bottom: 20.2%;
+  left: 59.5%;
+  z-index: 3;
+  display: none;
+}
+
+.footer-salmon {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: 50px;
+  transform: rotate(45deg);
+  background: #ef6362;
+  left: -50px;
+}
+
+.footer-blue {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background: #213556;
+  z-index: 4;
+}
