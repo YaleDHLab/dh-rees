@@ -5,14 +5,6 @@ body, html {
   padding: 0;
 }
 
-body {
-  background: url(Background-wide.svg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 .header-blue {
   height: 240px;
   width: 240px;
@@ -38,9 +30,9 @@ body {
 .navigation-blue {
   background: #213556;
   position: absolute;
-  top: 40px;
-  height: 30px;
-  width: 38%;
+  top: 50px;
+  height: 48.25px;
+  width: 46.04%;
   left: 12.9366%;
   transform: skewX(-45deg);
   z-index: 3;
@@ -49,9 +41,9 @@ body {
 .navigation-gray {
   background: rgba(216, 216, 216, 0.6);
   position: absolute;
-  top: 40px;
-  height: 30px;
-  width: 8.4087%;
+  top: 50px;
+  height: 48.25px;
+  width: 11.639%;
   left: 82.826%;
   transform: skewX(-45deg);
   z-index: 4;
@@ -61,7 +53,7 @@ body {
   background: #213556;
   -webkit-clip-path: polygon(100% 0, 50% 50%, 100% 100%);
   clip-path: polygon(100% 0, 50% 50%, 100% 100%);
-  position: fixed;
+  position: absolute;
   right: 0;
   z-index: 0;
   height: 0;
@@ -69,22 +61,21 @@ body {
 
 .baby-blue-stripe {
   background: #c9e7dd;
-  width: 11%;
-  height: 400%;
+  width: 11.27%;
   opacity: .7;
   transform: rotate(45deg);
-  position: fixed;
+  position: absolute;
   top: -145.5%;
   z-index: 1;
 }
 
 .cream-stripe {
   background: #f1e5d9;
-  width: 310px;
-  height: 400%;
+  width: 20%;
+  height: 10000px;
   opacity: .7;
   transform: rotate(-45deg);
-  position: fixed;
+  position: absolute;
   left: 50%;
   top: -120%;
   z-index: 2
@@ -96,7 +87,7 @@ body {
   height: 13%;
   opacity: 0.7;
   transform: skewX(45deg);
-  position: fixed;
+  position: absolute;
   bottom: 20.2%;
   left: 18%;
   z-index: 4;
@@ -110,7 +101,7 @@ body {
   height: 13%;
   opacity: 0.8;
   transform: skewX(45deg);
-  position: fixed;
+  position: absolute;
   bottom: 20.2%;
   left: 59.5%;
   z-index: 3;
