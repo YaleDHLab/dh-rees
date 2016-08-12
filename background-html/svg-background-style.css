@@ -3,6 +3,7 @@ body, html {
   width: 100%;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 body {
@@ -64,24 +65,35 @@ body {
   height: 0;
 }
 
+.blue-triangle-svg-container {
+  position: absolute;
+  right: 0;
+}
+
+.blue-triangle-svg {
+  position: absolute;
+  right: 0;
+}
+
 .baby-blue-stripe {
   background: #C9E7DD;
-  width: 11.63%;
+  width: 16.13%;
   opacity: .5;
-  transform: rotate(45deg);
   position: absolute;
   z-index: 1;
+  height: 100%;
+  transform: skewX(-45deg);
+  transform-origin: 100% 10%;
 }
 
 .cream-stripe {
   background: #F1E5D9;
   width: 44.9%;
   opacity: .4;
-  transform: rotate(-45deg);
   position: absolute;
-  left: 50%;
-  top: -120%;
-  z-index: 2
+  z-index: 2;
+  height: 100%;
+  transform: skewX(45deg);
 }
 
 .baby-blue-parallelogram {
@@ -119,6 +131,7 @@ body {
   transform: rotate(45deg);
   background: #ef6362;
   left: -50px;
+  display: none;
 }
 
 .footer-blue {
@@ -139,4 +152,5 @@ body {
   z-index: 10;
   opacity: .9;
   top: 151px;
+  margin-bottom: 100px;
 }
