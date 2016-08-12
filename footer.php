@@ -18,8 +18,15 @@
  
       <div class="contact-us-container">
         <div class="contact-us-blurb">Want to share feedback or connect to our team? Get in touch with us!</div>
-        <div class-"contact-button-container">Contact</div>
+        <div class="contact-button-container">
+          <a href="mailto:marijeta.bozovic@yale.edu">
+            <div class="button contact-us-button">Contact</div>
+          </a>
+        </div>
       </div>
+
+      <div class="brand-footer-container">
+        <div class="dh-logo-brand">
 
    </div><!-- .site-info -->
 	</footer><!-- #colophon -->
