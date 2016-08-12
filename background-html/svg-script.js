@@ -68,97 +68,41 @@ var moveShapes = function() {
   ***/
 
   /***
-  * The left-most point in the triangle should reach exactly
-  * halfway across the page. If we imagine the blue triangle as
-  * a square where we see the bottom left hand half, then we can model
-  * the triangle as pageWidth**2 = width**2 + height**2, where
-  * width and height are the same value (it's a square).
-  *
-  * There's one wrinkle here; we use a css clip that clips the described square
-  * at the midpoint of the x axis as it moves leftward onto the page.
-  * By multiplying the derived value by 2**(1/2) [aka the square root of 2]
-  * we can adjust for this clip effect.
-  *
-  * Additionally, it's necessary to prevent the blue triangle from being
-  * taller than the desired document height. The desired document height =
-  * $(".page-content").height() + top + marginBottom. Determine what
-  * percent of this desired document height would be filled by the current
-  * blue triangle, and clip the bottom if necessar to avoid making the page
-  * longer
-  *
+  * To create a blue triangle that always intersects with the nav
+  * and always reaches exactly halfway across the page, we can create
+  * a simple SVG element and update its top margin as required.
   ***/
 
-  // calculate the required triangle width and height
-  var blueTriangleWidth = Math.pow( (Math.pow(windowWidth, 2)/2), 0.5) * Math.pow(2, 0.5);
+  // Determine how much margin to apply to the top of the triangle
+  // such that the triangle will always intersect with the nav.
+  // These coefficients were determined by fitting a linear model 
+  // to the required left padding for various viewport widths
   var blueTriangleTop =  (-0.02732*windowWidth) - 3.815;
 
-  /***
-  * Determine the required triangle path and draw it.
-  *
-  * The svg points can be understood as the following array:
-  * full width, 0 height; .5 width, .5 width; * (see below); full width, document height
-  *
-  * the starred point can be calculated as follows:
-  *   .5 width - (document height - .5 document width - triangle offset top)
-  *
-  ***/
-
-  // determine whether the desired triangle height is > document height
-  var pageContentHeight = $(".page-content").height();
+  // calculate how tall the entire document height should be
   var pageContentTop = parseInt( $(".page-content").css("top"), 10);
   var pageContentBottom = parseInt( $(".page-content").css("marginBottom"), 10);
+  var pageContentHeight = $(".page-content").height();
   var desiredPageHeight = pageContentHeight + pageContentTop + pageContentBottom;
-  var blueTriangleHeight = blueTriangleTop + blueTriangleWidth;
 
-  // if the desired triangle height is > document height, we need 4 svg points,
-  // otherwise we need 3
-  if (blueTriangleHeight > desiredPageHeight) {
-
-    // calculate the distance between the midpoint of the triangle height
-    // (in page pixels) and the document height
-    var triangleDocumentDelta = desiredPageHeight - ( ($(document).width()/2) + blueTriangleTop);
-
-    var triangleSvgPoints = [
-      {
-        "label": "top-right",
-        "x": $(window).width(),
-        "y": 0
-      },
-      {
-        "label": "mid-point-left",
-        "x": $(window).width()/2,
-        "y": $(window).width()/2
-      },
-      {
-        "label": "bottom-left",
-        "x": $(window).width() - (($(document).width()/2) - triangleDocumentDelta),
-        "y": desiredPageHeight - blueTriangleTop
-      },
-      {
-        "label": "bottom-right",
-        "x": $(window).width(),
-        "y": desiredPageHeight - blueTriangleTop
-      }
-    ];
-  } else {
-    var triangleSvgPoints = [
-      {
-        "label": "top-right",
-        "x": $(window).width(),
-        "y": 0
-      },
-      {
-        "label": "mid-point-left",
-        "x": blueTriangleWidth/2,
-        "y": blueTriangleWidth/2
-      },
-      {
-        "label": "bottom-right",
-        "x": $(window).width(),
-        "y": blueTriangleWidth
-      }
-    ];
-  }
+  // Define the triangle points
+  var triangleSvgPoints = [
+    {
+      "label": "top-right",
+      "x": $(window).width(),
+      "y": 0
+    },
+    {
+      "label": "mid-point-left",
+      "x": $(window).width()/2,
+      "y": $(window).width()/2
+    },
+    {
+      "label": "bottom-right",
+      "x": $(window).width(),
+      "y": $(window).width()
+    }
+  ];
 
   // given a triangleSvgPoints object, build the polygon string
   var createPointArray = function(triangleSvgPoints) {
@@ -213,21 +157,9 @@ var moveShapes = function() {
   var polygonObject = createPolygon(pointArray, "#cc3333", "#cc3333");
   appendPolygon(triangleSvg, polygonObject);
 
-  // to be removed
-  $(".main-blue-triangle").css({
-    "width": blueTriangleWidth,
-    "height": blueTriangleWidth,
-    "top": blueTriangleTop + "px"
-  });
-
   $(".blue-triangle-svg-container").css({
     "top": blueTriangleTop + "px"
   });
-
-  console.log(triangleSvgPoints, blueTriangleWidth, blueTriangleTop);
-
-
-
 
   /***
   * Stripe elements
@@ -265,7 +197,6 @@ var moveShapes = function() {
     height: $(document).height()
     //left: creamStripeLeft
   });
-
 
   /***
   * Footer
