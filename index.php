@@ -31,10 +31,14 @@ get_header(); ?>
           <div class="featured-project-image-wrapper">
             <img class="featured-project-image" src="<?php the_post_thumbnail_url('original'); ?>" />
           </div>
+          <div class="featured-project-button-container">
+            <a href="<?php echo esc_url( get_permalink() ); ?>">
+              <div class="button featured-project-button">View Project</div>
+            </a>
+          </div>
         </div>
       <?php endwhile; endif; ?>
     </div>
-
 
     <!-- Showcase project grid -->
     <div class="showcase-project-container">
@@ -52,13 +56,12 @@ get_header(); ?>
           </div>
         </a>
       <?php endwhile; endif; ?>
+      <div class="clear-both">
     </div><!-- ,showcase-project-container -->
 
-    <h2 class="cats"><?php echo get_theme_mod( 'good-looking-cats', 'meow' ); ?></h2>
-
 		</main><!-- #main -->
-	</div><!-- #primary -->
-
+  </div><!-- #primary -->
+  <div class='push'/>
 <?php
 get_sidebar();
 get_footer();
