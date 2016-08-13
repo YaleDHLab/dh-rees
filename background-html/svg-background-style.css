@@ -32,11 +32,30 @@ body {
   z-index: 3;
 }
 
+.header-salmon-image {
+  height: 100%;
+  width: 100%;
+  background: url(soviet-background.png);
+  transform: rotate(-90deg);
+  background-size: 157%;
+}
+
+.navigation-brand {
+  position: absolute;
+  background: #000;
+  opacity: 0.3;
+  height: 7%;
+  width: 13%;
+  top: 50px;
+  transform: skewX(-45deg);
+  z-index: 4;
+}
+
 .navigation-blue {
   background: #00356B;
   position: absolute;
   top: 50px;
-  height: 48.25px;
+  height: 7%;
   width: 46.04%;
   left: 12.9366%;
   transform: skewX(-45deg);
@@ -48,7 +67,7 @@ body {
   opacity: 0.5;
   position: absolute;
   top: 50px;
-  height: 48.25px;
+  height: 7%;
   width: 11.639%;
   left: 82.826%;
   transform: skewX(-45deg);
