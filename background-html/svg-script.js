@@ -154,7 +154,7 @@ var moveShapes = function() {
   // create the required triangle svg
   var pointArray = createPointArray(triangleSvgPoints);
   var triangleSvg = updateSvg("blue-triangle-svg");
-  var polygonObject = createPolygon(pointArray, "#cc3333", "#cc3333");
+  var polygonObject = createPolygon(pointArray, "#213556", "#213556");
   appendPolygon(triangleSvg, polygonObject);
 
   $(".blue-triangle-svg-container").css({
@@ -208,7 +208,6 @@ var moveShapes = function() {
   })
 
 };
-
 
 $(document).ready(moveShapes);
 $(window).on("load resize", moveShapes);
