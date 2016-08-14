@@ -1216,7 +1216,6 @@ img.site-logo {
 
 .featured-project-image {
   flex-shrink:0;
-  min-width:110%;
   min-height:110%;
 }
 
@@ -1256,18 +1255,25 @@ img.site-logo {
 }
 
 .showcase-project-container {
-  margin-top: 23px;
-  width: 740px;
-  position: relative;
-  left: 50%;
-  margin-left: -370px;
+  width: 100%;
+  height: 100%;
+  padding: 35px 10%;
+}
+
+.showcase-project-container a {
+  display: inline-block;
+  text-decoration: none;
+  width: 46%;
+}
+
+.showcase-project-container a:nth-of-type(2n) {
+  margin-left: 3.5%;
 }
 
 .showcase-project {
-  width: 350px;
-  height: 250px;
-  float: left;
-  margin: 10px;
+  width: 100%;
+  overflow: hidden;
+  display: inline-block;
   font-family: Times, serif;
 }
 
@@ -1288,9 +1294,19 @@ img.site-logo {
 }
 
 .showcase-project-title {
-  font-size: 1.3em; 
+  font-size: 1.25em;
+  font-family: Arial;
+  line-height: 1.25em;
   text-decoration: none;
-  color: #000;
+  margin-top: 4px;
+  color: #00356B;
+}
+
+.showcase-project-blurb {
+  color: #00356B;
+  font-family: Arial;
+  font-size: .95em;
+  margin-top: 10px;
 }
 
 .showcase-project-author {
