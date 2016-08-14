@@ -221,4 +221,4 @@ var moveShapes = function() {
 
 
 $(document).ready(moveShapes);
-$(window).on("resize", moveShapes);
+$(window).on("load resize", moveShapes);
