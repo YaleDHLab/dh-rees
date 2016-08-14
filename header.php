@@ -18,7 +18,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <!-- Scripts to minify -->
-<script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
 
 <!-- Fonts -->
 <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -30,28 +30,24 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-      <div class="site-logo-container">
-        <!-- users set the site logo in admin -> appearance -> header -->
-        <img class="site-logo" src="<?php echo( get_header_image() ); ?>"</img>
-      </div>
+  <div class="header-blue"></div>
+  <div class="header-salmon">
+    <div class="header-salmon-image"></div>
+  </div>
 
-			<h1 class="site-title">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-      </h1>
-		<?php
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+  <div class="navigation-trapezoid navigation-brand"></div>
+  <div class="navigation-trapezoid navigation-blue"></div>
+  <div class="navigation-trapezoid navigation-gray"></div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+  <div class="blue-triangle-svg-container">
+    <svg class="blue-triangle-svg"></svg>
+  </div>
 
-	<div id="content" class="site-content">
+  <div class="baby-blue-stripe"></div>
+  <div class="cream-stripe"></div>
+
+  <div class="baby-blue-parallelogram"></div>
+  <div class="gray-parallelogram"></div>
+
+  <div class="page-content site-content" id="content">
+
