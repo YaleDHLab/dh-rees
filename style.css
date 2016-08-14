@@ -964,10 +964,16 @@ body {
 }
 
 .navigation-brand {
-  background: #000;
-  opacity: 0.3;
-  width: 9.5%;
+  background: rgba(0,0,0,.3);
+  width: 80px;
   z-index: 4;
+}
+
+.navigation-brand svg {
+  transform: skewX(45deg);
+  float: right;
+  margin: 1px 13px;
+  height: 100%;
 }
 
 .navigation-blue {
@@ -1029,7 +1035,7 @@ body {
 .baby-blue-parallelogram {
   background: #c9e7dd;
   width: 41.5%;
-  height: 13%;
+  height: 17%;
   opacity: 0.7;
   transform: skewX(45deg);
   position: absolute;
@@ -1280,7 +1286,7 @@ img.site-logo {
 
 .showcase-project-thumbnail {
   display: flex;
-  height: 15vw;
+  height: 13vw;
   justify-content: center;
   align-items: center;
   overflow: hidden
