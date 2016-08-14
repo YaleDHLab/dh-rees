@@ -52,7 +52,7 @@ get_header(); ?>
               </div>
             </div>
             <div class="showcase-project-title"><?php the_title(); ?></div>
-            <div class="showcase-project-author">By <?php echo get_post_meta($post->ID, 'project-author', true); ?></div>
+            <div class="showcase-project-blurb"><?php echo get_post_meta($post->ID, 'project-blurb', true); ?></div>
           </div> <!-- .showcase-project -->
         </a>
       <?php endwhile; endif; ?>
