@@ -24,17 +24,17 @@ get_header(); ?>
         <div class="featured-project-text-container">
           <div class="featured-project-title"><?php the_title(); ?></div>
             <div class="featured-project-blurb"><?php echo get_post_meta($post->ID, 'project-blurb', true); ?>
+            <div class="featured-project-button-container">
+              <a href="<?php echo esc_url( get_permalink() ); ?>">
+                <div class="button featured-project-button">View Project</div>
+              </a>
+            </div>
           </div> 
         </div>
 
         <div class="featured-project-image-container">
           <div class="featured-project-image-wrapper">
             <img class="featured-project-image" src="<?php the_post_thumbnail_url('original'); ?>" />
-          </div>
-          <div class="featured-project-button-container">
-            <a href="<?php echo esc_url( get_permalink() ); ?>">
-              <div class="button featured-project-button">View Project</div>
-            </a>
           </div>
         </div>
       <?php endwhile; endif; ?>
@@ -53,15 +53,13 @@ get_header(); ?>
             </div>
             <div class="showcase-project-title"><?php the_title(); ?></div>
             <div class="showcase-project-author">By <?php echo get_post_meta($post->ID, 'project-author', true); ?></div>
-          </div>
+          </div> <!-- .showcase-project -->
         </a>
       <?php endwhile; endif; ?>
-      <div class="clear-both">
-    </div><!-- ,showcase-project-container -->
-
-		</main><!-- #main -->
+      </div><!-- .showcase-project-container -->
+    </main><!-- #main -->
   </div><!-- #primary -->
-  <div class='push'/>
+
 <?php
 get_sidebar();
 get_footer();
