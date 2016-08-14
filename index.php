@@ -44,17 +44,13 @@ get_header(); ?>
     <div class="showcase-project-container">
       <?php $query = new WP_Query( array( 'category_name' => 'showcase-project' ) );
         if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-        <a href="<?php echo esc_url( get_permalink() ); ?>">
-          <div class="showcase-project">
-            <div class="showcase-project-thumbnail-container">
-              <div class="showcase-project-thumbnail">
-                <img src="<?php the_post_thumbnail_url('large'); ?>"/>
-              </div>
-            </div>
-            <div class="showcase-project-title"><?php the_title(); ?></div>
-            <div class="showcase-project-blurb"><?php echo get_post_meta($post->ID, 'project-blurb', true); ?></div>
-          </div> <!-- .showcase-project -->
-        </a>
+        <a href="<?php echo esc_url( get_permalink() ); ?>" class="showcase-project">
+          <div class="showcase-project-thumbnail">
+            <img src="<?php the_post_thumbnail_url('large'); ?>"/>
+          </div>
+          <div class="showcase-project-title"><?php the_title(); ?></div>
+          <div class="showcase-project-blurb"><?php echo get_post_meta($post->ID, 'project-blurb', true); ?></div>
+        </a><!-- .showcase-project -->
       <?php endwhile; endif; ?>
       </div><!-- .showcase-project-container -->
     </main><!-- #main -->
