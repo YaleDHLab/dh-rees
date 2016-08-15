@@ -33,6 +33,7 @@ get_header(); ?>
         </div>
 
        <div class="featured-project-image-container">
+          <div class="image-stripe featured-image-stripe"></div>
           <img class="featured-project-image" src="<?php the_post_thumbnail_url('original'); ?>" />
         </div>
       <?php endwhile; endif; ?>

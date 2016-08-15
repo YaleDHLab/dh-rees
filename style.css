@@ -1142,13 +1142,14 @@ body {
 .featured-project-text-container {
   position: absolute;
   left: 8%;
-  top: 40px;
+  top: 9%;
   width: 33%;
   color: #00356B;
+  z-index: 2;
 }
 
 .featured-project-title {
-  font-size: 2.1em;
+  font-size: 1.9em;
   line-height: 1.1em;
   font-family: Arial;
   font-weight: 300;
@@ -1166,6 +1167,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  position: relative;
 }
 
 .featured-project-image {
@@ -1181,7 +1183,7 @@ body {
   text-transform: uppercase;
   background: #00356B;
   color: #fff;
-  font-size: .95em;
+  font-size: .85em;
   box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
 }
 
@@ -1198,6 +1200,18 @@ body {
 
 .featured-project-button {
   padding-top: 9px;
+}
+
+.featured-image-stripe {
+  position: absolute;
+  height: 200%;
+  width: 29%;
+  transform: rotate(45deg);
+  left: 0px;
+  top: -69%;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(255,255,255,.8);
 }
 
 /***
@@ -1304,4 +1318,17 @@ body {
 .widget-area {
   display: none;
 }
+
+/*********************
+* Smaller viewpoerts *
+*********************/
+
+@media (max-width: 870px) {
+  .featured-project-title {
+    font-size: 1.5em;
+  }
   
+  .project-blurb {
+    font-size: .85em;
+  }
+}
