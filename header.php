@@ -118,8 +118,5 @@
   <div class="baby-blue-stripe"></div>
   <div class="cream-stripe"></div>
 
-  <div class="baby-blue-parallelogram"></div>
-  <div class="gray-parallelogram"></div>
-
   <div class="page-content site-content" id="content">
 
