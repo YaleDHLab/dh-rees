@@ -89,23 +89,23 @@ var moveShapes = function() {
   var blueTriangleTop =  (-0.02732*windowWidth) - 3.815;
 
   // calculate how tall the entire document height should be
-  var pageContentTop = parseInt( $(".page-content").css("top"), 10);
-  var pageContentBottom = parseInt( $(".page-content").css("marginBottom"), 10);
+  var pageContentTop = parseInt( $(".page-content").css("paddingTop"), 10);
   var pageContentHeight = $(".page-content").height();
-  var desiredPageHeight = pageContentHeight + pageContentTop + pageContentBottom;
+  var pageContentBottom = parseInt( $(".page-content").css("paddingBottom"), 10);
+  var desiredPageHeight = pageContentTop + pageContentHeight + pageContentBottom;
 
   // if the calculated page height does not fill the viewport, set the
   // page height to the viewport height
   if (desiredPageHeight < $(window).height()) {
-    var desiredPageHeight = $(window).height()
+    var desiredPageHeight = $(window).height();
   };
 
   // calculate how tall stripes should be, and how much top to apply
-  // to the footer. This distance = required page height -  footer height
-  var distanceToFooter = desiredPageHeight - 100;
+  // to the footer. This distance = the full document height - footer height
+  var distanceToFooter = $(document).height() - 100;
 
   // log values for analysis
-  console.log(windowWidth, windowHeight, desiredPageHeight);
+  //console.log(windowWidth, windowHeight, desiredPageHeight, blueTriangleTop, $(document).height());
 
   // Define the triangle points
   var triangleSvgPoints = [
@@ -233,6 +233,8 @@ var moveShapes = function() {
 
 };
 
-
+// resize items on document load, window load
+// window resize, and change of device orientation
 $(document).ready(moveShapes);
 $(window).on("load resize", moveShapes);
+window.addEventListener("orientationchange", moveShapes);
