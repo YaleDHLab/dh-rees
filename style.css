@@ -974,7 +974,7 @@ body {
   position: absolute;
   z-index: 10;
   left: calc(-98px + 26%);
-  top: calc(76px - 3.5%);;
+  top: calc(76px - 3.5%);
 }
 
 .navigation-trapezoid {
@@ -1066,33 +1066,6 @@ body {
   transform: skewX(45deg);
 }
 
-.baby-blue-parallelogram {
-  background: #c9e7dd;
-  width: 41.5%;
-  height: 17%;
-  opacity: 0.7;
-  transform: skewX(45deg);
-  position: absolute;
-  bottom: 20.2%;
-  left: 18%;
-  z-index: 4;
-  display: none;
-}
-
-.gray-parallelogram {
-  background: #d8d8d8;
-  opacity: 0.7;
-  width: 29.5%;
-  height: 13%;
-  opacity: 0.8;
-  transform: skewX(45deg);
-  position: absolute;
-  bottom: 20.2%;
-  left: 59.5%;
-  z-index: 3;
-  display: none;
-}
-
 .footer-salmon {
   height: 100px;
   width: 100px;
@@ -1114,25 +1087,20 @@ body {
 }
 
 .page-content {
-  width: 58.5%;
-  left: 20.75%;
+  width: 100%;
   position: absolute;
-  z-index: 10;
-  top: 151px;
-  margin-bottom: 100px;
+  z-index: 3;
+  padding-top: 110px;
+  padding-bottom: 70px;
 }
-
 
 /***************
 * Page Content *
 ***************/
 
-
-
 .site-description {
   display: none;
 }
-
 
 /***
 * Nav
@@ -1168,7 +1136,8 @@ body {
 ***/
 
 .featured-project-container {
-  width: 100%;
+  width: 58.5%;
+  left: 20.75%;
   max-height: 30%;
   position: relative; 
 }
@@ -1212,13 +1181,15 @@ body {
 
 .button {
   height: 37px;
-  padding: 0 10px;
+  width: 140px;
+  padding: 9px 10px;
   text-align: center;
   text-transform: uppercase;
   background: #00356B;
   color: #fff;
-  font-size: .85em;
+  font-size: .8em;
   box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+  display: inline-block;
 }
 
 .featured-project-button-container {
@@ -1230,10 +1201,6 @@ body {
   text-decoration: none;
   height: 100%;
   width: 100%;
-}
-
-.featured-project-button {
-  padding-top: 9px;
 }
 
 .image-stripe {
@@ -1274,6 +1241,71 @@ body {
   margin: -20% 10%;
 }
 
+
+/***
+* Parallelograms
+***/
+
+.parallelogram-container {
+  padding: 10px 0 40px 14.75%;
+  position: relative;
+}
+
+.baby-blue-parallelogram {
+  background: #c9e7dd;
+  width: 45.5%;
+  height: 9vw;
+  opacity: 0.7;
+  transform: skewX(45deg);
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+}
+
+.gray-parallelogram {
+  background: #d8d8d8;
+  opacity: 0.7;
+  width: 31.5%;
+  height: 9vw;
+  opacity: 0.8;
+  transform: skewX(45deg);
+  z-index: 0;
+  display: inline-block;
+  margin-left: -5px;
+}
+
+.baby-blue-parallelogram-text {
+  position: absolute;
+  z-index: 2;
+  width: 24%;
+  left: 25%;
+  top: calc(-38px + 46%);
+  font-size: .9em;
+  line-height: 1.3em;
+  color: #00356B;
+}
+
+@media (max-width: 900px) {
+  .baby-blue-parallelogram-text {
+    font-size: .8em;
+    top: calc(-44px + 46%);
+  }
+}
+
+@media (min-width: 1260px) {
+  .baby-blue-parallelogram-text {
+    font-size: 1.1em;
+  }
+}
+
+.sign-up-button {
+  position: absolute;
+  z-index: 2;
+  left: 52%;
+  top: calc(-25px + 41%);
+}
+
+
 /***
 * Project cards
 ***/
@@ -1286,20 +1318,20 @@ body {
 .showcase-project-container {
   width: 100%;
   height: 100%;
-  padding: 35px 10%;
+  padding: 35px 25%;
   overflow: auto;
 }
 
 .showcase-project-container a {
   float: left;
   text-decoration: none;
-  width: 48%;
+  width: 45.5%;
   position: relative;
 }
 
 
 .showcase-project-container a:nth-of-type(2n) {
-  margin-left: 4%;
+  margin-left: 9%;
 }
 
 .showcase-project {

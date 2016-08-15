@@ -18,7 +18,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
     <!-- Featured project carosel -->
-    <div class="featured-project-container">
+    <div class="featured-project-container page-lane">
       <?php $query = new WP_Query( array( 'category_name' => 'featured-project' ) );
         if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
         <div class="featured-project-text-container">
@@ -65,6 +65,19 @@ get_header(); ?>
         </a><!-- .showcase-project -->
       <?php endwhile; endif; ?>
       </div><!-- .showcase-project-container -->
+
+      <!-- Parallelograms -->
+      <div class="parallelogram-container">
+        <div class="baby-blue-parallelogram-text">
+      Join our listserve to stay informed about upcoming events, news and opportunities in the field.
+        </div>
+        <div class="button sign-up-button">Sign Up</div>
+        <div class="baby-blue-parallelogram"></div>
+        <div class="gray-parallelogram">
+          <div class="sign-up-gray-image"></div>
+        </div>
+      </div>
+
     </main><!-- #main -->
   </div><!-- #primary -->
 
