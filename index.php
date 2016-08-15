@@ -32,9 +32,9 @@ get_header(); ?>
           </div> 
         </div>
 
-       <div class="featured-project-image-container">
-          <div class="image-stripe featured-image-stripe"></div>
-          <img class="featured-project-image" src="<?php the_post_thumbnail_url('original'); ?>" />
+        <div class="featured-project-image-container">
+        <div class="image-stripe featured-image-stripe"></div>
+           <img class="featured-project-image" src="<?php the_post_thumbnail_url('original'); ?>" />
         </div>
       <?php endwhile; endif; ?>
     </div>
@@ -44,6 +44,19 @@ get_header(); ?>
       <?php $query = new WP_Query( array( 'category_name' => 'showcase-project' ) );
         if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
         <a href="<?php echo esc_url( get_permalink() ); ?>" class="showcase-project">
+          <?php
+            $event_month = get_post_meta($post->ID, 'event-month', true);
+            $event_day = get_post_meta($post->ID, 'event-day', true);
+            if ( strlen($event_month) == 3 && strlen($event_day) > 0) {
+              echo '<div class="image-stripe event-stripe"></div>';
+              echo '<div class="event-stripe-text">';
+                echo '<div class="event-stripe-month">'.$event_month.'</div>';
+                echo '<div class="event-stripe-day">'.$event_day.'</div>';
+              echo '</div>';
+            } else {};
+            unset($event_month);
+            unset($event_day);
+          ?>
           <div class="showcase-project-thumbnail">
             <img src="<?php the_post_thumbnail_url('large'); ?>"/>
           </div>
