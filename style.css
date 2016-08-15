@@ -969,6 +969,14 @@ body {
   fill: #fff;
 }
 
+.header-site-title {
+  width: calc(200px + 10%);
+  position: absolute;
+  z-index: 10;
+  left: calc(-98px + 26%);
+  top: calc(71px - 4%);
+}
+
 .navigation-trapezoid {
   position: absolute;
   height: 37px;
