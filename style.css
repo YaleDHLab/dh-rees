@@ -1272,6 +1272,17 @@ body {
   z-index: 0;
   display: inline-block;
   margin-left: -5px;
+  overflow: hidden;
+}
+
+.sign-up-gray-image {
+  width: 200%;
+  height: 200%;
+  background: url(https://s3-us-west-2.amazonaws.com/dh-rees/images/lissitsky-th.jpg);
+  background-size: cover;
+  transform: skewX(-45deg);
+  margin-left: -20%;
+  margin-top: -20%;
 }
 
 .baby-blue-parallelogram-text {
