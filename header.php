@@ -75,7 +75,9 @@
     </svg>
 
   </div>
-  <div class="navigation-trapezoid navigation-blue"></div>
+  <div class="navigation-trapezoid navigation-blue">
+    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+  </div>
   <div class="navigation-trapezoid navigation-gray"></div>
 
   <div class="blue-triangle-svg-container">

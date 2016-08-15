@@ -1095,52 +1095,8 @@ body {
 
 
 
-
-
-
-/***
-* Header
-***/
-
-.site-header {
-  height: 130px;
-}
-
-.site-branding * {
-  display: inline-block;
-}
-
 .site-description {
   display: none;
-}
-
-.site-title {
-  margin: 0;
-  font-family: 'Times', serif;
-  font-weight: 100;
-  font-size: 1.3em;
-  width: 100px;
-  line-height: 1.15em;
-  position: absolute;
-  left: 100px;
-  top: 20px;
-}
-
-.site-title a {
-  text-decoration: none;
-  color: #000;
-}
-
-.site-logo-container {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-}
-
-img.site-logo {
-  width: 45px;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
 }
 
 
@@ -1148,23 +1104,22 @@ img.site-logo {
 * Nav
 ***/
 
-.main-navigation {
-  margin-top: 20px;
-  position: absolute;
-  left: 300px;
-  width: auto;
+.menu {
+  margin: 0;
+  padding: 7px 23px;
 }
 
-.nav-menu .menu-item {
+.menu-item {
+  transform: skewX(45deg);
+  display: inline-block;
   text-transform: uppercase;
-  font-family: 'Lato', sans-serif;
-  font-size: .9em;
   margin: 0 10px;
 }
 
-.nav-menu .menu-item a {
+.menu-item a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
+  font-size: .9em;
 }
 
 .page_item_has_children a:after {
@@ -1188,13 +1143,13 @@ img.site-logo {
   position: absolute;
   left: 8%;
   top: 40px;
-  width: 40%;
+  width: 33%;
   color: #00356B;
 }
 
 .featured-project-title {
   font-size: 2.1em;
-  line-height: 1em;
+  line-height: 1.1em;
   font-family: Arial;
   font-weight: 300;
 }
