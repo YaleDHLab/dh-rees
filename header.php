@@ -35,20 +35,12 @@
     <div class="header-salmon-image"></div>
   </div>
 
+  <div class="header-site-title">
+  </div>
+
   <div class="navigation-trapezoid navigation-brand">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="179 43 74.27 59">
       <defs>
-        <style>
-          .cls-1 {
-            fill: #fff;
-          }
-          .cls-2 {
-            filter: url(#path-2);
-          }
-          .cls-3 {
-            filter: url(#path);
-          }
-        </style>
         <filter id="path" x="189.659" y="60.6" width="63.611" height="41.4" filterUnits="userSpaceOnUse">
           <feOffset dy="2" input="SourceAlpha"/>
           <feGaussianBlur stdDeviation="2" result="blur"/>
