@@ -2,8 +2,7 @@ var moveShapes = function() {
   var windowWidth = $(window).width();
   var windowHeight = $(window).height();
   var rootTwo = Math.pow(2, 0.5);
-  console.log(windowWidth, windowHeight);  
-  
+
   /***
   * Header
   ***/
@@ -94,6 +93,19 @@ var moveShapes = function() {
   var pageContentBottom = parseInt( $(".page-content").css("marginBottom"), 10);
   var pageContentHeight = $(".page-content").height();
   var desiredPageHeight = pageContentHeight + pageContentTop + pageContentBottom;
+
+  // if the calculated page height does not fill the viewport, set the
+  // page height to the viewport height
+  if (desiredPageHeight < $(window).height()) {
+    var desiredPageHeight = $(window).height()
+  };
+
+  // calculate how tall stripes should be, and how much top to apply
+  // to the footer. This distance = required page height -  footer height
+  var distanceToFooter = desiredPageHeight - 100;
+
+  // log values for analysis
+  console.log(windowWidth, windowHeight, desiredPageHeight);
 
   // Define the triangle points
   var triangleSvgPoints = [
@@ -188,13 +200,15 @@ var moveShapes = function() {
   * offset at various viewport widths, then fitting a linear
   * model to the observed values
   *
+  * The top offset is simply the desired page height minus the footer height
+  *
   ***/
 
   var babyBlueStripeLeft = (0.6561*windowWidth) - 107.7;
 
   $(".baby-blue-stripe").css({
     left: babyBlueStripeLeft,
-    height: $(".page-content").height() + 251
+    height: distanceToFooter
   });
 
   /***
@@ -204,8 +218,8 @@ var moveShapes = function() {
   ***/
 
   $(".cream-stripe").css({
-    height: $(".page-content").height() + 251
     //left: creamStripeLeft
+    height: distanceToFooter
   });
 
   /***
@@ -214,7 +228,7 @@ var moveShapes = function() {
 
   // this will actually be set by css only, and is only for demo
   $(".footer-blue").css({
-    "top": $(".page-content").height() + 251
+    "top": distanceToFooter
   });
 
 };
