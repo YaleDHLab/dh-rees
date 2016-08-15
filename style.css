@@ -956,6 +956,19 @@ body {
   background-size: 157%;
 }
 
+/* Site title svg */
+.header-site-title .cls-1 {
+  fill: none;
+}
+
+.header-site-title .cls-2 {
+  clip-path: url(#clip-path);
+}
+
+.header-site-title .cls-3 {
+  fill: #fff;
+}
+
 .navigation-trapezoid {
   position: absolute;
   height: 37px;
@@ -974,6 +987,19 @@ body {
   float: right;
   margin: 1px 13px;
   height: 100%;
+}
+
+/* navigation brand svg path styles */
+.navigation-brand .cls-1 {
+  fill: #fff;
+}
+
+.navigation-brand .cls-2 {
+  filter: url(#path-2);
+}
+
+.navigation-brand .cls-3 {
+  filter: url(#path);
 }
 
 .navigation-blue {
