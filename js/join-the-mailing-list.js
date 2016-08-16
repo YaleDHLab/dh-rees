@@ -13,4 +13,9 @@ $(document).ready(function() {
   $(".wpcf7-submit").click(function() {
     $(".mailing-list-modal-container").addClass("hidden");
   });
+
+  // allow users to click within the text box
+  $(".mailing-list-modal").click(function(e){
+    e.stopPropagation();
+  });
 });
