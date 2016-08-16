@@ -910,6 +910,10 @@ html, body {
   clear: both;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /*************
 * Background *
 *************/
@@ -1413,6 +1417,26 @@ body {
   left: 50%;
   bottom: 4px;
   padding-top: 9px;
+}
+
+.mailing-list-modal-container {
+  display: none;
+  z-index: 20;
+  background: rgba(0,0,0,.5);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  padding: 15%;
+  display: inline-block;
+}
+
+.mailing-list-modal {
+  background: #fff;
+  padding: 20px;
+}
+
+.mailing-list-modal p {
+  margin: 7px 25px;
 }
 
 /***
