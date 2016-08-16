@@ -1169,7 +1169,6 @@ body {
   display: flex;
   height: 36vw;
   justify-content: center;
-  align-items: center;
   overflow: hidden;
   position: relative;
 }
@@ -1357,7 +1356,6 @@ body {
   display: flex;
   height: 13vw;
   justify-content: center;
-  align-items: center;
   overflow: hidden
 }
 
