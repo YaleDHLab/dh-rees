@@ -90,9 +90,10 @@ var moveShapes = function() {
 
   // calculate how tall the entire document height should be
   var pageContentTop = parseInt( $(".page-content").css("paddingTop"), 10);
+  var pageContentMarginTop = parseInt( $(".page-content").css("marginTop"), 10);
   var pageContentHeight = $(".page-content").height();
   var pageContentBottom = parseInt( $(".page-content").css("paddingBottom"), 10);
-  var desiredPageHeight = pageContentTop + pageContentHeight + pageContentBottom;
+  var desiredPageHeight = pageContentTop + pageContentMarginTop + pageContentHeight + pageContentBottom;
 
   // if the calculated page height does not fill the viewport, set the
   // page height to the viewport height
