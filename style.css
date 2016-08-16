@@ -1003,11 +1003,11 @@ body {
 }
 
 .navigation-brand .cls-2 {
-  filter: url(#path-2);
+  clip-path: url(#path-2);
 }
 
 .navigation-brand .cls-3 {
-  filter: url(#path);
+  clip-path: url(#path);
 }
 
 .navigation-blue {
