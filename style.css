@@ -986,6 +986,7 @@ body {
   height: 37px;
   top: 50px;
   transform: skewX(-45deg);
+  box-shadow: 1px 2px 5px #4c4c4c;
 }
 
 .navigation-brand {
@@ -1175,6 +1176,7 @@ body {
   justify-content: center;
   overflow: hidden;
   position: relative;
+  box-shadow: 1px 2px 5px #4c4c4c;
 }
 
 .featured-project-image {
@@ -1192,8 +1194,9 @@ body {
   background: #00356B;
   color: #fff;
   font-size: .8em;
-  box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+  box-shadow: 1px 2px 5px #4c4c4c;
   display: inline-block;
+  cursor: pointer;
 }
 
 .featured-project-button-container {
@@ -1361,6 +1364,8 @@ body {
   height: 13vw;
   justify-content: center;
   overflow: hidden
+  margin-right: 5px;
+  box-shadow: 1px 2px 5px #4c4c4c;
 }
 
 .showcase-project-thumbnail img {
