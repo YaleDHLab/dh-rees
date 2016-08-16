@@ -106,6 +106,7 @@ function _s_scripts() {
 
  /* Add custom scripts */
   wp_enqueue_script( 'svg-background', get_template_directory_uri() . '/js/svg-background.js', array ( 'jquery' ), 1.1, false);
+  wp_enqueue_script( 'join-the-mailing-list', get_template_directory_uri() . '/js/join-the-mailing-list.js', array ( 'jquery' ), 1.1, false);
 
 	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
