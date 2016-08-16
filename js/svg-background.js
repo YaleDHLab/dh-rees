@@ -66,7 +66,7 @@ var moveShapes = function() {
   * Brand navigation
   ***/
 
-  var brandNavigationLeft = (0.2690*windowWidth - 148.0);
+  var brandNavigationLeft = (0.1696*windowWidth - 65.01);
 
   $(".navigation-brand").css({
     "left": brandNavigationLeft
