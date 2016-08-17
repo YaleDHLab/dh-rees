@@ -103,7 +103,7 @@ var moveShapes = function() {
 
   // calculate how tall stripes should be, and how much top to apply
   // to the footer. This distance = the full document height - footer height
-  var distanceToFooter = $(document).height() - 100;
+  var distanceToFooter = $(document).height() - $(".footer-blue").height();
 
   // log values for analysis
   //console.log(windowWidth, windowHeight, desiredPageHeight, blueTriangleTop, $(document).height());
