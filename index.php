@@ -64,6 +64,7 @@ get_header(); ?>
           <div class="showcase-project-blurb"><?php echo get_post_meta($post->ID, 'project-blurb', true); ?></div>
         </a><!-- .showcase-project -->
       <?php endwhile; endif; ?>
+      <?php wp_reset_postdata(); ?>
       </div><!-- .showcase-project-container -->
 
       <!-- Parallelograms -->
@@ -77,6 +78,28 @@ get_header(); ?>
           <div class="sign-up-gray-image"></div>
         </div>
       </div>
+
+      <!-- Mission and Connect -->
+      <div class="mission-and-connect-container">
+        <div class="mission-text">
+          <?php $query = new WP_Query( array( 'category_name' => 'landing-page' ) );
+            if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+              <?php echo "<div class='subtitle'>MISSION</div>"; ?>
+              <?php echo get_post_meta($post->ID, 'site-mission', true); ?>
+          <?php endwhile; endif; ?>
+          <?php wp_reset_postdata(); ?>
+        </div><!-- .mission-text -->
+
+        <div class="connect-text">
+          <?php $query = new WP_Query( array( 'category_name' => 'landing-page' ) );
+            if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+              <?php echo "<div class='subtitle'>CONNECT</div>"; ?>
+              <?php echo get_post_meta($post->ID, 'connect', true); ?>
+          <?php endwhile; endif; ?>
+          <?php wp_reset_postdata(); ?>
+        </div><!-- .connect-text -->
+
+      </div><!-- .mission-and-connect-container -->
 
     </main><!-- #main -->
   </div><!-- #primary -->
