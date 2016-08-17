@@ -900,6 +900,7 @@ object {
 html, body {
   height: 100%;
   margin: 0;
+  color: #00356B;
 }
 
 /***
@@ -913,6 +914,43 @@ html, body {
 .hidden {
   display: none !important;
 }
+
+.subtitle {
+  display: block;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 800;
+}
+
+/***
+* Font sizing
+***/
+
+@media (max-width: 870px) {
+  .featured-project-title {
+    font-size: 1.5em;
+  }
+
+  html, body {
+    font-size: 95%;
+  }
+
+}
+
+@media (min-width: 950px) {
+  html, body {
+    font-size: 105%;
+  }
+}
+
+@media (min-width: 1500px) {
+  html, body {
+    font-size: 110%;
+  }
+}
+
+
 
 /*************
 * Background *
@@ -976,7 +1014,7 @@ body {
 .header-site-title {
   width: calc(200px + 10%);
   position: absolute;
-  z-index: 10;
+  z-index: 3;
   left: calc(-98px + 26%);
   top: calc(76px - 3.5%);
 }
@@ -989,17 +1027,25 @@ body {
   box-shadow: 1px 2px 5px #4c4c4c;
 }
 
+.navigation-trapezoid {
+  position: absolute;
+  height: calc(30px + 2vw);
+  top: 50px;
+  transform: skewX(-45deg);
+  box-shadow: 1px 2px 5px #4c4c4c;
+}
+
 .navigation-brand {
   background: rgba(0,0,0,.3);
-  width: 80px;
+  width: 9%;
   z-index: 4;
 }
 
 .navigation-brand svg {
   transform: skewX(45deg);
   float: right;
-  margin: 1px 13px;
-  height: 100%;
+  margin: 5px 13px;
+  height: 85%;
 }
 
 /* navigation brand svg path styles */
@@ -1096,7 +1142,7 @@ body {
   position: absolute;
   z-index: 3;
   padding-top: 110px;
-  padding-bottom: 70px;
+  padding-bottom: 90px;
   margin-top: 4%;
 }
 
@@ -1112,9 +1158,16 @@ body {
 * Nav
 ***/
 
+.menu-rees-menu-container {
+  height: 100%;
+  width: 100%;
+}
+
 .menu {
   margin: 0;
-  padding: 7px 23px;
+  padding: 0 5%;
+  height: 100%;
+  width: 100%;
 }
 
 .menu-item {
@@ -1128,6 +1181,8 @@ body {
   text-decoration: none;
   color: #fff;
   font-size: .9em;
+  display: inline-block;
+  margin-top: calc(35% - 3px);
 }
 
 .page_item_has_children a:after {
@@ -1254,14 +1309,14 @@ body {
 ***/
 
 .parallelogram-container {
-  padding: 10px 0 40px 14.75%;
+  margin: 10px 0 10px 18.5%;
   position: relative;
 }
 
 .baby-blue-parallelogram {
   background: #c9e7dd;
   width: 45.5%;
-  height: 9vw;
+  height: 12vw;
   opacity: 0.7;
   transform: skewX(45deg);
   z-index: 1;
@@ -1273,7 +1328,7 @@ body {
   background: #d8d8d8;
   opacity: 0.7;
   width: 31.5%;
-  height: 9vw;
+  height: 12vw;
   opacity: 0.8;
   transform: skewX(45deg);
   z-index: 0;
@@ -1296,7 +1351,7 @@ body {
   position: absolute;
   z-index: 2;
   width: 24%;
-  left: 25%;
+  left: 8%;
   top: calc(-38px + 46%);
   font-size: .9em;
   line-height: 1.3em;
@@ -1306,7 +1361,7 @@ body {
 @media (max-width: 900px) {
   .baby-blue-parallelogram-text {
     font-size: .8em;
-    top: calc(-44px + 46%);
+    top: calc(-32px + 46%);
   }
 }
 
@@ -1319,10 +1374,33 @@ body {
 .sign-up-button {
   position: absolute;
   z-index: 2;
-  left: 52%;
-  top: calc(-25px + 41%);
+  left: 41.5%;
+  top: calc(-19px + 48%);
 }
 
+/***
+* Mission and Connect Styles
+***/
+
+.mission-and-connect-container {
+  padding: 20px 25% 120px 25%;
+}
+
+.mission-text,
+.connect-text {
+  width: 45.5%;
+  display: inline-block;
+  font-size: .9em;
+  overflow: auto;
+}
+
+.mission-text {
+  float: left;
+}
+
+.connect-text {
+  margin-left: 9%;
+}
 
 /***
 * Project cards
