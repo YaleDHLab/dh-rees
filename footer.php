@@ -13,7 +13,13 @@
 
 	</div><!-- #content -->
 
-  <div class="footer-blue"></div>
+  <div class="footer-blue">
+    <div class="yul-wordmark">
+      <img src="https://s3-us-west-2.amazonaws.com/dh-rees/images/yul-wordmark.png">
+    </div>
+  </div>
+
+  </div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
