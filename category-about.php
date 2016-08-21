@@ -37,6 +37,27 @@ get_header(); ?>
         </div>
       </div>
 
+      <!-- Team member cards -->
+      <div class="team-member-cards-container">
+      <?php $query = new WP_Query( array( 'category_name' => 'team-member' ) );
+        if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+          <div class="team-member-card">
+            <div class="team-member-thumbnail">
+              <?php the_post_thumbnail('thumbnail'); ?>
+            </div>
+            <div class="team-member-text-container">
+              <div class="team-member-text team-member-name">
+                <?php echo get_post_meta($post->ID, 'team-member-name', true); ?>
+              </div>
+              <div class="team-member-text team-member-position">
+                <?php echo get_post_meta($post->ID, 'team-member-position', true); ?>
+              </div>
+            </div><!-- .team-member-text-container -->
+          </div><!-- .team-member-card -->
+        <?php endwhile; endif; ?>
+        <?php wp_reset_postdata(); ?>
+      </div><!-- .team-member-cards-container -->
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
