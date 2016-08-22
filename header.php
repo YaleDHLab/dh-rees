@@ -122,12 +122,5 @@
   </div>
   <div class="navigation-trapezoid navigation-gray"></div>
 
-  <div class="blue-triangle-svg-container">
-    <svg class="blue-triangle-svg"></svg>
-  </div>
-
-  <div class="baby-blue-stripe"></div>
-  <div class="cream-stripe"></div>
-
   <div class="page-content site-content" id="content">
 
