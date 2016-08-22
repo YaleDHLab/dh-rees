@@ -899,8 +899,16 @@ object {
 
 html, body {
   height: 100%;
+  width: 100%;
   margin: 0;
   color: #00356B;
+}
+
+body {
+  background-image: url(https://s3-us-west-2.amazonaws.com/dh-rees/images/background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 /***
@@ -1095,27 +1103,6 @@ body {
 .blue-triangle-svg {
   position: absolute;
   right: 0;
-}
-
-.baby-blue-stripe {
-  background: #C9E7DD;
-  width: 16.13%;
-  opacity: .5;
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-  transform: skewX(-45deg);
-  transform-origin: 100% 10%;
-}
-
-.cream-stripe {
-  background: #F1E5D9;
-  width: 44.9%;
-  opacity: .4;
-  position: absolute;
-  z-index: 2;
-  height: 100%;
-  transform: skewX(45deg);
 }
 
 .footer-salmon {
