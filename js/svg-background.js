@@ -76,9 +76,13 @@ var moveShapes = function() {
   * Footer
   ***/
 
-  var distanceToFooter = $(document).height() - $(".footer-blue").height();
+  var content = $(".site-content");
+  var contentMargin = parseInt( content.css("marginTop"), 10);
+  var contentPaddingT = parseInt( content.css("paddingTop"), 10);
+  var contentPaddingB = parseInt( content.css("paddingBottom"), 10);
+  var distanceToFooter = content.height() + contentMargin + contentPaddingT + contentPaddingB; 
 
-  // this will actually be set by css only, and is only for demo
+  // dynamically set footer offset on viewport change
   $(".footer-blue").css({
     "top": distanceToFooter
   });
