@@ -1450,6 +1450,7 @@ body {
 * About page
 ***/
 
+/* Text Column */
 .about-text-column {
   width: 37%;
   padding: 40px;
@@ -1457,9 +1458,11 @@ body {
   line-height: 1.3em;
   font-size: .87em;
   display: inline-block;
-  margin-left: 17%;
+  margin-left: 14%;
+  margin-bottom: 80px;
   position: relative;
   overflow: hidden;
+  float: left;
 }
 
 .about-text-stripe {
@@ -1487,6 +1490,49 @@ body {
 
 .about-subtitle {
   font-size: 1.2em;
+}
+
+/* Team member cards */
+.team-member-cards-container {
+  display: inline-block;
+  margin-left: 30px;
+  width: 37%;
+}
+
+.team-member-card {
+  background: rgba(241,229,217,.93);
+  margin-bottom: 30px;
+  height: 150px;
+}
+
+.team-member-thumbnail {
+  float: left;
+}
+
+.team-member-text-container {
+  float: left;
+  margin: 20px;
+}
+
+.team-member-name {
+  font-size: 1.4em;
+}
+
+.team-member-position {
+  color: #826F69;
+  margin-top: 12px;
+  font-size: .87em;
+}
+
+.team-member-hover-stripe {
+  float: right;
+  width: 15px;
+  height: 100%;
+  background: #C9E7DD;
+}
+
+.team-member-card:hover .team-member-hover-stripe {
+  background: #EF6362;
 }
 
 /***
