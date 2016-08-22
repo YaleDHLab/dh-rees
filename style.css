@@ -1485,6 +1485,8 @@ body {
   background: rgba(241,229,217,.93);
   margin-bottom: 30px;
   height: 150px;
+  position: relative;
+  overflow: hidden;
 }
 
 .team-member-thumbnail {
@@ -1492,12 +1494,14 @@ body {
 }
 
 .team-member-text-container {
-  float: left;
-  margin: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  margin-left: 170px;
 }
 
 .team-member-name {
   font-size: 1.4em;
+  line-height: 1.2em;
 }
 
 .team-member-position {
@@ -1507,7 +1511,9 @@ body {
 }
 
 .team-member-hover-stripe {
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 15px;
   height: 100%;
   background: #C9E7DD;
