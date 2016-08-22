@@ -59,6 +59,10 @@ get_header(); ?>
         <?php wp_reset_postdata(); ?>
       </div><!-- .team-member-cards-container -->
 
+      <!-- Parallelograms -->
+      <div class="clear-both"></div>
+      <?php get_template_part( 'template-parts/contact-parallelograms', 'none' ); ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
