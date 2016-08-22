@@ -1419,6 +1419,15 @@ body {
   display: inline-block;
   border-radius: 38px;
   background: #EF6362;
+  cursor: pointer;
+}
+
+.footer-icon:hover {
+  background: #C9E7DD;
+}
+
+.footer-icon:hover .cls-1 {
+  fill: #EF6362;
 }
 
 .footer-icon-container {
