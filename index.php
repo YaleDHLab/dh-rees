@@ -70,7 +70,7 @@ get_header(); ?>
           <?php endwhile; endif; ?>
           <?php wp_reset_postdata(); ?>
         </div><!-- .connect-text -->
-
+        <div class="clear-both"></div>
       </div><!-- .mission-and-connect-container -->
 
     </main><!-- #main -->
