@@ -53,6 +53,7 @@ get_header(); ?>
                 <?php echo get_post_meta($post->ID, 'team-member-position', true); ?>
               </div>
             </div><!-- .team-member-text-container -->
+            <div class="team-member-hover-stripe"></div>
           </div><!-- .team-member-card -->
         <?php endwhile; endif; ?>
         <?php wp_reset_postdata(); ?>
