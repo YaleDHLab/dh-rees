@@ -1380,6 +1380,17 @@ body {
 * Footer
 ***/
 
+svg.footer-red-triangle {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  background: url(https://s3-us-west-2.amazonaws.com/dh-rees/images/soviet-background.png);
+  background-size: cover;
+  fill: #fff;
+  bottom: 120px;
+  z-index: 0;
+}
+
 .yul-wordmark {
   display: inline-block;
   width: 300px;
