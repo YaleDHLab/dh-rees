@@ -949,7 +949,7 @@ body {
 
 @font-face {
   font-family: YaleNew;
-  font-weight: italic;
+  font-style: italic;
   src: url("fonts/YaleNew-Italic.otf") format("opentype");
 }
 
@@ -966,7 +966,7 @@ body {
 
 @font-face {
   font-family: Interstate;
-  font-weight: italic;
+  font-style: italic;
   src: url("fonts/Interstate-Italic.otf") format("opentype");
 }
 
@@ -1316,7 +1316,7 @@ body {
 
 .event-stripe {
   height: 100%;
-  width: 50px;
+  width: 48px;
   background: #EF6362;
   color: #fff;
   font-family: Interstate;
@@ -1544,7 +1544,7 @@ body {
 }
 
 .about-subtitle {
-  font-size: 1.2em;
+  font-size: 1em;
   font-family: Interstate;
   font-style: italic;
 }
