@@ -2,6 +2,7 @@
   <?php $query = new WP_Query( array( 'category_name' => 'featured-project' ) );
     if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
     <div class="featured-project-text-container">
+      <div class="subtitle">Feature</div>
       <div class="featured-project-title"><?php the_title(); ?></div>
         <div class="featured-project-blurb"><?php echo get_post_meta($post->ID, 'project-blurb', true); ?>
         <div class="featured-project-button-container">
