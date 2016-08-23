@@ -929,7 +929,47 @@ body {
   text-transform: uppercase;
   font-size: 1em;
   font-weight: 800;
+  font-family: Interstate;
 }
+
+/***
+* Fonts
+***/
+
+@font-face {
+  font-family: YaleNew;
+  src: url("fonts/YaleNew-Roman.otf") format("opentype");
+}
+
+@font-face {
+  font-family: YaleNew;
+  font-weight: bold;
+  src: url("fonts/YaleNew-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: YaleNew;
+  font-weight: italic;
+  src: url("fonts/YaleNew-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Interstate;
+  src: url("fonts/Interstate-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Interstate;
+  font-weight: bold;
+  src: url("fonts/Interstate-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Interstate;
+  font-weight: italic;
+  src: url("fonts/Interstate-Italic.otf") format("opentype");
+}
+
 
 /***
 * Font sizing
@@ -1167,6 +1207,8 @@ body {
 .menu-item a {
   text-decoration: none;
   color: #fff;
+  font-family: Interstate;
+  font-weight: bold;
   font-size: .9em;
   display: inline-block;
   margin-top: calc(35% - 3px);
@@ -1203,14 +1245,15 @@ body {
 .featured-project-title {
   font-size: 1.9em;
   line-height: 1.1em;
-  font-family: Arial;
+  font-family: YaleNew;
   font-weight: 300;
 }
 
 .featured-project-blurb {
   margin-top: 10px;
-  font-size: .9em;
   line-height: 1.4em;
+  font-size: .9em;
+  font-family: YaleNew; 
 }
 
 .featured-project-image-container {
@@ -1235,11 +1278,13 @@ body {
   text-align: center;
   text-transform: uppercase;
   background: #00356B;
-  color: #fff;
-  font-size: .8em;
   box-shadow: 1px 2px 5px #4c4c4c;
   display: inline-block;
   cursor: pointer;
+  color: #fff;
+  font-size: .8em; 
+  font-family: Interstate;
+  font-weight: bold;
 }
 
 .featured-project-button-container {
@@ -1274,7 +1319,7 @@ body {
   width: 50px;
   background: #EF6362;
   color: #fff;
-  font-family: arial;
+  font-family: Interstate;
   left: 0;
   top: -37%;
 }
@@ -1283,8 +1328,17 @@ body {
   color: #fff;
   position: absolute;
   z-index: 1;
-  margin: 3% 4%;
+  margin: 5%;
   font-family: arial;
+}
+
+.event-stripe-month {
+  font-size: .85em;
+}
+
+.event-stripe-day {
+  font-size: 1.2em;
+  line-height: 1.1em;
 }
 
 .event-stripe-day {
@@ -1344,6 +1398,8 @@ body {
   font-size: .9em;
   line-height: 1.3em;
   color: #00356B;
+  font-family: YaleNew;
+  font-style: italic;
 }
 
 .sign-up-button {
@@ -1366,6 +1422,7 @@ body {
   display: inline-block;
   font-size: .9em;
   overflow: auto;
+  font-family: TimesNew;
 }
 
 .mission-text {
@@ -1380,15 +1437,15 @@ body {
 * Footer
 ***/
 
-svg.footer-red-triangle {
-  width: 140px;
-  height: 140px;
-  position: absolute;
+.footer-red-triangle {
+  transform: rotate(45deg);
+  height: 170px;
+  width: 170px;
   background: url(https://s3-us-west-2.amazonaws.com/dh-rees/images/soviet-background.png);
-  background-size: cover;
-  fill: #fff;
-  bottom: 120px;
-  z-index: 0;
+  background-size: 250%;
+  margin-left: -85px;
+  margin-top: -85px;
+  position: absolute;
 }
 
 .yul-wordmark {
@@ -1471,6 +1528,10 @@ svg.footer-red-triangle {
   z-index: 2;
 }
 
+.about-text-main {
+  font-family: YaleNew;
+}
+
 .about-text p {
   margin: 15px 0 0 0;
 }
@@ -1479,10 +1540,13 @@ svg.footer-red-triangle {
   font-size: 1.8em;
   display: inline-block;
   margin: 15px 0 22px 0;
+  font-family: TimesNew;
 }
 
 .about-subtitle {
   font-size: 1.2em;
+  font-family: Interstate;
+  font-style: italic;
 }
 
 /* Team member cards */
@@ -1512,13 +1576,15 @@ svg.footer-red-triangle {
 
 .team-member-name {
   font-size: 1.4em;
-  line-height: 1.2em;
+  line-height: 1.15em;
+  font-family: YaleNew;
 }
 
 .team-member-position {
   color: #826F69;
   margin-top: 12px;
   font-size: .87em;
+  font-family: Interstate;
 }
 
 .team-member-hover-stripe {
@@ -1586,7 +1652,7 @@ svg.footer-red-triangle {
 
 .showcase-project-title {
   font-size: 1.25em;
-  font-family: Arial;
+  font-family: YaleNew;
   line-height: 1.25em;
   text-decoration: none;
   margin-top: 16px;
@@ -1595,7 +1661,7 @@ svg.footer-red-triangle {
 
 .showcase-project-blurb {
   color: #00356B;
-  font-family: Arial;
+  font-family: YaleNew;
   font-size: .9em;
   margin-top: 10px;
 }
