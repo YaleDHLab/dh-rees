@@ -72,6 +72,16 @@ var moveShapes = function() {
     "left": brandNavigationLeft
   });
 
+ /***
+ * Site Title
+ ***/
+
+  var siteTitleTop = (windowWidth * -.01608) + 19.68;
+  $(".header-site-title").css({
+    "top": siteTitleTop
+  });
+
+
   /***
   * Footer
   ***/
