@@ -1016,6 +1016,14 @@ body {
   overflow-x: hidden;
 }
 
+.yale-logo {
+  width: calc(100px + 2%);
+  display: inline-block;
+  position: absolute;
+  left: calc(71% - 50px);
+  top: 12px;
+}
+
 .header-blue {
   height: 240px;
   width: 240px;
@@ -1043,7 +1051,7 @@ body {
   width: 100%;
   background: url(https://s3-us-west-2.amazonaws.com/dh-rees/images/soviet-background.png);
   transform: rotate(-90deg);
-  background-size: 157%;
+  background-size: 125%;
 }
 
 /* Site title svg */
@@ -1060,11 +1068,10 @@ body {
 }
 
 .header-site-title {
-  width: calc(200px + 10%);
+  width: calc(250px + 13.5%);
   position: absolute;
   z-index: 5;
-  left: calc(-98px + 26%);
-  top: calc(76px - 3.5%);
+  left: calc(-123px + 26%);
 }
 
 .navigation-trapezoid {
@@ -1077,10 +1084,10 @@ body {
 
 .navigation-trapezoid {
   position: absolute;
-  height: calc(30px + 2vw);
+  height: calc(35px + 1vw);
   top: 50px;
   transform: skewX(-45deg);
-  box-shadow: 1px 2px 5px #4c4c4c;
+  box-shadow: 1px 2px 5px rgba(76,76,76,.5);
 }
 
 .navigation-brand {
@@ -1092,9 +1099,12 @@ body {
 
 .navigation-brand svg {
   transform: skewX(45deg);
-  float: right;
-  margin: 5px 13px;
-  height: 85%;
+  height: 114%;
+  display: block;
+  margin: auto;
+  position: relative;
+  bottom: 8px;
+  left: -4px;
 }
 
 /* navigation brand svg path styles */
@@ -1192,7 +1202,7 @@ body {
 
 .menu {
   margin: 0;
-  padding: 0 5%;
+  padding: 0 2%;
   height: 100%;
   width: 100%;
 }
@@ -1208,10 +1218,9 @@ body {
   text-decoration: none;
   color: #fff;
   font-family: Interstate;
-  font-weight: bold;
-  font-size: .9em;
+  font-size: .725em;
+  letter-spacing: .1em;
   display: inline-block;
-  margin-top: calc(35% - 3px);
 }
 
 .page_item_has_children a:after {
@@ -1242,8 +1251,12 @@ body {
   z-index: 2;
 }
 
+.featured-project-text-container .subtitle {
+  font-size: .8em;
+}
+
 .featured-project-title {
-  font-size: 1.9em;
+  font-size: 2.2em;
   line-height: 1.1em;
   font-family: YaleNew;
   font-weight: 300;
@@ -1252,7 +1265,7 @@ body {
 .featured-project-blurb {
   margin-top: 10px;
   line-height: 1.4em;
-  font-size: .9em;
+  font-size: 1em;
   font-family: YaleNew; 
 }
 
@@ -1262,7 +1275,7 @@ body {
   justify-content: center;
   overflow: hidden;
   position: relative;
-  box-shadow: 1px 2px 5px #4c4c4c;
+  box-shadow: 1px 2px 5px rgba(76,76,76,.5);
 }
 
 .featured-project-image {
@@ -1278,13 +1291,12 @@ body {
   text-align: center;
   text-transform: uppercase;
   background: #00356B;
-  box-shadow: 1px 2px 5px #4c4c4c;
   display: inline-block;
   cursor: pointer;
   color: #fff;
-  font-size: .8em; 
+  font-size: .725em; 
   font-family: Interstate;
-  font-weight: bold;
+  letter-spacing: .1em;
 }
 
 .featured-project-button-container {
@@ -1316,7 +1328,7 @@ body {
 
 .event-stripe {
   height: 100%;
-  width: 41px;
+  width: 50px;
   background: #EF6362;
   color: #fff;
   font-family: Interstate;
@@ -1328,7 +1340,7 @@ body {
   color: #fff;
   position: absolute;
   z-index: 1;
-  margin: 4.5%;
+  margin: 5.5%;
   font-family: Arial;
 }
 
@@ -1337,7 +1349,7 @@ body {
 }
 
 .event-stripe-day {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 23px;
   margin: -20% 2%;
 }
@@ -1377,13 +1389,13 @@ body {
 }
 
 .sign-up-gray-image {
-  width: 200%;
-  height: 200%;
+  width: 161%;
+  height: 179%;
   background: url(https://s3-us-west-2.amazonaws.com/dh-rees/images/lissitsky-th.jpg);
   background-size: cover;
   transform: skewX(-45deg);
-  margin-left: -20%;
-  margin-top: -20%;
+  margin-left: -26%;
+  margin-top: -24%;
 }
 
 .baby-blue-parallelogram-text {
@@ -1391,8 +1403,8 @@ body {
   z-index: 2;
   width: 24%;
   left: 8%;
-  font-size: .9em;
-  line-height: 1.3em;
+  font-size: 1.3em;
+  line-height: 1.2em;
   color: #00356B;
   font-family: YaleNew;
   font-style: italic;
@@ -1416,7 +1428,7 @@ body {
 .connect-text {
   width: 45.5%;
   display: inline-block;
-  font-size: .9em;
+  font-size: 1em;
   overflow: auto;
   font-family: TimesNew;
 }
@@ -1636,9 +1648,9 @@ body {
   display: flex;
   height: 13vw;
   justify-content: center;
-  overflow: hidden
+  overflow: hidden;
   margin-right: 5px;
-  box-shadow: 1px 2px 5px #4c4c4c;
+  box-shadow: 1px 2px 5px rgba(76,76,76,.5);
 }
 
 .showcase-project-thumbnail img {
@@ -1648,7 +1660,7 @@ body {
 }
 
 .showcase-project-title {
-  font-size: 1.25em;
+  font-size: 1.37em;
   font-family: YaleNew;
   line-height: 1.25em;
   text-decoration: none;
@@ -1659,7 +1671,7 @@ body {
 .showcase-project-blurb {
   color: #00356B;
   font-family: YaleNew;
-  font-size: .9em;
+  font-size: 1em;
   margin-top: 10px;
 }
 
@@ -1731,6 +1743,7 @@ body {
   float: right;
   text-decoration: none;
   width: 39.5%;
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -1743,9 +1756,13 @@ body {
   margin: 4%;
 }
 
+.event-image-container .showcase-project-thumbnail {
+  height: 100%;
+}
+
 .upcoming-event {
   width: 96%;
-  height: 156px;
+  height: 12vw;
   margin-bottom: 35px;
 }
 
