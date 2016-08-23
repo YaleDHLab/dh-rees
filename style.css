@@ -1169,7 +1169,7 @@ body {
 .footer-blue {
   position: absolute;
   bottom: 0;
-  height: 120px;
+  height: 200px;
   width: 100%;
   background: #213556;
   z-index: 4;
@@ -1458,8 +1458,9 @@ body {
 
 .yul-wordmark {
   display: inline-block;
-  width: 300px;
-  margin: 36px 0 0 18.75%;
+  width: 100%;
+  margin-top: 71px;
+  margin-left: 19.75%;
 }
 
 .footer-icon {
@@ -1481,7 +1482,7 @@ body {
 
 .footer-icon-container {
   position: absolute;
-  bottom: 36px;
+  bottom: 74px;
   right: 200px;
   display: inline-block;
 }
