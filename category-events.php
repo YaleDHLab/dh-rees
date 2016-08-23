@@ -60,6 +60,10 @@ get_header(); ?>
         </div>
       </div>
 
+      <!-- Parallelograms -->
+      <div class="clear-both"></div>
+      <?php get_template_part( 'template-parts/contact-parallelograms', 'none' ); ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

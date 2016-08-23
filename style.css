@@ -1724,7 +1724,7 @@ body {
 /* Events gallery */
 
 .upcoming-events-container {
-  padding: 35px 21%;
+  padding: 35px 21% 0 21%;
 }
 
 .event-image-container {
