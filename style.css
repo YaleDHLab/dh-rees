@@ -901,8 +901,11 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
+  padding: 0;
   color: #00356B;
+  position: relative;
 }
+
 
 body {
   background-image: url(https://s3-us-west-2.amazonaws.com/dh-rees/images/background.svg);
@@ -1010,18 +1013,6 @@ body {
 * Background *
 *************/
 
-body, html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-body {
-  overflow-x: hidden;
-}
-
 .yale-logo {
   width: calc(100px + 2%);
   display: inline-block;
@@ -1077,7 +1068,7 @@ body {
   width: calc(250px + 13.5%);
   position: absolute;
   z-index: 5;
-  left: calc(-123px + 26%);
+  left: calc(-223px + 26%);
 }
 
 .navigation-trapezoid {
@@ -1128,7 +1119,7 @@ body {
 
 .navigation-blue {
   background: #00356B;
-  width: 46.04%;
+  width: calc(46.04% + 100px);
   left: 12.9366%;
   z-index: 6;
 }
@@ -1465,9 +1456,13 @@ body {
 
 .yul-wordmark {
   display: inline-block;
-  width: 100%;
-  margin-top: 71px;
-  margin-left: 19.75%;
+  position: relative;
+  top: 71px;
+  left: 19.75%;
+}
+
+.yul-wordmark img {
+  width: 330px;
 }
 
 .footer-icon {
@@ -1880,4 +1875,9 @@ body {
   .project-blurb {
     font-size: .85em;
   }
+}
+
+@media (max-width: 1100px) {
+
+
 }
