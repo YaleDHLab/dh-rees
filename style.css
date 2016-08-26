@@ -1958,6 +1958,30 @@ body {
     width: 260px;
   }
 
+  .navigation-dropdown-container {
+    width: 70px;
+    height: 70px;
+    padding: 28px 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .navigation-dropdown-container span {
+    height: 4px;
+    width: 23px;
+    background: #fff;
+    display: block;
+    margin-bottom: 3px;
+    border-radius: 1px;
+  }
+
+  .navigation-dropdown-container:hover span {
+    background: #f0eeee;
+  }
+
   /***
   * Featured Project
   ***/
