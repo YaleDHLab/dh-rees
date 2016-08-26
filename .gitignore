@@ -1,3 +1,6 @@
 *.swp
 *.pem
 fonts/*
+node_modules/
+package.json
+phantomjs/
