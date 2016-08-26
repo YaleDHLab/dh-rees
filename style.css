@@ -1180,9 +1180,9 @@ body {
   width: 100%;
   position: absolute;
   z-index: 3;
-  padding-top: 110px;
+  padding-top: 50px;
+  padding-bottom: 60px;
   margin-top: 4%;
-  overflow-x: hidden;
 }
 
 /***************
@@ -1518,13 +1518,13 @@ body {
 
 /* Text Column */
 .about-text-column {
-  width: 29.5%;
+  width: 400px;
   padding: 80px 60px 50px 55px;
   background: #F1E5D9;
   line-height: 1.3em;
   font-size: .87em;
   display: inline-block;
-  margin-left: 21%;
+  margin-left: calc(50% - 420px);
   margin-bottom: 80px;
   position: relative;
   overflow: hidden;
@@ -1574,7 +1574,7 @@ body {
 .team-member-cards-container {
   display: inline-block;
   margin-left: 40px;
-  width: 30%;
+  width: 400px;
 }
 
 .team-member-card {
@@ -1884,9 +1884,11 @@ body {
 
 /* Desktop view */
 @media (min-width: 1000px) {
-  .mobile-navigation-container {
+  .mobile-navigation-container,
+  .magnifying-glass {
     display: none;
   }
+
 }
 
 /* Mobile view */
@@ -1905,6 +1907,7 @@ body {
 
   .page-content {
     padding-top: 87px;
+    overflow-x: hidden;
   }
 
   /***
@@ -1980,6 +1983,70 @@ body {
 
   .navigation-dropdown-container:hover span {
     background: #f0eeee;
+  }
+
+  /***
+  * Mobile navigation menu
+  ***/
+
+  .mobile-navigation-menu {
+    width: 268px;
+    height: 585px;
+    display: inline-block;
+    position: absolute;
+    top: 72px;
+    right: 0;
+    background: #E6E6E6;
+    z-index: 20;
+    padding: 30px;
+  }
+
+  .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .slideInRight {
+    animation-name: slideInRight;
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .magnifying-glass {
+    width: 21px;
+    float: right;
+    margin-top: 6px;
+  }
+
+  .search-field {
+    margin-bottom: 10px;
+    padding: 3px 0 3px 8px;
+  }
+
+  .search-submit {
+    display: none;
+  }
+
+  .menu-item {
+    transform: none;
+    display: block;
+    margin: 8px 0 0 0;
+  }
+
+  .menu-item a {
+    color: #213556;
+    font-weight: bold;
   }
 
   /***
@@ -2180,6 +2247,5 @@ body {
     display: block;
     width: 120px;
   }
-
 
 }
