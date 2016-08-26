@@ -1071,6 +1071,10 @@ body {
   left: calc(-223px + 26%);
 }
 
+/***
+* Navigation
+***/
+
 .navigation-trapezoid {
   position: absolute;
   height: 37px;
@@ -1877,7 +1881,192 @@ body {
   }
 }
 
-@media (max-width: 1100px) {
+/* Desktop view */
+@media (min-width: 1000px) {
+  .mobile-navigation-container {
+    display: none;
+  }
+}
 
+/* Mobile view */
+@media (max-width: 1000px) {
+
+  /***
+  * Background
+  ***/
+
+  body {
+    background-image: url(https://s3-us-west-2.amazonaws.com/dh-rees/images/mobile-background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  .page-content {
+    padding-top: 87px;
+  }
+
+  /***
+  * Navigation
+  ***/
+
+  .header-blue,
+  .header-salmon,
+  .header-site-title,
+  .yale-logo,
+  .navigation-trapezoid {
+    display: none;
+  }
+
+  .mobile-navigation-container {
+    display: block;
+    width: 100%;
+    height: 72px;
+    background: #213556;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .mobile-navigation-brand .cls-2,
+  .mobile-navigation-brand .cls-3 {
+    fill: #fff
+  }
+
+  .mobile-navigation-brand {
+    width: 60px;
+    margin: 13px 0 0 30px;
+    display: inline-block;
+  }
+
+  .mobile-site-title {
+    display: inline-block;
+    height: 77px;
+    width: 284px;
+    position: absolute;
+    top: -10px;
+    transform: rotate(-45deg);
+    background: url(https://s3-us-west-2.amazonaws.com/dh-rees/images/soviet-background.png);
+    background-size: cover;
+    left: 32px;
+  }
+
+  .mobile-site-title object {
+    transform: rotate(45deg);
+    margin-left: 30px;
+    margin-top: 21px;
+    width: 260px;
+  }
+
+  /***
+  * Featured Project
+  ***/
+
+  .featured-image-stripe,
+  .featured-project-button {
+    display: none;
+  }
+
+  .featured-project-container {
+    width: 90%;
+    left: 5%;
+    margin-bottom: 130px;
+  }
+
+  .featured-project-image-container {
+    height: 54vw;
+  }
+
+  .featured-project-text-container {
+    top: 100%;
+    left: 0%;
+    width: 100%;
+  }
+
+  .subtitle-wrapper {
+    width: 200px;
+    height: 29px;
+    background: #213556;
+    display: inline-block;
+    margin-top: -14px;
+    transform: skew(-45deg);
+    left: -40px;
+  }
+
+  .subtitle {
+    padding-top: 8px;
+    color: #fff;
+    float: right;
+    margin-right: 30px;
+    transform: skew(45deg);
+  }
+
+  .featured-project-text-container .subtitle-wrapper {
+    margin-left: -107px;
+  }
+
+  .featured-project-title {
+    margin-top: 11px;
+  }
+
+  .featured-project-blurb {
+    margin-top: 7px;
+  }
+
+  /***
+  * Showcase projects
+  ***/
+
+  .showcase-project-container {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: 5%;
+    width: 90%;
+    display: inline-block;
+    overflow: visible;
+  }
+
+  .showcase-project {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+  }
+
+  .showcase-project-thumbnail {
+    height: 54vw;
+  }
+
+  .showcase-project-container .subtitle-wrapper {
+    position: absolute;
+    top: 54vw;
+    z-index: 5;
+    left: -72px;
+  }
+
+  .showcase-project-container .subtitle-2 {
+    left: -112px;
+  }
+
+  .showcase-project-title {
+    font-size: 1.5em;
+    margin-top: 30px;
+  }
+
+  .showcase-project-blurb {
+    margin-top: 3px;
+    margin-bottom: 20px;
+  }
+
+  .showcase-project-container .showcase-project:nth-of-type(2n) {
+    margin-left: 0;
+  }
+
+  .event-stripe {
+    top: -41%
+  }
+
+  .event-stripe-text {
+    margin: 3%;
+  }
 
 }
