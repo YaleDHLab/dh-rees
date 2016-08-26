@@ -82,6 +82,12 @@
       </object>
     </div><!-- .mobile-site-title -->
 
+    <div class="navigation-dropdown-container">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
   </div>
 
   <!-- Header content -->
