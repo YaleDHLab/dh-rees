@@ -22,12 +22,17 @@ get_header(); ?>
 
     <!-- Showcase project grid -->
     <div class="showcase-project-container">
-      <?php $query = new WP_Query( array( 'category_name' => 'showcase-project' ) );
+      <?php $card_count = 0;
+        $query = new WP_Query( array( 'category_name' => 'showcase-project' ) );
         if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
         <div class="showcase-project">
-          <div class="subtitle">
-            <?php echo get_post_meta($post->ID, 'showcase-section-title', true) ?>
+          <?php $card_count = $card_count + 1;
+             $class_name = "<div class='subtitle-wrapper subtitle-".$card_count."'>";
+             echo $class_name ?>
+            <div class="subtitle">
+              <?php echo get_post_meta($post->ID, 'showcase-section-title', true) ?>
+            </div>
           </div>
 
           <a href="#<?php echo esc_url( get_permalink() ); ?>">
@@ -64,7 +69,9 @@ get_header(); ?>
         <div class="mission-text">
           <?php $query = new WP_Query( array( 'category_name' => 'landing-page' ) );
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-              <?php echo "<div class='subtitle'>MISSION</div>"; ?>
+              <div class="subtitle-wrapper">
+                <?php echo "<div class='subtitle'>MISSION</div>"; ?>
+              </div>
               <?php echo get_post_meta($post->ID, 'site-mission', true); ?>
           <?php endwhile; endif; ?>
           <?php wp_reset_postdata(); ?>
@@ -73,7 +80,9 @@ get_header(); ?>
         <div class="connect-text">
           <?php $query = new WP_Query( array( 'category_name' => 'landing-page' ) );
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-              <?php echo "<div class='subtitle'>CONNECT</div>"; ?>
+              <div class="subtitle-wrapper">
+                <?php echo "<div class='subtitle'>CONNECT</div>"; ?>
+              </div>
               <?php echo get_post_meta($post->ID, 'connect', true); ?>
           <?php endwhile; endif; ?>
           <?php wp_reset_postdata(); ?>
