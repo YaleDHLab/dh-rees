@@ -4,84 +4,91 @@ var moveShapes = function() {
   var rootTwo = Math.pow(2, 0.5);
 
   /***
-  * Header
+  * The following changes apply only to large viewports
   ***/
 
-  /***
-  * Because the triangles in the top right of the page should grow
-  * proportionally with the document, and because they're rotated,
-  * they grow as a power of root two
-  ***/
+  if (windowWidth > 1000) {
 
-  var blueHeaderWidth =  rootTwo * windowWidth * .27;
+    /***
+    * Header
+    ***/
 
-  $(".header-blue").css({
-    "height": blueHeaderWidth + "px",
-    "width": blueHeaderWidth + "px",
-    "top": "-" + blueHeaderWidth/2 + "px",
-    "left": "-" + (blueHeaderWidth/2) -100 + "px"
-  });
+    /***
+    * Because the triangles in the top right of the page should grow
+    * proportionally with the document, and because they're rotated,
+    * they grow as a power of root two
+    ***/
 
-  var salmonHeaderWidth = rootTwo * windowWidth * (.27 + .155);
+    var blueHeaderWidth =  rootTwo * windowWidth * .27;
 
-  $(".header-salmon").css({
-    "height": salmonHeaderWidth + "px",
-    "width": salmonHeaderWidth + "px",
-    "top": "-" + salmonHeaderWidth/2 + "px",
-    "left": "-" + (salmonHeaderWidth/2) -100 + "px"
-  });
+    $(".header-blue").css({
+      "height": blueHeaderWidth + "px",
+      "width": blueHeaderWidth + "px",
+      "top": "-" + blueHeaderWidth/2 + "px",
+      "left": "-" + (blueHeaderWidth/2) -100 + "px"
+    });
 
-  /***
-  * Navigation
-  ***/
+    var salmonHeaderWidth = rootTwo * windowWidth * (.27 + .155);
 
-  /***
-  * To calculate the blue nav bar's left offset, compute:
-  * ((rootTwo * header-salmon's width) / 2 ) - offset
-  * 
-  * the offset should be = 75px + (1.61% viewport width)
-  * 75 because we want an overlap between blue navigation and the red image div
-  * and because of the translation applied to the blue div
-  ***/
+    $(".header-salmon").css({
+      "height": salmonHeaderWidth + "px",
+      "width": salmonHeaderWidth + "px",
+      "top": "-" + salmonHeaderWidth/2 + "px",
+      "left": "-" + (salmonHeaderWidth/2) -100 + "px"
+    });
 
-  var blueNavigationLeft = (rootTwo * $(".header-salmon").width()) / 2;
-  var blueNavigationLeftOffset = 175 + (windowWidth * 0.0161);
+    /***
+    * Navigation
+    ***/
 
-  $(".navigation-blue").css({
-    "left": blueNavigationLeft - blueNavigationLeftOffset + "px"
-  });
+    /***
+    * To calculate the blue nav bar's left offset, compute:
+    * ((rootTwo * header-salmon's width) / 2 ) - offset
+    * 
+    * the offset should be = 75px + (1.61% viewport width)
+    * 75 because we want an overlap between blue navigation and the red image div
+    * and because of the translation applied to the blue div
+    ***/
 
-  /***
-  * the grayNavigationLeft = the blue offset + width plus its own offset
-  * as we want space between the div and the blue div
-  ***/
+    var blueNavigationLeft = (rootTwo * $(".header-salmon").width()) / 2;
+    var blueNavigationLeftOffset = 175 + (windowWidth * 0.0161);
 
-  var grayNavigationLeft = blueNavigationLeft - blueNavigationLeftOffset + $(".navigation-blue").width();
-  var grayNavigationLeftOffset = windowWidth * 0.005;
+    $(".navigation-blue").css({
+      "left": blueNavigationLeft - blueNavigationLeftOffset + "px"
+    });
 
-  $(".navigation-gray").css({
-    "left": grayNavigationLeft + grayNavigationLeftOffset
-  });
+    /***
+    * the grayNavigationLeft = the blue offset + width plus its own offset
+    * as we want space between the div and the blue div
+    ***/
 
-  /***
-  * Brand navigation
-  ***/
+    var grayNavigationLeft = blueNavigationLeft - blueNavigationLeftOffset + $(".navigation-blue").width();
+    var grayNavigationLeftOffset = windowWidth * 0.005;
 
-  var brandNavigationLeft = (0.1696*windowWidth - 65.01);
+    $(".navigation-gray").css({
+      "left": grayNavigationLeft + grayNavigationLeftOffset
+    });
 
-  $(".navigation-brand").css({
-    "left": brandNavigationLeft - 100
-  });
+    /***
+    * Brand navigation
+    ***/
 
- /***
- * Site Title
- ***/
+    var brandNavigationLeft = (0.1696*windowWidth - 65.01);
 
-  var siteTitleTop = (windowWidth * -.01608) + 19.68;
-  $(".header-site-title").css({
-    "top": siteTitleTop
-  });
+    $(".navigation-brand").css({
+      "left": brandNavigationLeft - 100
+    });
 
+    /***
+    * Site Title
+    ***/
+
+    var siteTitleTop = (windowWidth * -.01608) + 19.68;
+    $(".header-site-title").css({
+      "top": siteTitleTop
+    });
+
+  };
 
   /***
   * Footer
