@@ -1182,6 +1182,8 @@ body {
   z-index: 3;
   padding-top: 110px;
   margin-top: 4%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 /***************
@@ -2068,5 +2070,93 @@ body {
   .event-stripe-text {
     margin: 3%;
   }
+
+  /***
+  * Parallelograms
+  ***/
+
+  .baby-blue-parallelogram,
+  .baby-blue-parallelogram-text {
+    display: none;
+  }
+
+  .parallelogram-container {
+    height: 24vw;
+    margin-bottom: 50px;
+  }
+
+  .gray-parallelogram {
+    position: relative;
+    height: 24vw;
+    width: 110%;
+    left: -16%;
+  }
+
+  .sign-up-gray-image {
+    height: 175%;
+    width: 128%;
+    margin-top: -18%;
+  }
+
+  .sign-up-button {
+    margin-top: 21vw;
+    left: calc(50% - 86px);
+  }
+
+  .mission-and-connect-container {
+    padding: 0 10% 0 10%;
+  }
+
+  .mission-text,
+  .connect-text {
+    float: none;
+    width: 100%;
+    margin: 0;
+    overflow: visible;
+  }
+
+  .mission-text {
+    margin-bottom: 20px;
+  }
+
+  .connect-text {
+    margin-bottom: 40px;
+  }
+
+  .mission-and-connect-container .subtitle-wrapper {
+    background: none;
+    display: block;
+    margin-top: 0;
+  }
+
+  .mission-and-connect-container .subtitle {
+    color: #00356B;
+    float: none;
+    display: block;
+  }
+
+  /***
+  * Footer
+  ***/
+
+  .footer-red-triangle {
+    display: none;
+  }
+
+  .yul-wordmark {
+    left: calc(50% - 112.5px);
+  }
+
+  .yul-wordmark img {
+    width: 225px;
+  }
+
+  .footer-icon-container {
+    left: calc(50% - 58px);
+    top: -17px;
+    display: block;
+    width: 120px;
+  }
+
 
 }
