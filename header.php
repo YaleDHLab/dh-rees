@@ -76,11 +76,12 @@
     </div><!--.mobile-navigation-brand -->
 
     <!-- DH-Rees title -->
-    <div class="mobile-site-title">
+    <a href="<?php echo get_home_url() ?>" class="mobile-site-title">
       <object data="https://s3-us-west-2.amazonaws.com/dh-rees/images/dhrees-logo.svg" type="image/svg+xml">
         <img src="https://s3-us-west-2.amazonaws.com/dh-rees/images/dhrees-logo.png" />
       </object>
-    </div><!-- .mobile-site-title -->
+    </a>
+    <!-- .mobile-site-title -->
 
     <div class="navigation-dropdown-container">
       <span></span>
@@ -88,6 +89,16 @@
       <span></span>
     </div>
 
+  </div>
+
+  <!-- Mobile dropdown navigation -->
+  <div class="mobile-navigation-menu hidden animated slideOutRight">
+    <div class="search-container">
+      <?php get_template_part( 'template-parts/search-form', 'none' ); ?>
+    </div>
+    <div class="link-container">
+      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+    </div>
   </div>
 
   <!-- Header content -->
