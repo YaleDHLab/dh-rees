@@ -23,6 +23,10 @@
 <!-- Fonts -->
 <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
+<!-- TypeKit -->
+<script src="https://use.typekit.net/vlc1ajh.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 <?php wp_head(); ?>
 </head>
 
