@@ -1014,7 +1014,7 @@ body {
 .header-site-title {
   width: calc(200px + 10%);
   position: absolute;
-  z-index: 3;
+  z-index: 5;
   left: calc(-98px + 26%);
   top: calc(76px - 3.5%);
 }
@@ -1024,7 +1024,7 @@ body {
   height: 37px;
   top: 50px;
   transform: skewX(-45deg);
-  box-shadow: 1px 2px 5px #4c4c4c;
+  box-shadow: 1px 2px 3px #2c2c2c;
 }
 
 .navigation-trapezoid {
@@ -1039,6 +1039,7 @@ body {
   background: rgba(0,0,0,.3);
   width: 9%;
   z-index: 4;
+  box-shadow: none;
 }
 
 .navigation-brand svg {
@@ -1065,7 +1066,7 @@ body {
   background: #00356B;
   width: 46.04%;
   left: 12.9366%;
-  z-index: 3;
+  z-index: 6;
 }
 
 .navigation-gray {
@@ -1352,23 +1353,9 @@ body {
   z-index: 2;
   width: 24%;
   left: 8%;
-  top: calc(-38px + 46%);
   font-size: .9em;
   line-height: 1.3em;
   color: #00356B;
-}
-
-@media (max-width: 900px) {
-  .baby-blue-parallelogram-text {
-    font-size: .8em;
-    top: calc(-32px + 46%);
-  }
-}
-
-@media (min-width: 1260px) {
-  .baby-blue-parallelogram-text {
-    font-size: 1.1em;
-  }
 }
 
 .sign-up-button {
@@ -1418,6 +1405,15 @@ body {
   display: inline-block;
   border-radius: 38px;
   background: #EF6362;
+  cursor: pointer;
+}
+
+.footer-icon:hover {
+  background: #C9E7DD;
+}
+
+.footer-icon:hover .cls-1 {
+  fill: #EF6362;
 }
 
 .footer-icon-container {
@@ -1444,6 +1440,96 @@ body {
 .footer-icon-github svg {
   margin: 6px 3px;
 }
+
+/***
+* About page
+***/
+
+/* Text Column */
+.about-text-column {
+  width: 37%;
+  padding: 40px;
+  background: #F1E5D9;
+  line-height: 1.3em;
+  font-size: .87em;
+  display: inline-block;
+  margin-left: 14%;
+  margin-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.about-text-stripe {
+  height: 156%;
+  width: 40%;
+  top: -69%;
+  background: rgba(255,255,255,0.4);
+  overflow: hidden;
+}
+
+.about-text {
+  position: relative;
+  z-index: 2;
+}
+
+.about-text p {
+  margin: 15px 0 0 0;
+}
+
+.about-text-title {
+  font-size: 1.8em;
+  display: inline-block;
+  margin: 15px 0 22px 0;
+}
+
+.about-subtitle {
+  font-size: 1.2em;
+}
+
+/* Team member cards */
+.team-member-cards-container {
+  display: inline-block;
+  margin-left: 30px;
+  width: 37%;
+}
+
+.team-member-card {
+  background: rgba(241,229,217,.93);
+  margin-bottom: 30px;
+  height: 150px;
+}
+
+.team-member-thumbnail {
+  float: left;
+}
+
+.team-member-text-container {
+  float: left;
+  margin: 20px;
+}
+
+.team-member-name {
+  font-size: 1.4em;
+}
+
+.team-member-position {
+  color: #826F69;
+  margin-top: 12px;
+  font-size: .87em;
+}
+
+.team-member-hover-stripe {
+  float: right;
+  width: 15px;
+  height: 100%;
+  background: #C9E7DD;
+}
+
+.team-member-card:hover .team-member-hover-stripe {
+  background: #EF6362;
+}
+
 /***
 * Project cards
 ***/
