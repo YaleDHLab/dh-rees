@@ -18,46 +18,91 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
     <!-- Featured project carosel -->
-    <div class="featured-project-container">
+    <div class="featured-project-container page-lane">
       <?php $query = new WP_Query( array( 'category_name' => 'featured-project' ) );
         if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
         <div class="featured-project-text-container">
           <div class="featured-project-title"><?php the_title(); ?></div>
             <div class="featured-project-blurb"><?php echo get_post_meta($post->ID, 'project-blurb', true); ?>
+            <div class="featured-project-button-container">
+              <a href="<?php echo esc_url( get_permalink() ); ?>">
+                <div class="button featured-project-button">View Project</div>
+              </a>
+            </div>
           </div> 
         </div>
 
         <div class="featured-project-image-container">
-          <div class="featured-project-image-wrapper">
-            <img class="featured-project-image" src="<?php the_post_thumbnail_url('original'); ?>" />
-          </div>
+        <div class="image-stripe featured-image-stripe"></div>
+           <img class="featured-project-image" src="<?php the_post_thumbnail_url('original'); ?>" />
         </div>
       <?php endwhile; endif; ?>
     </div>
-
 
     <!-- Showcase project grid -->
     <div class="showcase-project-container">
       <?php $query = new WP_Query( array( 'category_name' => 'showcase-project' ) );
         if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-        <a href="<?php echo esc_url( get_permalink() ); ?>">
-          <div class="showcase-project">
-            <div class="showcase-project-thumbnail-container">
-              <div class="showcase-project-thumbnail">
-                <img src="<?php the_post_thumbnail_url('large'); ?>"/>
-              </div>
-            </div>
-            <div class="showcase-project-title"><?php the_title(); ?></div>
-            <div class="showcase-project-author">By <?php echo get_post_meta($post->ID, 'project-author', true); ?></div>
+        <a href="<?php echo esc_url( get_permalink() ); ?>" class="showcase-project">
+          <?php
+            $event_month = get_post_meta($post->ID, 'event-month', true);
+            $event_day = get_post_meta($post->ID, 'event-day', true);
+            if ( strlen($event_month) == 3 && strlen($event_day) > 0) {
+              echo '<div class="image-stripe event-stripe"></div>';
+              echo '<div class="event-stripe-text">';
+                echo '<div class="event-stripe-month">'.$event_month.'</div>';
+                echo '<div class="event-stripe-day">'.$event_day.'</div>';
+              echo '</div>';
+            } else {};
+            unset($event_month);
+            unset($event_day);
+          ?>
+          <div class="showcase-project-thumbnail">
+            <img src="<?php the_post_thumbnail_url('large'); ?>"/>
           </div>
-        </a>
+          <div class="showcase-project-title"><?php the_title(); ?></div>
+          <div class="showcase-project-blurb"><?php echo get_post_meta($post->ID, 'project-blurb', true); ?></div>
+        </a><!-- .showcase-project -->
       <?php endwhile; endif; ?>
-    </div><!-- ,showcase-project-container -->
+      <?php wp_reset_postdata(); ?>
+      </div><!-- .showcase-project-container -->
 
-    <h2 class="cats"><?php echo get_theme_mod( 'good-looking-cats', 'meow' ); ?></h2>
+      <!-- Parallelograms -->
+      <div class="parallelogram-container">
+        <div class="baby-blue-parallelogram-text">
+      Join our listserve to stay informed about upcoming events, news and opportunities in the field.
+        </div>
+        <div class="button sign-up-button">Sign Up</div>
+        <div class="baby-blue-parallelogram"></div>
+        <div class="gray-parallelogram">
+          <div class="sign-up-gray-image"></div>
+        </div>
+      </div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+      <!-- Mission and Connect -->
+      <div class="mission-and-connect-container">
+        <div class="mission-text">
+          <?php $query = new WP_Query( array( 'category_name' => 'landing-page' ) );
+            if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+              <?php echo "<div class='subtitle'>MISSION</div>"; ?>
+              <?php echo get_post_meta($post->ID, 'site-mission', true); ?>
+          <?php endwhile; endif; ?>
+          <?php wp_reset_postdata(); ?>
+        </div><!-- .mission-text -->
+
+        <div class="connect-text">
+          <?php $query = new WP_Query( array( 'category_name' => 'landing-page' ) );
+            if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+              <?php echo "<div class='subtitle'>CONNECT</div>"; ?>
+              <?php echo get_post_meta($post->ID, 'connect', true); ?>
+          <?php endwhile; endif; ?>
+          <?php wp_reset_postdata(); ?>
+        </div><!-- .connect-text -->
+
+      </div><!-- .mission-and-connect-container -->
+
+    </main><!-- #main -->
+  </div><!-- #primary -->
 
 <?php
 get_sidebar();
