@@ -87,6 +87,11 @@ var moveShapes = function() {
     "top": distanceToFooter
   });
 
+  // also update the footer's red triangle
+  $(".footer-red-triangle").css({
+    "top": distanceToFooter
+  });
+
 };
 
 // resize items on document load, window load
