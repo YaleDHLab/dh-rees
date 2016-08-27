@@ -13,7 +13,15 @@
 
 	</div><!-- #content -->
 
+  <!-- Footer -->
   <div class="footer-blue">
+
+    <!-- Footer Red Triangle -->
+    <svg class="footer-red-triangle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" version="1.1" baseProfile="full">
+     <polygon points="0,0 140,140 140,0" />
+    </svg><!--.footer-red-triangle-->
+
+
     <div class="yul-wordmark">
       <img src="https://s3-us-west-2.amazonaws.com/dh-rees/images/yul-wordmark.png">
     </div>

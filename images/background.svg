@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="11892 2 2068 2840">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Background);
+      }
+
+      .cls-2 {
+        fill: #213556;
+      }
+
+      .cls-3 {
+        fill: #f1e5d9;
+        opacity: 0.4;
+      }
+
+      .cls-4 {
+        fill: #c9e7dd;
+        opacity: 0.5;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clip-Background">
+      <rect x="11892" y="2" width="2068" height="2840"/>
+    </clipPath>
+  </defs>
+  <g id="Background" class="cls-1">
+    <rect class="cls-5" x="11892" y="2" width="2068" height="2840"/>
+    <g id="group-88" transform="translate(11943.807 2)">
+      <path id="rectangle-6" class="cls-2" d="M-.494-.494,1723.528-11.472,1709.3,2222.3-14.718,2233.282Z" transform="translate(1015.439 973.269) rotate(-45)"/>
+      <path id="rectangle-5" class="cls-3" d="M-.5-.5,3732.728,23.272l3.879,609.121L3.379,608.621Z" transform="translate(-62.508 -143.462) rotate(45)"/>
+      <path id="rectangle-6-2" data-name="rectangle-6" class="cls-4" d="M-.494-.494l2773.34-17.66-1.6,251.4L-2.095,250.905Z" transform="translate(-232.989 1553.191) rotate(-45)"/>
+    </g>
+  </g>
+</svg>

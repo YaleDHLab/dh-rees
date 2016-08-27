@@ -899,8 +899,16 @@ object {
 
 html, body {
   height: 100%;
+  width: 100%;
   margin: 0;
   color: #00356B;
+}
+
+body {
+  background-image: url(https://s3-us-west-2.amazonaws.com/dh-rees/images/background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 /***
@@ -1097,27 +1105,6 @@ body {
   right: 0;
 }
 
-.baby-blue-stripe {
-  background: #C9E7DD;
-  width: 16.13%;
-  opacity: .5;
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-  transform: skewX(-45deg);
-  transform-origin: 100% 10%;
-}
-
-.cream-stripe {
-  background: #F1E5D9;
-  width: 44.9%;
-  opacity: .4;
-  position: absolute;
-  z-index: 2;
-  height: 100%;
-  transform: skewX(45deg);
-}
-
 .footer-salmon {
   height: 100px;
   width: 100px;
@@ -1143,7 +1130,6 @@ body {
   position: absolute;
   z-index: 3;
   padding-top: 110px;
-  padding-bottom: 90px;
   margin-top: 4%;
 }
 
@@ -1202,6 +1188,7 @@ body {
   left: 20.75%;
   max-height: 30%;
   position: relative; 
+  display: inline-block;
 }
 
 .featured-project-text-container {
@@ -1310,14 +1297,15 @@ body {
 ***/
 
 .parallelogram-container {
-  margin: 10px 0 10px 18.5%;
+  margin-left: 18.5%;
   position: relative;
+  height: 12vw;
 }
 
 .baby-blue-parallelogram {
   background: #c9e7dd;
   width: 45.5%;
-  height: 12vw;
+  height: 100%;
   opacity: 0.7;
   transform: skewX(45deg);
   z-index: 1;
@@ -1362,7 +1350,6 @@ body {
   position: absolute;
   z-index: 2;
   left: 41.5%;
-  top: calc(-19px + 48%);
 }
 
 /***
@@ -1370,7 +1357,7 @@ body {
 ***/
 
 .mission-and-connect-container {
-  padding: 20px 25% 120px 25%;
+  padding: 40px 25% 60px 25%;
 }
 
 .mission-text,
@@ -1392,6 +1379,17 @@ body {
 /***
 * Footer
 ***/
+
+svg.footer-red-triangle {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  background: url(https://s3-us-west-2.amazonaws.com/dh-rees/images/soviet-background.png);
+  background-size: cover;
+  fill: #fff;
+  bottom: 120px;
+  z-index: 0;
+}
 
 .yul-wordmark {
   display: inline-block;
@@ -1498,6 +1496,8 @@ body {
   background: rgba(241,229,217,.93);
   margin-bottom: 30px;
   height: 150px;
+  position: relative;
+  overflow: hidden;
 }
 
 .team-member-thumbnail {
@@ -1505,12 +1505,14 @@ body {
 }
 
 .team-member-text-container {
-  float: left;
-  margin: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 170px;
 }
 
 .team-member-name {
   font-size: 1.4em;
+  line-height: 1.2em;
 }
 
 .team-member-position {
@@ -1520,7 +1522,9 @@ body {
 }
 
 .team-member-hover-stripe {
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 15px;
   height: 100%;
   background: #C9E7DD;
@@ -1585,7 +1589,7 @@ body {
   font-family: Arial;
   line-height: 1.25em;
   text-decoration: none;
-  margin-top: 4px;
+  margin-top: 16px;
   color: #00356B;
 }
 
