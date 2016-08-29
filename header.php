@@ -84,9 +84,11 @@
     <!-- .mobile-site-title -->
 
     <div class="navigation-dropdown-container">
-      <span></span>
-      <span></span>
-      <span></span>
+      <div class="navigation-span-wrapper">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
 
   </div>

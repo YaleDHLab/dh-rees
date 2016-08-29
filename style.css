@@ -1181,7 +1181,7 @@ body {
   position: absolute;
   z-index: 3;
   padding-top: 50px;
-  padding-bottom: 60px;
+  padding-bottom: 70px;
   margin-top: 4%;
 }
 
@@ -1287,9 +1287,8 @@ body {
 }
 
 .button {
-  height: 37px;
   width: 140px;
-  padding: 9px 10px;
+  padding: 9px 0 8px 0;
   text-align: center;
   text-transform: uppercase;
   background: #00356B;
@@ -1964,7 +1963,6 @@ body {
   .navigation-dropdown-container {
     width: 70px;
     height: 70px;
-    padding: 28px 20px;
     position: absolute;
     right: 0;
     top: 0;
@@ -1972,9 +1970,13 @@ body {
     cursor: pointer;
   }
 
+  .navigation-span-wrapper {
+    padding: 24px 32px 24px 13px;
+  }
+
   .navigation-dropdown-container span {
     height: 4px;
-    width: 23px;
+    width: 100%;
     background: #fff;
     display: block;
     margin-bottom: 3px;
@@ -1999,6 +2001,11 @@ body {
     background: #E6E6E6;
     z-index: 20;
     padding: 30px;
+  }
+
+  .search-form {
+    height: 37px;
+    margin-bottom: 18px;
   }
 
   .animated {
@@ -2045,8 +2052,17 @@ body {
   }
 
   .search-field {
-    margin-bottom: 10px;
-    padding: 3px 0 3px 8px;
+    width: 170px;
+    height: 37px;
+    margin: 0 !important;
+    padding: 4px 0 4px 8px;
+    border-radius: 0px !important;
+    line-height: 37px !important;
+  }
+
+  /* remove safari default styles */
+  input, textarea, select {
+    -webkit-appearance: none;
   }
 
   .search-submit {
@@ -2056,7 +2072,7 @@ body {
   .menu-item {
     transform: none;
     display: block;
-    margin: 8px 0 0 0;
+    margin: 10px 0 0 0;
   }
 
   .menu-item a {
@@ -2077,10 +2093,6 @@ body {
     width: 90%;
     left: 5%;
     margin-bottom: 130px;
-  }
-
-  .featured-project-image-container {
-    height: 54vw;
   }
 
   .featured-project-text-container {
@@ -2139,13 +2151,8 @@ body {
     overflow: visible;
   }
 
-  .showcase-project-thumbnail {
-    height: 54vw;
-  }
-
   .showcase-project-container .subtitle-wrapper {
     position: absolute;
-    top: 54vw;
     z-index: 5;
     left: -72px;
   }
@@ -2204,8 +2211,10 @@ body {
   }
 
   .sign-up-button {
+    margin-top: 25%;
     margin-top: 21vw;
-    left: calc(50% - 86px);
+    margin-left: -86px;
+    left: 50%;
   }
 
   .mission-and-connect-container {
@@ -2257,10 +2266,24 @@ body {
   }
 
   .footer-icon-container {
-    left: calc(50% - 58px);
+    left: 50%;
+    margin-left: -58px;
     top: -17px;
     display: block;
     width: 120px;
+    height: 40px;
+    bottom: 0px;
   }
 
+}
+
+/* Cell specific styles */
+@media (max-width: 420px) {
+  .featured-project-container {
+    margin-bottom: 165px;
+  }
+
+  .navigation-span-wrapper {
+    padding: 24px 19px 24px 27px;
+  }
 }
