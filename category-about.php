@@ -61,8 +61,9 @@ get_header(); ?>
 
       <!-- Parallelograms -->
       <div class="clear-both"></div>
-      <?php get_template_part( 'template-parts/contact-parallelograms', 'none' ); ?>
-
+      <div class="about-page-parallelograms-container">
+        <?php get_template_part( 'template-parts/contact-parallelograms', 'none' ); ?>
+      </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
