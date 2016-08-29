@@ -109,6 +109,8 @@ function _s_scripts() {
   wp_enqueue_script( 'join-the-mailing-list', get_template_directory_uri() . '/js/join-the-mailing-list.js', array ( 'jquery' ), 1.1, false);
   wp_enqueue_script( 'vertically-center-divs', get_template_directory_uri() . '/js/vertically-center-divs.js', array ( 'jquery' ), 1.1, false);
 	wp_enqueue_script( 'mobile-menu', get_template_directory_uri() . '/js/mobile-menu.js', array(), '20151215', true );
+	wp_enqueue_script( 'position-vw-divs', get_template_directory_uri() . '/js/position-vw-divs.js', array(), '20151215', true );
+
 	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
