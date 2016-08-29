@@ -7,7 +7,7 @@ var moveShapes = function() {
   * The following changes apply only to large viewports
   ***/
 
-  if (windowWidth > 1000) {
+  if (windowWidth >= 1000) {
 
     /***
     * Header

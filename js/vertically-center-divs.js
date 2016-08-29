@@ -4,7 +4,7 @@ var verticallyCenter = function() {
   // only adjust elements on desktop views
   var windowWidth = $(window).width();
 
-  if (windowWidth > 1000) {
+  if (windowWidth >= 1000) {
 
     // calculate the height of the container
     var containerHeight = $(".baby-blue-parallelogram").height();
