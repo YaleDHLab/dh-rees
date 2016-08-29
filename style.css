@@ -1180,8 +1180,7 @@ body {
   width: 100%;
   position: absolute;
   z-index: 3;
-  padding-top: 50px;
-  padding-bottom: 70px;
+  padding-top: 100px;
   margin-top: 4%;
 }
 
@@ -1214,6 +1213,7 @@ body {
   display: inline-block;
   text-transform: uppercase;
   margin: 0 10px;
+  line-height: 0px;
 }
 
 .menu-item a {
@@ -1859,6 +1859,16 @@ body {
   display: none;
 }
 
+/*******************
+* Larger viewports *
+*******************/
+
+@media (min-width: 1850px) {
+  .event-stripe-text {
+    margin: 4.5%;
+  }
+}
+
 /*********************
 * Smaller viewpoerts *
 *********************/
@@ -1891,7 +1901,7 @@ body {
 }
 
 /* Mobile view */
-@media (max-width: 1000px) {
+@media (max-width: 999px) {
 
   /***
   * Background
@@ -2072,7 +2082,8 @@ body {
   .menu-item {
     transform: none;
     display: block;
-    margin: 10px 0 0 0;
+    margin: 10px 0 20px 0;
+    line-height: 1em;
   }
 
   .menu-item a {
@@ -2275,6 +2286,37 @@ body {
     bottom: 0px;
   }
 
+  /***
+  * About page
+  ***/
+
+  .about-page-parallelograms-container {
+    display: none;
+  }
+
+  .about-text-column,
+  .team-member-cards-container {
+    width: 60%;
+    margin-left: 20%;
+  } 
+
+  .about-text-column {
+    margin-bottom: 35px;
+    float: none;
+    clear: both;
+  }
+
+}
+
+/* Larger cell styles */
+@media (max-width: 600px) {
+  .about-text-column,
+  .team-member-cards-container {
+    width: 90%;
+    max-width: 90%;
+    margin-left: 5%
+  }
+
 }
 
 /* Cell specific styles */
@@ -2286,4 +2328,5 @@ body {
   .navigation-span-wrapper {
     padding: 24px 19px 24px 27px;
   }
+
 }
