@@ -22,6 +22,9 @@ var positionDivs = function() {
         background: 'none'
       });
 
+      // remove additional stripes
+      $(".image-stripe").remove();
+      $(".about-text-stripe").remove();
     }
   };
 };
