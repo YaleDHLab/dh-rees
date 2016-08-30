@@ -42,7 +42,7 @@ get_header(); ?>
       <?php $query = new WP_Query( array( 'category_name' => 'showcase-event' ) );
         $event_count = 0;
         if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-        <?php $showcase_section_subtitle = "UPCOMING EVENTS" ?>
+        <?php $showcase_section_subtitle = "EVENTS" ?>
 
         <?php $event_count = $event_count + 1;
           if ($event_count == 1) {
