@@ -1662,6 +1662,7 @@ body {
   display: flex;
   height: 13vw;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
   margin-right: 5px;
   box-shadow: 1px 2px 5px rgba(76,76,76,.5);
@@ -2173,7 +2174,7 @@ body {
     left: -72px;
   }
 
-  .showcase-project-container .subtitle-2 {
+  .showcase-project-container .subtitle-EVENTS {
     left: -112px;
   }
 

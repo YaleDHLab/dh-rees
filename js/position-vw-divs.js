@@ -4,7 +4,14 @@ var positionDivs = function() {
   // only adjust elements on mobile views
   var windowWidth = $(window).width();
 
-  if (windowWidth < 1000) {
+  if (windowWidth >= 1000) {
+    var imageHeight = windowWidth * .14;
+
+    $(".showcase-project-thumbnail").css({
+      height: imageHeight
+    });
+
+  } else {
 
     /***
     * Treat featured image assets
