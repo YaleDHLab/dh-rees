@@ -6,7 +6,12 @@
         <div class="subtitle">Feature</div>
       </div>
       <div class="featured-project-title"><?php the_title(); ?></div>
-        <div class="featured-project-blurb"><?php echo get_post_meta($post->ID, 'project-blurb', true); ?>
+      <div class="featured-project-blurb">
+        <?php if ($featured_item_type == "featured-project") {
+          echo get_post_meta($post->ID, 'project-blurb', true);
+        } elseif ($featured_item_type == "featured-event") {
+          echo get_post_meta($post->ID, 'event-blurb', true);
+        } ?>
         <div class="featured-project-button-container">
           <a href="#<?php echo esc_url( get_permalink() ); ?>">
             <div class="button featured-project-button">
