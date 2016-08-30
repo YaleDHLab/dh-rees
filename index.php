@@ -28,7 +28,7 @@ get_header(); ?>
 
         <div class="showcase-project">
           <?php $card_count = $card_count + 1;
-             $class_name = "<div class='subtitle-wrapper subtitle-".$card_count."'>";
+             $class_name = "<div class='subtitle-wrapper landing-page-subtitle subtitle-".$card_count."'>";
              echo $class_name ?>
             <div class="subtitle">
               <?php echo get_post_meta($post->ID, 'showcase-section-title', true) ?>
@@ -69,7 +69,7 @@ get_header(); ?>
         <div class="mission-text">
           <?php $query = new WP_Query( array( 'category_name' => 'landing-page' ) );
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-              <div class="subtitle-wrapper">
+              <div class="subtitle-wrapper landing-page-subtitle">
                 <?php echo "<div class='subtitle'>MISSION</div>"; ?>
               </div>
               <?php echo get_post_meta($post->ID, 'site-mission', true); ?>
@@ -80,7 +80,7 @@ get_header(); ?>
         <div class="connect-text">
           <?php $query = new WP_Query( array( 'category_name' => 'landing-page' ) );
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-              <div class="subtitle-wrapper">
+              <div class="subtitle-wrapper landing-page-subtitle">
                 <?php echo "<div class='subtitle'>CONNECT</div>"; ?>
               </div>
               <?php echo get_post_meta($post->ID, 'connect', true); ?>
