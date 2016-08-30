@@ -27,6 +27,11 @@
     </div>
     <div class="showcase-project-title"><?php the_title(); ?></div>
     <div class="showcase-project-blurb">
-      <?php echo get_post_meta($post->ID, 'project-blurb', true); ?></div>
+      <?php if ($showcase_section_type == 'projects') {
+        echo get_post_meta($post->ID, 'project-blurb', true);
+      } elseif ($showcase_section_type == 'events') {
+        echo get_post_meta($post->ID, 'event-blurb', true);
+      } ?>
+    </div>
   </a>
 </div><!-- .showcase-project -->
