@@ -63,7 +63,7 @@ get_header(); ?>
                   <?php echo get_post_meta($post->ID, 'event-time-line', true); ?>
                 </div>
                 <div class="event-text">
-                  <?php the_content(); ?>
+                  <?php echo get_post_meta($post->ID, 'event-blurb', true); ?>
                 </div>
               </div>
  
