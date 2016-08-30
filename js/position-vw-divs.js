@@ -26,7 +26,7 @@ var positionDivs = function() {
       });
     });
 
-    var subtitles = $(".subtitle-wrapper");
+    var subtitles = $(".landing-page-subtitle");
     subtitles.each(function() {
       $(this).css({
         top: imageHeight + 7
