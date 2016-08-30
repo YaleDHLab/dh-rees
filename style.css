@@ -2311,6 +2311,49 @@ body {
     clear: both;
   }
 
+  /***
+  * Events page
+  ***/
+
+  .upcoming-events-container {
+    padding: 20px 0;
+  }
+
+  .upcoming-events-control-row .subtitle-wrapper {
+    width: 250px;
+    left: -48px;
+    position: relative;
+  }
+
+  .upcoming-event {
+    width: 90%;
+    height: 45%;
+    margin: 0 5%;
+    overflow: hidden;
+    padding-bottom: 140px;
+    position: relative;
+  }
+
+  .event-text-container {
+    width: 100%;
+    position: absolute;
+    height: 150px;
+    margin-top: 54vw;
+    padding: 15px 0;
+  }
+
+  .upcoming-event:hover .event-text-container {
+    background: none;
+  }
+
+  .event-hover-strip {
+    display: none;
+  }
+
+  .event-image-container {
+    width: 100%;
+    float: none;
+  }
 }
 
 /* Larger cell styles */
