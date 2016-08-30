@@ -1660,7 +1660,6 @@ body {
 
 .showcase-project-thumbnail {
   display: flex;
-  height: 13vw;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -2336,7 +2335,7 @@ body {
 
   .event-text-container {
     width: 100%;
-    height: 120px;
+    height: 140px;
     padding: 15px 0;
   }
 
