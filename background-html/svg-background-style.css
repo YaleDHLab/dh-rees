@@ -1,0 +1,175 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header-blue {
+  height: 240px;
+  width: 240px;
+  position: absolute;
+  transform: rotate(45deg);
+  background: #213556;
+  top: -120px;
+  left: -120px;
+  z-index: 4;
+}
+
+.header-salmon {
+  height: 384px;
+  width: 384px;
+  position: absolute;
+  transform: rotate(45deg);
+  background: #ef6362;
+  top: -192px;
+  left: -192px;
+  z-index: 3;
+}
+
+.header-salmon-image {
+  height: 100%;
+  width: 100%;
+  background: url(soviet-background.png);
+  transform: rotate(-90deg);
+  background-size: 157%;
+}
+
+.navigation-brand {
+  position: absolute;
+  background: #000;
+  opacity: 0.3;
+  height: 7%;
+  width: 13%;
+  top: 50px;
+  transform: skewX(-45deg);
+  z-index: 4;
+}
+
+.navigation-blue {
+  background: #00356B;
+  position: absolute;
+  top: 50px;
+  height: 7%;
+  width: 46.04%;
+  left: 12.9366%;
+  transform: skewX(-45deg);
+  z-index: 3;
+}
+
+.navigation-gray {
+  background: #F1E5D9;
+  opacity: 0.5;
+  position: absolute;
+  top: 50px;
+  height: 7%;
+  width: 11.639%;
+  left: 82.826%;
+  transform: skewX(-45deg);
+  z-index: 4;
+}
+
+.main-blue-triangle {
+  background: #213556;
+  -webkit-clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+  clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+  position: absolute;
+  right: 0;
+  z-index: 0;
+  height: 0;
+}
+
+.blue-triangle-svg-container {
+  position: absolute;
+  right: 0;
+}
+
+.blue-triangle-svg {
+  position: absolute;
+  right: 0;
+}
+
+.baby-blue-stripe {
+  background: #C9E7DD;
+  width: 16.13%;
+  opacity: .5;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  transform: skewX(-45deg);
+  transform-origin: 100% 10%;
+}
+
+.cream-stripe {
+  background: #F1E5D9;
+  width: 44.9%;
+  opacity: .4;
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  transform: skewX(45deg);
+}
+
+.baby-blue-parallelogram {
+  background: #c9e7dd;
+  width: 41.5%;
+  height: 13%;
+  opacity: 0.7;
+  transform: skewX(45deg);
+  position: absolute;
+  bottom: 20.2%;
+  left: 18%;
+  z-index: 4;
+  display: none;
+}
+
+.gray-parallelogram {
+  background: #d8d8d8;
+  opacity: 0.7;
+  width: 29.5%;
+  height: 13%;
+  opacity: 0.8;
+  transform: skewX(45deg);
+  position: absolute;
+  bottom: 20.2%;
+  left: 59.5%;
+  z-index: 3;
+  display: none;
+}
+
+.footer-salmon {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: 50px;
+  transform: rotate(45deg);
+  background: #ef6362;
+  left: -50px;
+  display: none;
+}
+
+.footer-blue {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background: #213556;
+  z-index: 4;
+}
+
+.page-content {
+  height: 1000px;
+  width: 58.5%;
+  left: 20.75%;
+  background: #F1E5D9;
+  position: absolute;
+  z-index: 10;
+  opacity: .9;
+  top: 151px;
+  margin-bottom: 100px;
+}
