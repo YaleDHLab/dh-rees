@@ -24,7 +24,9 @@ get_header(); ?>
       <div class="upcoming-events-column">
         <div class="upcoming-events-container">
           <div class="upcoming-events-control-row">
-            <div class="subtitle">UPCOMING EVENTS</div>
+            <div class="subtitle-wrapper">
+              <div class="subtitle">UPCOMING EVENTS</div>
+            </div>
           </div>
           <?php $query = new WP_Query( array( 'category_name' => 'event' ) );
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
