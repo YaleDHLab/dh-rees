@@ -4,7 +4,7 @@ This repository houses the source code for a WordPress theme for the Digital Hum
 
 #### Logging In
 
-To log in to the admin portal of this WordPress site, please visit: http://ec2-52-37-250-134.us-west-2.compute.amazonaws.com/wp-login.php and submit your user credentials.
+To log in to the admin portal of this WordPress site, please visit: http://ec2-52-38-86-138.us-west-2.compute.amazonaws.com/wp-login.php and submit your user credentials.
 
 #### Adding Content
 
