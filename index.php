@@ -19,7 +19,7 @@ get_header(); ?>
 
     <!-- Featured project carosel -->
     <?php $featured_item_type = 'featured-project';
-      include(locate_template( 'template-parts/featured-project-carousel.php') ); ?>
+      include(locate_template( 'template-parts/featured-item-carousel.php') ); ?>
 
     <!-- Showcase project and event grid -->
     <div class="showcase-project-container">
