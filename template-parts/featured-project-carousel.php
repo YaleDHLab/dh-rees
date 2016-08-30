@@ -8,7 +8,7 @@
       <div class="featured-project-title"><?php the_title(); ?></div>
         <div class="featured-project-blurb"><?php echo get_post_meta($post->ID, 'project-blurb', true); ?>
         <div class="featured-project-button-container">
-          <a href="<?php echo esc_url( get_permalink() ); ?>">
+          <a href="#<?php echo esc_url( get_permalink() ); ?>">
             <div class="button featured-project-button">View Project</div>
           </a>
         </div>
