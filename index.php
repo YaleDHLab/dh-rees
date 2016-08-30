@@ -18,47 +18,38 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
     <!-- Featured project carosel -->
-    <?php get_template_part( 'template-parts/featured-project-carousel', 'none' ); ?>
+    <?php $featured_item_type = 'featured-project';
+      include(locate_template( 'template-parts/featured-project-carousel.php') ); ?>
 
-    <!-- Showcase project grid -->
+    <!-- Showcase project and event grid -->
     <div class="showcase-project-container">
-      <?php $card_count = 0;
-        $query = new WP_Query( array( 'category_name' => 'showcase-project' ) );
+
+      <!-- Showcase project -->
+      <?php $query = new WP_Query( array( 'category_name' => 'showcase-project' ) );
+        $project_count = 0;
         if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+        <?php $showcase_section_subtitle = "WHAT'S NEW" ?>
 
-        <div class="showcase-project">
-          <?php $card_count = $card_count + 1;
-             $class_name = "<div class='subtitle-wrapper landing-page-subtitle subtitle-".$card_count."'>";
-             echo $class_name ?>
-            <div class="subtitle">
-              <?php echo get_post_meta($post->ID, 'showcase-section-title', true) ?>
-            </div>
-          </div>
+        <?php $project_count = $project_count + 1;
+          if ($project_count == 1) {
+            include(locate_template( 'template-parts/showcase-project.php') );
+        } ?>
 
-          <a href="#<?php echo esc_url( get_permalink() ); ?>">
-            <?php
-              $event_month = get_post_meta($post->ID, 'event-month', true);
-              $event_day = get_post_meta($post->ID, 'event-day', true);
-              if ( strlen($event_month) == 3 && strlen($event_day) > 0) {
-                echo '<div class="image-stripe event-stripe"></div>';
-                echo '<div class="event-stripe-text">';
-                  echo '<div class="event-stripe-month">'.$event_month.'</div>';
-                  echo '<div class="event-stripe-day">'.$event_day.'</div>';
-                echo '</div>';
-              } else {};
-              unset($event_month);
-              unset($event_day);
-            ?>
-            <div class="showcase-project-thumbnail">
-              <img src="<?php the_post_thumbnail_url('large'); ?>"/>
-            </div>
-            <div class="showcase-project-title"><?php the_title(); ?></div>
-            <div class="showcase-project-blurb">
-              <?php echo get_post_meta($post->ID, 'project-blurb', true); ?></div>
-          </a>
-        </div><!-- .showcase-project -->
         <?php endwhile; endif; ?>
       <?php wp_reset_postdata(); ?>
+
+      <!-- Showcase event -->
+      <?php $query = new WP_Query( array( 'category_name' => 'showcase-event' ) );
+        $event_count = 0;
+        if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+        <?php $showcase_section_subtitle = "UPCOMING EVENTS" ?>
+
+        <?php $event_count = $event_count + 1;
+          if ($event_count == 1) {
+            include(locate_template( 'template-parts/showcase-project.php') );
+        } ?>
+        <?php endwhile; endif; ?>
+        <?php wp_reset_postdata(); ?>
       </div><!-- .showcase-project-container -->
 
       <!-- Parallelograms -->
