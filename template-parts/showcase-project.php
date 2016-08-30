@@ -1,5 +1,7 @@
 <div class="showcase-project">
-  <div class='subtitle-wrapper landing-page-subtitle subtitle-1'>
+  <?php $class_name = 'subtitle-wrapper landing-page-subtitle subtitle-';
+        $class_name = $class_name.$showcase_section_subtitle;
+        echo "<div class='".$class_name."'>"; ?>
     <div class="subtitle">
       <?php echo $showcase_section_subtitle; ?>
     </div>
@@ -18,6 +20,7 @@
       } else {};
       unset($event_month);
       unset($event_day);
+      unset($class_name);
     ?>
     <div class="showcase-project-thumbnail">
       <img src="<?php the_post_thumbnail_url('large'); ?>"/>
