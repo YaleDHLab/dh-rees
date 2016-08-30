@@ -31,6 +31,12 @@ get_header(); ?>
           </div>
           <?php $query = new WP_Query( array( 'category_name' => 'event' ) );
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+
+            <!-- Display only non-featured events -->
+            <?php if (has_category('featured-event', $post)) {
+              continue;
+             } ?>
+
             <div class="upcoming-event">
               <div class="event-image-container">
                 <?php
