@@ -21,7 +21,18 @@ var verticallyCenter = function() {
 
   var buttonOffset = (containerHeight - totalButtonHeight) / 2;
   button.css({"marginTop": buttonOffset});
-}
+
+  // also vertically center the nav links
+  var containerHeight = $(".menu-rees-menu-container").height();
+  var link = $(".menu-item a");
+  var linkHeight = link.height();
+  var requiredTop = (containerHeight-linkHeight)/2;
+
+  link.css({
+    "marginTop": requiredTop
+  });
+
+};
 
 $(document).ready(verticallyCenter);
 $(window).on("load resize", verticallyCenter);

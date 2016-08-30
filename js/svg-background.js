@@ -8,8 +8,9 @@ var moveShapes = function() {
   ***/
 
   /***
-  * The decimal values here indicate the percent of the viewport
-  * (a.k.a document) occupied by the topmost region of the shape
+  * Because the triangles in the top right of the page should grow
+  * proportionally with the document, and because they're rotated,
+  * they grow as a power of root two
   ***/
 
   var blueHeaderWidth =  rootTwo * windowWidth * .27;
@@ -18,7 +19,7 @@ var moveShapes = function() {
     "height": blueHeaderWidth + "px",
     "width": blueHeaderWidth + "px",
     "top": "-" + blueHeaderWidth/2 + "px",
-    "left": "-" + blueHeaderWidth/2 + "px"
+    "left": "-" + (blueHeaderWidth/2) -100 + "px"
   });
 
   var salmonHeaderWidth = rootTwo * windowWidth * (.27 + .155);
@@ -27,7 +28,7 @@ var moveShapes = function() {
     "height": salmonHeaderWidth + "px",
     "width": salmonHeaderWidth + "px",
     "top": "-" + salmonHeaderWidth/2 + "px",
-    "left": "-" + salmonHeaderWidth/2 + "px"
+    "left": "-" + (salmonHeaderWidth/2) -100 + "px"
   });
 
   /***
@@ -44,7 +45,7 @@ var moveShapes = function() {
   ***/
 
   var blueNavigationLeft = (rootTwo * $(".header-salmon").width()) / 2;
-  var blueNavigationLeftOffset = 75 + (windowWidth * 0.0161);
+  var blueNavigationLeftOffset = 175 + (windowWidth * 0.0161);
 
   $(".navigation-blue").css({
     "left": blueNavigationLeft - blueNavigationLeftOffset + "px"
@@ -69,8 +70,18 @@ var moveShapes = function() {
   var brandNavigationLeft = (0.1696*windowWidth - 65.01);
 
   $(".navigation-brand").css({
-    "left": brandNavigationLeft
+    "left": brandNavigationLeft - 100
   });
+
+ /***
+ * Site Title
+ ***/
+
+  var siteTitleTop = (windowWidth * -.01608) + 19.68;
+  $(".header-site-title").css({
+    "top": siteTitleTop
+  });
+
 
   /***
   * Footer
