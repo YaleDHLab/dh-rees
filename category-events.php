@@ -31,16 +31,6 @@ get_header(); ?>
           <?php $query = new WP_Query( array( 'category_name' => 'event' ) );
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="upcoming-event">
-              <div class="event-text-container">
-                <div class="event-hover-strip"></div>
-                <div class="event-title"><?php the_title(); ?></div>
-                <div class="event-time-line">
-                  <?php echo get_post_meta($post->ID, 'event-time-line', true); ?>
-                </div>
-                <div class="event-text">
-                  <?php the_content(); ?>
-                </div>
-              </div>
               <div class="event-image-container">
                 <?php
                   $event_month = get_post_meta($post->ID, 'event-month', true);
@@ -58,7 +48,18 @@ get_header(); ?>
                 <div class="showcase-project-thumbnail">
                   <img src="<?php the_post_thumbnail_url('large'); ?>"/>
                 </div>
+              </div><!--.event-image-container-->
+              <div class="event-text-container">
+                <div class="event-hover-strip"></div>
+                <div class="event-title"><?php the_title(); ?></div>
+                <div class="event-time-line">
+                  <?php echo get_post_meta($post->ID, 'event-time-line', true); ?>
+                </div>
+                <div class="event-text">
+                  <?php the_content(); ?>
+                </div>
               </div>
+ 
             </div>
           <?php endwhile; endif; ?>
           <?php wp_reset_postdata(); ?>

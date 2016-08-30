@@ -2330,15 +2330,12 @@ body {
     height: 45%;
     margin: 0 5%;
     overflow: hidden;
-    padding-bottom: 140px;
     position: relative;
   }
 
   .event-text-container {
     width: 100%;
-    position: absolute;
-    height: 150px;
-    margin-top: 54vw;
+    height: 120px;
     padding: 15px 0;
   }
 
