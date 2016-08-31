@@ -21,6 +21,16 @@ var positionDivs = function() {
       height: showcaseImageHeight
     });
 
+    var parallelogramContainerHeight = windowWidth * .12;
+    $(".parallelogram-container").css({
+      height: parallelogramContainerHeight
+    });
+
+    var grayParallelogramHeight = windowWidth * .12;
+    $(".gray-parallelogram").css({
+      height: grayParallelogramHeight
+    });
+
   } else {
 
     /***
@@ -43,11 +53,24 @@ var positionDivs = function() {
       });
     });
 
+    // adjust subtitles
     var subtitles = $(".landing-page-subtitle");
     subtitles.each(function() {
       $(this).css({
         top: imageHeight + 7
       });
+    });
+
+    // set the parallelogram height
+    var parallelogramContainerHeight = windowWidth * .24;
+    $(".parallelogram-container").css({
+      height: parallelogramContainerHeight
+    });
+
+    // the gray parallelogram height
+    var grayParallelogramHeight = windowWidth * .24;
+    $(".gray-parallelogram").css({
+      height: grayParallelogramHeight
     });
 
   };
