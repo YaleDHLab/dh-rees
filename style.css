@@ -1854,9 +1854,8 @@ body {
 ***/
 
 .project-full-text-container {
-  width: 58.5%;
+  width: 100%;
   position: relative;
-  left: 20.75%;
   background: #F1E5D9;
   display: inline-block;
   box-shadow: 1px 2px 5px rgba(76,76,76,.5);
@@ -1878,7 +1877,7 @@ body {
 
 .author {
   font-family: Interstate;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 /***
@@ -2388,6 +2387,16 @@ body {
     width: 100%;
     float: none;
   }
+
+  /***
+  * Single Page Project / Event
+  ***/
+
+  .single-page-wrapper .featured-project-container {
+    margin-bottom: 50px;
+  }
+
+
 }
 
 /* Larger cell styles */
