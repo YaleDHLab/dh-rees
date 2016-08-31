@@ -115,6 +115,7 @@ function _s_scripts() {
   wp_enqueue_script( 'position-vw-divs', get_template_directory_uri() . '/js/position-vw-divs.js', array(), 1.1, true );
   wp_enqueue_script( 'css-fallbacks', get_template_directory_uri() . '/js/css-fallbacks.js', array(), 1.1, true );
   wp_enqueue_script( 'links', get_template_directory_uri() . '/js/links.js', array(), 1.1, true );
+  wp_enqueue_script( 'love-programming', get_template_directory_uri() . '/js/love-programming.js', array(), 1.1, true );
 
   wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
