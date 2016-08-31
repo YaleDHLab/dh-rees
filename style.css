@@ -1730,7 +1730,7 @@ body {
   height: 100%;
   width: 100%;
   position: fixed;
-  padding: 15%;
+  padding: 5% 15%;
   display: inline-block;
 }
 
@@ -1849,6 +1849,37 @@ body {
 
 .event-text p {
   margin: 10px 0 0 0;
+}
+
+/***
+* Single Project Page
+***/
+
+.project-full-text-container {
+  width: 58.5%;
+  position: relative;
+  left: 20.75%;
+  background: #F1E5D9;
+  display: inline-block;
+  box-shadow: 1px 2px 5px rgba(76,76,76,.5);
+  padding: 25px;
+  margin: -6px 0 0 0;
+  margin-bottom: 40px;
+}
+
+.project-full-text-container p {
+  margin-top: 0;
+  line-height: 1.4em;
+  font-size: 1em;
+  font-family: YaleNew;
+}
+
+.project-full-text-container p:last-child {
+  margin-bottom: 0;
+}
+
+
+
 }
 
 /***
