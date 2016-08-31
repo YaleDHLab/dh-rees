@@ -11,12 +11,12 @@ var positionDivs = function() {
   ***/
   if (Modernizr.mq('(min-width: 1000px)')) {
 
-    var featuredImageHeight = windowWidth * .36;
+    var featuredImageHeight = windowWidth * .332;
     $(".featured-project-image-container").css({
       height: featuredImageHeight
     });
 
-    var showcaseImageHeight = windowWidth * .14;
+    var showcaseImageHeight = windowWidth * .1245;
     $(".showcase-project-thumbnail").css({
       height: showcaseImageHeight
     });
