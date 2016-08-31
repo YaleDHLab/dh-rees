@@ -76,11 +76,12 @@
     </div><!--.mobile-navigation-brand -->
 
     <!-- DH-Rees title -->
-    <a href="<?php echo get_home_url() ?>" class="mobile-site-title">
+    <div class="mobile-site-title-link"></div>
+    <div class="mobile-site-title">
       <object data="https://s3-us-west-2.amazonaws.com/dh-rees/images/dhrees-logo.svg" type="image/svg+xml">
         <img src="https://s3-us-west-2.amazonaws.com/dh-rees/images/dhrees-logo.png" />
       </object>
-    </a>
+    </div>
     <!-- .mobile-site-title -->
 
     <div class="navigation-dropdown-container">
@@ -119,6 +120,7 @@
   </div>
 
   <!-- DH-Rees logo -->
+  <div class="header-site-title-link"></div>
   <div class="header-site-title">
     <object data="https://s3-us-west-2.amazonaws.com/dh-rees/images/dhrees-logo.svg" type="image/svg+xml">
       <img src="https://s3-us-west-2.amazonaws.com/dh-rees/images/dhrees-logo.png" />
