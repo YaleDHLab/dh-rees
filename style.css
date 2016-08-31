@@ -1290,7 +1290,7 @@ body {
   padding: 9px 0 8px 0;
   text-align: center;
   text-transform: uppercase;
-  background: #00356B;
+  background: #213556;
   display: inline-block;
   cursor: pointer;
   color: #fff;
@@ -1784,7 +1784,7 @@ body {
 
 .upcoming-event {
   width: 93%;
-  height: 12vw;
+  height: 12.8vw;
   margin-bottom: 40px;
 }
 
@@ -2243,6 +2243,10 @@ body {
     margin-bottom: 50px;
   }
 
+  .events-parallelograms {
+    margin-bottom: 70px;
+  }
+
   .gray-parallelogram {
     position: relative;
     height: 24vw;
@@ -2259,8 +2263,11 @@ body {
   .sign-up-button {
     margin-top: 25%;
     margin-top: 21vw;
-    margin-left: -86px;
-    left: 50%;
+    /* the delta between left value and traditional left value is
+    * due to the container that holds the sign up button, which
+    * has a left offset already */
+    margin-left: -70px;
+    left: 38.65%;
   }
 
   .mission-and-connect-container {
@@ -2333,6 +2340,7 @@ body {
   .team-member-cards-container {
     width: 60%;
     margin-left: 20%;
+    margin-bottom: 30px;
   } 
 
   .about-text-column {
