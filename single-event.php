@@ -19,28 +19,23 @@ get_header(); ?>
       <div class="featured-project-container">
         <div class="featured-project-text-container">
           <div class="subtitle-wrapper">
-            <div class="subtitle">Project</div>
+            <div class="subtitle">Event</div>
           </div>
           <div class="featured-project-title"><?php the_title(); ?></div>
-          <div class="featured-project-blurb">
-            <?php echo get_post_meta($post->ID, 'project-blurb', true); ?>
-          </div>
         </div>
         <div class="featured-project-image-container">
           <div class="image-stripe featured-image-stripe"></div>
           <img class="featured-project-image" src="<?php the_post_thumbnail_url('original'); ?>" />
         </div>
-      </div>
+      </div>      
       <div class="project-full-text-container">
         <div class="author">
-          <?php echo get_post_meta($post->ID, 'project-author', true); ?>
+          <?php echo get_post_meta($post->ID, 'event-author', true); ?>
         </div>
         <?php echo the_content();
-          endwhile; // End of the loop. ?>
+          endwhile; ?>
       </div>
 
-
-      </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

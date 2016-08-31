@@ -1321,7 +1321,7 @@ body {
 
 .featured-image-stripe {
   height: 200%;
-  width: 29%;
+  width: 39%;
   top: -69%;
   background: rgba(255,255,255,.8);
 }
@@ -1362,7 +1362,6 @@ body {
 .parallelogram-container {
   margin-left: 18.5%;
   position: relative;
-  height: 12vw;
 }
 
 .baby-blue-parallelogram {
@@ -1861,7 +1860,7 @@ body {
   background: #F1E5D9;
   display: inline-block;
   box-shadow: 1px 2px 5px rgba(76,76,76,.5);
-  padding: 25px;
+  padding: 45px;
   margin: -6px 0 0 0;
   margin-bottom: 40px;
 }
@@ -1877,8 +1876,9 @@ body {
   margin-bottom: 0;
 }
 
-
-
+.author {
+  font-family: Interstate;
+  margin-bottom: 20px;
 }
 
 /***
@@ -2239,7 +2239,6 @@ body {
   }
 
   .parallelogram-container {
-    height: 24vw;
     margin-bottom: 50px;
   }
 

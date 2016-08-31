@@ -13,7 +13,7 @@
           echo get_post_meta($post->ID, 'event-blurb', true);
         } ?>
         <div class="featured-project-button-container">
-          <a href="#<?php echo esc_url( get_permalink() ); ?>">
+          <a href="<?php echo esc_url( get_permalink() ); ?>">
             <div class="button featured-project-button">
               <?php if ($featured_item_type == "featured-project") {
                 echo "View Project";

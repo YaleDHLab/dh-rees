@@ -19,6 +19,9 @@ get_header(); ?>
         if ( in_category( 'project' ) ) {
           include( TEMPLATEPATH.'/single-project.php' );
         }
+        elseif ( in_category( 'event' ) ) {
+          include( TEMPLATEPATH.'/single-event.php' );
+        }
         else {
           include( TEMPLATEPATH.'/single-generic.php' );
         }
@@ -28,5 +31,4 @@ get_header(); ?>
   </div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
