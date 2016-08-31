@@ -1,10 +1,37 @@
 // position divs as a function of viewport width
 var positionDivs = function() {
 
-  // only adjust elements on mobile views
   var windowWidth = $(window).width();
 
-  if (windowWidth < 1000) {
+  // desktop styles
+
+  /***
+  * NB: use Modernizr.mq to check width, rather than jquery width
+  * as the latter doesn't account for the scrollbar width evidently
+  ***/
+  if (Modernizr.mq('(min-width: 1000px)')) {
+
+    var featuredImageHeight = windowWidth * .332;
+    $(".featured-project-image-container").css({
+      height: featuredImageHeight
+    });
+
+    var showcaseImageHeight = windowWidth * .1245;
+    $(".showcase-project-thumbnail").css({
+      height: showcaseImageHeight
+    });
+
+    var parallelogramContainerHeight = windowWidth * .12;
+    $(".parallelogram-container").css({
+      height: parallelogramContainerHeight
+    });
+
+    var grayParallelogramHeight = windowWidth * .12;
+    $(".gray-parallelogram").css({
+      height: grayParallelogramHeight
+    });
+
+  } else {
 
     /***
     * Treat featured image assets
@@ -26,11 +53,24 @@ var positionDivs = function() {
       });
     });
 
+    // adjust subtitles
     var subtitles = $(".landing-page-subtitle");
     subtitles.each(function() {
       $(this).css({
         top: imageHeight + 7
       });
+    });
+
+    // set the parallelogram height
+    var parallelogramContainerHeight = windowWidth * .24;
+    $(".parallelogram-container").css({
+      height: parallelogramContainerHeight
+    });
+
+    // the gray parallelogram height
+    var grayParallelogramHeight = windowWidth * .24;
+    $(".gray-parallelogram").css({
+      height: grayParallelogramHeight
     });
 
   };

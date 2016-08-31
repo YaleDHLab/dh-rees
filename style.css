@@ -1071,6 +1071,16 @@ body {
   left: calc(-223px + 26%);
 }
 
+.header-site-title-link {
+  width: calc(1.4 * 7.5vw);
+  height: 20vw;
+  position: absolute;
+  z-index: 10;
+  transform: rotate(45deg);
+  margin-top: -4.6%;
+  cursor: pointer;
+}
+
 /***
 * Navigation
 ***/
@@ -1106,6 +1116,7 @@ body {
   position: relative;
   bottom: 8px;
   left: -4px;
+  cursor: pointer;
 }
 
 /* navigation brand svg path styles */
@@ -1265,15 +1276,15 @@ body {
 }
 
 .featured-project-blurb {
-  margin-top: 24px;
-  line-height: 1.4em;
-  font-size: 1em;
-  font-family: YaleNew; 
+  margin-top: 18px;
+  width: 70%;
+  line-height: 1.35em;
+  font-size: .9em;
+  font-family: "acumin-pro";
 }
 
 .featured-project-image-container {
   display: flex;
-  height: 36vw;
   justify-content: center;
   overflow: hidden;
   position: relative;
@@ -1291,7 +1302,7 @@ body {
   padding: 9px 0 8px 0;
   text-align: center;
   text-transform: uppercase;
-  background: #00356B;
+  background: #213556;
   display: inline-block;
   cursor: pointer;
   color: #fff;
@@ -1322,8 +1333,8 @@ body {
 
 .featured-image-stripe {
   height: 200%;
-  width: 29%;
-  top: -69%;
+  width: 32%;
+  top: -68%;
   background: rgba(255,255,255,.8);
 }
 
@@ -1341,7 +1352,7 @@ body {
   color: #fff;
   position: absolute;
   z-index: 1;
-  margin: 5.5%;
+  margin: 6.5%;
   font-family: InterstateBlack;
 }
 
@@ -1363,7 +1374,6 @@ body {
 .parallelogram-container {
   margin-left: 18.5%;
   position: relative;
-  height: 12vw;
 }
 
 .baby-blue-parallelogram {
@@ -1405,8 +1415,8 @@ body {
   z-index: 2;
   width: 26%;
   left: 8%;
-  font-size: 1.33em;
-  line-height: 1.2em;
+  font-size: 1.3em;
+  line-height: 1.3em;
   color: #00356B;
   font-family: YaleNew;
   font-style: italic;
@@ -1595,7 +1605,7 @@ body {
 }
 
 .team-member-name {
-  font-size: 1.45em;
+  font-size: 1.475em;
   line-height: 1.15em;
   font-family: YaleNew;
 }
@@ -1603,7 +1613,8 @@ body {
 .team-member-position {
   color: #826F69;
   margin-top: 12px;
-  font-size: .87em;
+  font-size: .85em;
+  letter-spacing: .25px;
   font-family: Interstate;
 }
 
@@ -1660,8 +1671,8 @@ body {
 
 .showcase-project-thumbnail {
   display: flex;
-  height: 13vw;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
   margin-right: 5px;
   box-shadow: 1px 2px 5px rgba(76,76,76,.5);
@@ -1684,7 +1695,7 @@ body {
 
 .showcase-project-blurb {
   color: #00356B;
-  font-family: YaleNew;
+  font-family: "acumin-pro";
   font-size: 1em;
   margin-top: 10px;
 }
@@ -1730,7 +1741,7 @@ body {
   height: 100%;
   width: 100%;
   position: fixed;
-  padding: 15%;
+  padding: 5% 15%;
   display: inline-block;
 }
 
@@ -1785,7 +1796,7 @@ body {
 
 .upcoming-event {
   width: 93%;
-  height: 12vw;
+  height: 12.8vw;
   margin-bottom: 40px;
 }
 
@@ -1840,15 +1851,53 @@ body {
   color: #826F69;
   font-size: .9em;
   margin-top: 10px;
+  letter-spacing: .5px;
 }
 
 .event-text {
-  font-family: YaleNew;
-  line-height: 1.2;
+  font-family: "acumin-pro";
+  line-height: 1.5;
+  font-size: .9em;
 }
 
 .event-text p {
   margin: 10px 0 0 0;
+}
+
+/***
+* Single Project Page
+***/
+
+.project-full-text-container {
+  width: 100%;
+  position: relative;
+  background: #F1E5D9;
+  display: inline-block;
+  box-shadow: 1px 2px 5px rgba(76,76,76,.5);
+  padding: 45px;
+  margin: -6px 0 0 0;
+  margin-bottom: 40px;
+}
+
+.project-full-text-container p {
+  margin-top: 0;
+  line-height: 1.4em;
+  font-size: 1em;
+  font-family: "acumin-pro";
+}
+
+.project-full-text-container p:last-child {
+  margin-bottom: 0;
+}
+
+.author {
+  font-family: Interstate;
+  margin: 20px 0;
+  color: #826f69;
+  margin-bottom: 24px;
+  margin-top: 12px;
+  font-size: .9em;
+  letter-spacing: .5px;
 }
 
 /***
@@ -1976,6 +2025,18 @@ body {
     width: 60px;
     margin: 13px 0 0 30px;
     display: inline-block;
+  }
+
+  .mobile-site-title-link {
+    display: inline-block;
+    height: 77px;
+    width: 284px;
+    position: absolute;
+    top: -10px;
+    transform: rotate(-45deg);
+    left: 32px;
+    z-index: 10;
+    cursor: pointer;
   }
 
   .mobile-site-title {
@@ -2173,7 +2234,7 @@ body {
     left: -72px;
   }
 
-  .showcase-project-container .subtitle-2 {
+  .showcase-project-container .subtitle-EVENTS {
     left: -112px;
   }
 
@@ -2209,8 +2270,11 @@ body {
   }
 
   .parallelogram-container {
-    height: 24vw;
     margin-bottom: 50px;
+  }
+
+  .events-parallelograms {
+    margin-bottom: 70px;
   }
 
   .gray-parallelogram {
@@ -2229,8 +2293,11 @@ body {
   .sign-up-button {
     margin-top: 25%;
     margin-top: 21vw;
-    margin-left: -86px;
-    left: 50%;
+    /* the delta between left value and traditional left value is
+    * due to the container that holds the sign up button, which
+    * has a left offset already */
+    margin-left: -70px;
+    left: 38.65%;
   }
 
   .mission-and-connect-container {
@@ -2243,6 +2310,7 @@ body {
     width: 100%;
     margin: 0;
     overflow: visible;
+    font-family: "acumin-pro";
   }
 
   .mission-text {
@@ -2303,12 +2371,17 @@ body {
   .team-member-cards-container {
     width: 60%;
     margin-left: 20%;
+    margin-bottom: 30px;
   } 
 
   .about-text-column {
     margin-bottom: 35px;
     float: none;
     clear: both;
+  }
+
+  .about-text-container {
+    font-family: "acumin-pro";
   }
 
   /***
@@ -2335,7 +2408,7 @@ body {
 
   .event-text-container {
     width: 100%;
-    height: 120px;
+    height: 140px;
     padding: 15px 0;
   }
 
@@ -2351,6 +2424,16 @@ body {
     width: 100%;
     float: none;
   }
+
+  /***
+  * Single Page Project / Event
+  ***/
+
+  .single-page-wrapper .featured-project-container {
+    margin-bottom: 50px;
+  }
+
+
 }
 
 /* Larger cell styles */

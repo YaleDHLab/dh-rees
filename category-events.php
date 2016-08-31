@@ -18,7 +18,8 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
       <!-- Featured project carosel -->
-      <?php get_template_part( 'template-parts/featured-project-carousel', 'none' ); ?>
+      <?php $featured_item_type = 'featured-event';
+        include(locate_template( 'template-parts/featured-item-carousel.php') ); ?>
 
       <!-- Upcoming Events column -->
       <div class="upcoming-events-column">
@@ -30,6 +31,12 @@ get_header(); ?>
           </div>
           <?php $query = new WP_Query( array( 'category_name' => 'event' ) );
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+
+            <!-- Display only non-featured events -->
+            <?php if (has_category('featured-event', $post)) {
+              continue;
+             } ?>
+
             <div class="upcoming-event">
               <div class="event-image-container">
                 <?php
@@ -56,7 +63,7 @@ get_header(); ?>
                   <?php echo get_post_meta($post->ID, 'event-time-line', true); ?>
                 </div>
                 <div class="event-text">
-                  <?php the_content(); ?>
+                  <?php echo get_post_meta($post->ID, 'event-blurb', true); ?>
                 </div>
               </div>
  
@@ -68,11 +75,11 @@ get_header(); ?>
 
       <!-- Parallelograms -->
       <div class="clear-both"></div>
-      <?php get_template_part( 'template-parts/contact-parallelograms', 'none' ); ?>
-
+      <div class="events-parallelograms">
+        <?php get_template_part( 'template-parts/contact-parallelograms', 'none' ); ?>
+      <div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
