@@ -1669,7 +1669,6 @@ body {
 .showcase-project-thumbnail {
   display: flex;
   justify-content: center;
-  align-items: center;
   overflow: hidden;
   margin-right: 5px;
   box-shadow: 1px 2px 5px rgba(76,76,76,.5);
