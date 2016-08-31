@@ -46,6 +46,7 @@
   <div class="mobile-navigation-container">
 
     <!-- DHLab logo -->
+    <div class="mobile-navigation-brand-link"></div>
     <div class="mobile-navigation-brand">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="179 43 74.27 59">
         <defs>
