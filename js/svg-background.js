@@ -38,6 +38,15 @@ var moveShapes = function() {
     });
 
     /***
+    * Site title link
+    ***/
+
+    var siteTitleLink = $(".header-site-title-link");
+    siteTitleLink.css({
+      left: (windowWidth * .24) - 101.7
+    });
+
+    /***
     * Navigation
     ***/
 
