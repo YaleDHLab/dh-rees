@@ -1273,7 +1273,6 @@ body {
 
 .featured-project-image-container {
   display: flex;
-  height: 36vw;
   justify-content: center;
   overflow: hidden;
   position: relative;
