@@ -1079,7 +1079,6 @@ body {
   transform: rotate(45deg);
   margin-top: -4.6%;
   cursor: pointer;
-  left: 401px;
 }
 
 /***
@@ -1416,8 +1415,8 @@ body {
   z-index: 2;
   width: 26%;
   left: 8%;
-  font-size: 1.33em;
-  line-height: 1.2em;
+  font-size: 1.3em;
+  line-height: 1.3em;
   color: #00356B;
   font-family: YaleNew;
   font-style: italic;
@@ -1606,7 +1605,7 @@ body {
 }
 
 .team-member-name {
-  font-size: 1.45em;
+  font-size: 1.475em;
   line-height: 1.15em;
   font-family: YaleNew;
 }
@@ -1614,7 +1613,8 @@ body {
 .team-member-position {
   color: #826F69;
   margin-top: 12px;
-  font-size: .87em;
+  font-size: .85em;
+  letter-spacing: .25px;
   font-family: Interstate;
 }
 
@@ -1856,7 +1856,8 @@ body {
 
 .event-text {
   font-family: "acumin-pro";
-  line-height: 1.2;
+  line-height: 1.5;
+  font-size: .9em;
 }
 
 .event-text p {
