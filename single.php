@@ -7,28 +7,17 @@
  * @package _s
  */
 
-get_header(); ?>
+  $post = $wp_query->post;
 
-  <div id="primary" class="content-area">
-    <div class="page-type-single"></div>
-    <main id="main" class="site-main" role="main">
+  if ( in_category( 'project' ) ) {
+    include( TEMPLATEPATH.'/single-project.php' );
+  }
+  elseif ( in_category( 'event' ) ) {
+    include( TEMPLATEPATH.'/single-event.php' );
+  }
+  else {
+    include( TEMPLATEPATH.'/single-generic.php' );
+  }
+?>
 
-      <?php
-        $post = $wp_query->post;
 
-        if ( in_category( 'project' ) ) {
-          include( TEMPLATEPATH.'/single-project.php' );
-        }
-        elseif ( in_category( 'event' ) ) {
-          include( TEMPLATEPATH.'/single-event.php' );
-        }
-        else {
-          include( TEMPLATEPATH.'/single-generic.php' );
-        }
-      ?>
-
-    </main><!-- #main -->
-  </div><!-- #primary -->
-
-<?php
-get_footer();
