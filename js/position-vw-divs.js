@@ -1,14 +1,24 @@
 // position divs as a function of viewport width
 var positionDivs = function() {
 
-  // only adjust elements on mobile views
   var windowWidth = $(window).width();
 
-  if (windowWidth >= 1000) {
-    var imageHeight = windowWidth * .14;
+  // desktop styles
 
+  /***
+  * NB: use Modernizr.mq to check width, rather than jquery width
+  * as the latter doesn't account for the scrollbar width evidently
+  ***/
+  if (Modernizr.mq('(min-width: 1000px)')) {
+
+    var featuredImageHeight = windowWidth * .36;
+    $(".featured-project-image-container").css({
+      height: featuredImageHeight
+    });
+
+    var showcaseImageHeight = windowWidth * .14;
     $(".showcase-project-thumbnail").css({
-      height: imageHeight
+      height: showcaseImageHeight
     });
 
   } else {
