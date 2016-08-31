@@ -974,11 +974,6 @@ body {
   src: url("fonts/Interstate-Italic.otf") format("opentype");
 }
 
-@font-face {
-  font-family: InterstateBlack;
-  src: url("fonts/InterstateMono-Black.otf") format("opentype");
-}
-
 /***
 * Font sizing
 ***/
@@ -1306,7 +1301,7 @@ body {
   display: inline-block;
   cursor: pointer;
   color: #fff;
-  font-size: .725em; 
+  font-size: .8em;
   font-family: Interstate;
   letter-spacing: .1em;
 }
@@ -1330,12 +1325,11 @@ body {
   z-index: 1;
 }
 
-
 .featured-image-stripe {
   height: 200%;
-  width: 32%;
+  width: 30%;
   top: -68%;
-  background: rgba(255,255,255,.8);
+  background: rgba(255,255,255,.85);
 }
 
 .event-stripe {
@@ -1353,18 +1347,21 @@ body {
   position: absolute;
   z-index: 1;
   margin: 6.5%;
-  font-family: InterstateBlack;
+  font-family: acumin-pro;
 }
 
 .event-stripe-month {
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .event-stripe-day {
-  font-size: 21px;
+  font-size: 22px;
   line-height: 23px;
   margin: -21% 0%;
   text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 /***
@@ -1442,7 +1439,7 @@ body {
   display: inline-block;
   font-size: 1em;
   overflow: auto;
-  font-family: TimesNew;
+  font-family: acumin-pro;
 }
 
 .mission-text {
@@ -1696,7 +1693,7 @@ body {
 .showcase-project-blurb {
   color: #00356B;
   font-family: "acumin-pro";
-  font-size: 1em;
+  font-size: .9em;
   margin-top: 10px;
 }
 
@@ -2003,7 +2000,8 @@ body {
   .header-salmon,
   .header-site-title,
   .yale-logo,
-  .navigation-trapezoid {
+  .navigation-trapezoid,
+  .header-site-title-link {
     display: none;
   }
 
@@ -2027,6 +2025,15 @@ body {
     display: inline-block;
   }
 
+  /* link to yale dh */
+.mobile-navigation-brand-link {
+    width: 80px;
+    height: 70px;
+    position: absolute;
+    z-index: 10;
+    left: 20px;
+    cursor: pointer;
+}
   .mobile-site-title-link {
     display: inline-block;
     height: 77px;
