@@ -39,8 +39,13 @@ get_header(); ?>
 
       <!-- Team member cards -->
       <div class="team-member-cards-container">
-      <?php $query = new WP_Query( array( 'category_name' => 'team-member' ) );
+      <?php $query = new WP_Query( array(
+          'category_name' => 'team-member',
+          'meta_key' => 'sort-order',
+          'orderby' => 'meta_value_num',
+          'order' => 'ASC' ) );
         if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+
           <div class="team-member-card">
             <div class="team-member-thumbnail">
               <?php the_post_thumbnail('thumbnail'); ?>
