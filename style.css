@@ -1271,7 +1271,7 @@ body {
 }
 
 .featured-project-blurb {
-  margin-top: 18px;
+  margin-top: 15px;
   width: 70%;
   line-height: 1.35em;
   font-size: .9em;
@@ -1565,6 +1565,7 @@ body {
   line-height: 1em;
   display: inline-block;
   margin-bottom: 22px;
+  font-family: YaleNew
 }
 
 .about-subtitle {
@@ -1602,6 +1603,7 @@ body {
 .team-member-name {
   font-size: 1.475em;
   line-height: 1.15em;
+  font-family: YaleNew;
 }
 
 .team-member-position {
