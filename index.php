@@ -65,7 +65,9 @@ get_header(); ?>
               <div class="subtitle-wrapper landing-page-subtitle">
                 <?php echo "<div class='subtitle'>MISSION</div>"; ?>
               </div>
-              <?php echo get_post_meta($post->ID, 'site-mission', true); ?>
+              <div class="mission-text-content">
+                <?php echo get_post_meta($post->ID, 'site-mission', true); ?>
+              </div>
           <?php endwhile; endif; ?>
           <?php wp_reset_postdata(); ?>
         </div><!-- .mission-text -->
@@ -76,7 +78,9 @@ get_header(); ?>
               <div class="subtitle-wrapper landing-page-subtitle">
                 <?php echo "<div class='subtitle'>CONNECT</div>"; ?>
               </div>
-              <?php echo get_post_meta($post->ID, 'connect', true); ?>
+              <div class="connect-text-content">
+                <?php echo get_post_meta($post->ID, 'connect', true); ?>
+              </div>
           <?php endwhile; endif; ?>
           <?php wp_reset_postdata(); ?>
         </div><!-- .connect-text -->

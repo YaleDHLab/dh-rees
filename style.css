@@ -1535,6 +1535,7 @@ body {
   position: relative;
   overflow: hidden;
   float: left;
+  font-family: 'acumin-pro';
 }
 
 .about-text-stripe {
@@ -1551,7 +1552,6 @@ body {
 }
 
 .about-text-main {
-  font-family: YaleNew;
   font-size: 1.15em;
   line-height: 1.5em;
 }
@@ -1565,13 +1565,11 @@ body {
   line-height: 1em;
   display: inline-block;
   margin-bottom: 22px;
-  font-family: YaleNew;
 }
 
 .about-subtitle {
   font-size: 1.4em;
   line-height: 1.35em;
-  font-family: YaleNew;
   font-style: italic;
   margin-bottom: 45px;
 }
@@ -1604,7 +1602,6 @@ body {
 .team-member-name {
   font-size: 1.475em;
   line-height: 1.15em;
-  font-family: YaleNew;
 }
 
 .team-member-position {
@@ -2119,6 +2116,7 @@ body {
     animation-fill-mode: both;
   }
 
+  /* Introduce browser bug
   .slideInRight {
     animation-name: slideInRight;
   }
@@ -2126,6 +2124,7 @@ body {
   .slideOutRight {
     animation-name: slideOutRight;
   }
+  */
 
   .magnifying-glass {
     width: 21px;
@@ -2325,6 +2324,11 @@ body {
 
   .connect-text {
     margin-bottom: 40px;
+  }
+
+  .mission-text-content,
+  .connect-text-content {
+    font-size: .9em;
   }
 
   .mission-and-connect-container .subtitle-wrapper {
