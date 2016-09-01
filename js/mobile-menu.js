@@ -6,7 +6,7 @@ $(document).ready(function() {
     } else {
       setTimeout(function() {
         $(".mobile-navigation-menu").addClass("hidden");
-      }, 500);
+      }, 0);
       $(".mobile-navigation-menu").toggleClass("slideInRight slideOutRight");
     }
   });
