@@ -39,18 +39,19 @@ get_header(); ?>
               continue;
              } ?>
 
+            
             <div class="project">
               <div class="project-image-container">
                 <div class="project-thumbnail">
-                  <img src="<?php the_post_thumbnail_url('large'); ?>"/>
+                   <a href="<?php echo esc_url( get_permalink() ); ?>"><img src="<?php the_post_thumbnail_url('large'); ?>"/></a>
                 </div>
               </div>
               <div class="project-text-container">
-              	<div class="project-title"><?php the_title(); ?></div>
+              	<div class="project-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></div>
 			  	<div class="author"><?php the_author(); ?></div>
               </div>
             </div>
-
+        
 
           <?php endwhile; endif; ?>
           <?php wp_reset_postdata(); ?>

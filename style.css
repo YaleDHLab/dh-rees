@@ -1898,6 +1898,10 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.project-title a, .project-title a:hover, .project-title a:active, .project-title a:visited {
+	text-decoration: none;
+	color: #00356B;
+}
 
 .event-time-line {
   font-family: Interstate;
