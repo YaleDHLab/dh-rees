@@ -17,8 +17,8 @@ get_header(); ?>
   <div id="primary" class="content-area">
     <div class="page-type-category-projects"></div>
     <main id="main" class="site-main" role="main">
-	    
-	  <!-- Featured project carosel -->
+
+      <!-- Featured project carosel -->
       <?php $featured_item_type = 'featured-project';
         include(locate_template( 'template-parts/featured-item-carousel.php') );
       ?>
@@ -31,7 +31,6 @@ get_header(); ?>
               <div class="subtitle">ALL PROJECTS</div>
             </div>
           </div>
-          <div style="-webkit-column-count: 2;-moz-column-count: 2;column-count: 2;">
           <?php $query = new WP_Query( array( 'category_name' => 'project' ) );
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
@@ -39,23 +38,24 @@ get_header(); ?>
               continue;
              } ?>
 
-            
             <div class="project">
               <div class="project-image-container">
                 <div class="project-thumbnail">
-                   <a href="<?php echo esc_url( get_permalink() ); ?>"><img src="<?php the_post_thumbnail_url('large'); ?>"/></a>
+                  <a href="<?php echo esc_url( get_permalink() ); ?>">
+                    <img src="<?php the_post_thumbnail_url('large'); ?>"/>
+                  </a>
                 </div>
               </div>
               <div class="project-text-container">
-              	<div class="project-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></div>
-			  	<div class="author"><?php the_author(); ?></div>
+                <div class="project-title">
+                  <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
+                </div>
+                <div class="author"><?php the_author(); ?></div>
               </div>
             </div>
-        
 
           <?php endwhile; endif; ?>
           <?php wp_reset_postdata(); ?>
-          </div>
         </div>
       </div>
 
@@ -64,8 +64,8 @@ get_header(); ?>
       <div class="events-parallelograms">
         <?php get_template_part( 'template-parts/contact-parallelograms', 'none' ); ?>
       <div>
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    </main><!-- #main -->
+  </div><!-- #primary -->
 
 <?php
 get_footer();
