@@ -51,11 +51,11 @@ get_header(); ?>
                   <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
                 </div>
                 <div class="author">
-	                <?php  $author = get_post_meta($post->ID, 'project-author', true); 
-		                	if ($author) {echo $author;}
-		                	else {echo '&nbsp;';}
-		                		 ?>
-	                </div>
+                <?php  $author = get_post_meta($post->ID, 'project-author', true);
+                  if ($author) {echo $author;}
+                    else {echo '&nbsp;';}
+                ?>
+                </div>
               </div>
             </div>
 
