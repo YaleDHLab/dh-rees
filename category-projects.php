@@ -50,7 +50,12 @@ get_header(); ?>
                 <div class="project-title">
                   <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
                 </div>
-                <div class="author"><?php the_author(); ?></div>
+                <div class="author">
+	                <?php  $author = get_post_meta($post->ID, 'project-author', true); 
+		                	if ($author) {echo $author;}
+		                	else {echo '&nbsp;';}
+		                		 ?>
+	                </div>
               </div>
             </div>
 
