@@ -1801,7 +1801,6 @@ body {
   overflow: hidden;
 }
 
-
 .project-image-container {
 
   text-decoration: none;
@@ -1828,12 +1827,6 @@ body {
   margin-bottom: 40px;
 }
 
-.project {
-  width: 93%;
-  height: 12.8vw;
-  margin-bottom: 120px;
-}
-
 .event-text-container {
   display: inline-block;
   width: 58%;
@@ -1851,12 +1844,9 @@ body {
   background: #F1E5D9;
 }
 
-
-
 .upcoming-event:hover .event-title {
   color: #EF6362;
 }
-
 
 .event-hover-strip {
   position: absolute;
@@ -1869,9 +1859,6 @@ body {
 .upcoming-event:hover .event-hover-strip {
   background: #EF6362;
 }
-
-
-
 
 .event-title {
   font-size: 1.4em;
@@ -1897,10 +1884,6 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.project-title a, .project-title a:hover, .project-title a:active, .project-title a:visited {
-	text-decoration: none;
-	color: #00356B;
 }
 
 .event-time-line {
@@ -1958,6 +1941,34 @@ body {
 }
 
 /***
+* Projects listing page
+***/
+
+.project {
+  width: 44.9%;
+  height: 12.8vw;
+  margin-bottom: 120px;
+  display: inline-block;
+}
+
+.project-title a {
+  text-decoration: none;
+	color: #00356B;
+}
+
+.project-thumbnail a {
+  width: 100%;
+}
+
+.projects-container .project:nth-child(2n) {
+  margin-right: 9%;
+}
+
+.projects-container .project-thumbnail img {
+  max-width: 110%;
+}
+
+/***
 * Widget area
 ***/
 
@@ -1979,7 +1990,6 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-
 
 @keyframes slideOutRight {
   from {
@@ -2281,7 +2291,8 @@ body {
   * Showcase projects
   ***/
 
-  .showcase-project-container {
+  .showcase-project-container,
+  .projects-container {
     padding: 0;
     margin: 0;
     position: relative;
@@ -2512,7 +2523,15 @@ body {
     margin-bottom: 50px;
   }
 
+  /***
+  * Projects listing page
+  ***/
 
+  .project {
+    width: 100%;
+    margin-right: 0px;
+    height: 53vw;
+  }
 }
 
 /* Larger cell styles */
