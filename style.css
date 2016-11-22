@@ -1920,6 +1920,15 @@ body {
   display: none;
 }
 
+
+/***
+* 404 page
+***/
+
+.four-oh-four-container {
+  margin: 60px 27%;
+}
+
 /*************
 * Animations *
 *************/
