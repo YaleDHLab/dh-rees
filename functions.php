@@ -132,7 +132,7 @@ add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
-  register_post_type( 'dhrees_project',
+  register_post_type( 'dhrees-project',
     array(
       'labels' => array(
         'name' => __( 'Projects' ),
