@@ -4,3 +4,4 @@ fonts/*
 node_modules/
 package.json
 phantomjs/
+.github-token
