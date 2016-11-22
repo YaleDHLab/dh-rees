@@ -26,12 +26,13 @@ get_header(); ?>
             <?php the_title(); ?>
           </div>
           <div class="author">
-            <?php echo get_post_meta($post->ID, 'event-author', true); ?>
+            <?php echo get_post_meta($post->ID, 'project-author', true); ?>
           </div>
-          <?php echo the_content(); ?>
-        </div> <!--.project-full-text-container-->
-        <?php endwhile; ?>
-      </div><!--.featured-project-container-->
+          <?php echo the_content();
+          endwhile; // End of the loop. ?>
+        </div>
+      </div>
+
     </div>
   </main><!-- #main -->
 </div><!-- #primary -->
