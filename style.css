@@ -1028,13 +1028,13 @@ body {
 }
 
 .header-salmon {
-  height: 384px;
-  width: 384px;
+  height: 46vw;
+  width: 46vw;
   position: absolute;
   transform: rotate(45deg);
   background: #ef6362;
-  top: -192px;
-  left: -192px;
+  top: -23vw;
+  left: -23vw;
   z-index: 3;
 }
 
@@ -1130,7 +1130,7 @@ body {
 .navigation-blue {
   background: #00356B;
   width: calc(46.04% + 100px);
-  left: 27%;
+  left: 25%;
   z-index: 6;
 }
 
@@ -1138,7 +1138,7 @@ body {
   background: #F1E5D9;
   opacity: 0.5;
   width: 11.639%;
-  left: 82.826%;
+  left: 80.826%;
   z-index: 4;
 }
 
@@ -1180,6 +1180,7 @@ body {
   width: 100%;
   background: #213556;
   z-index: 4;
+  top: 100vh;
 }
 
 .page-content {
@@ -2325,9 +2326,7 @@ body {
   }
 
   .sign-up-button {
-    margin-top: 25%;
-    margin-top: 21vw;
-    /* the delta between left value and traditional left value is
+   /* the delta between left value and traditional left value is
     * due to the container that holds the sign up button, which
     * has a left offset already */
     margin-left: -70px;
