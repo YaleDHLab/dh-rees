@@ -140,10 +140,24 @@ function create_post_type() {
       ),
       'public' => true,
       'has_archive' => true,
-      'supports' => array( 'title', 'editor', 'thumbnail' )
+      'supports' => array( 'title', 'editor', 'thumbnail' ),
+      'show_in_nav_menus' => true
+    )
+  );
+  register_post_type( 'dhrees-event',
+    array(
+      'labels' => array(
+        'name' => __( 'Events' ),
+        'singular_name' => __( 'Event' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array( 'title', 'editor', 'thumbnail' ),
+      'show_in_nav_menus' => true
     )
   );
 }
+
 
 /**
  * Implement the Custom Header feature.
