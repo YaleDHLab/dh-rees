@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <a href="#<?php echo esc_url( get_permalink() ); ?>">
+  <a href="<?php echo esc_url( get_permalink() ); ?>">
     <?php
       $event_month = get_post_meta($post->ID, 'event-month', true);
       $event_day = get_post_meta($post->ID, 'event-day', true);
