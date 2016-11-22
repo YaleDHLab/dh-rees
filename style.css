@@ -2014,7 +2014,7 @@ body {
 
   .page-content {
     padding-top: 87px;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   /***
