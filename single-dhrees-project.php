@@ -13,50 +13,95 @@ get_header(); ?>
   <div class="single-page single-project"></div>
   <main id="main" class="site-main" role="main">
 
-    <!-- Post content -->
-    <div class="single-page-wrapper">
+    <!-- Check to see if this project has children projects -->
+    <?php $args = array(
+      'post_type' => 'dhrees-project',
+      'posts_per_page' => -1,
+      'post_status' => 'publish',
+      'order' => 'ASC',
+      'post_parent' => $post->ID
+    );
+    $loop = new WP_Query( $args ); ?>
+
+    <!-- Block for posts that have children -->
+    <?php if ($loop->have_posts()) : ?>
+
+      <!-- Featured project carosel -->
+      <?php $featured_item_type = 'featured-project';
+        include(locate_template( 'template-parts/featured-item-carousel.php') ); ?>
+
+      <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+        <div class="project-cards-container">
+          <a href="<?php the_permalink() ?>" rel="bookmark">
+            <div class="project-card">
+              <div class="project-card-image-container">
+                <div class="showcase-project-thumbnail">
+                  <img src="<?php the_post_thumbnail_url('large'); ?>"/>
+                </div>
+              </div><!--.project-card-image-container-->
+              <div class="project-card-text-container">
+                <div class="project-card-hover-strip"></div>
+                <div class="project-card-title"><?php the_title(); ?></div>
+               <div class="project-card-text">
+                  <?php echo get_field('blurb'); ?>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      <?php endwhile; ?>
+
+    <!-- Block for posts that have no children -->
+    <?php else : ?>
       <?php while ( have_posts() ) : the_post(); ?>
 
-      <div class="featured-project-container">
-        <div class="featured-project-image-container">
-          <img class="featured-project-image" src="<?php the_post_thumbnail_url('original'); ?>" />
-        </div>
-        <div class="project-full-text-container">
-          <div class="featured-project-title">
-            <?php the_title(); ?>
+        <div class="featured-project-container">
+          <div class="featured-project-image-container">
+            <img class="featured-project-image" src="<?php the_post_thumbnail_url('original'); ?>" />
           </div>
-          <div class="author">
-            <?php echo get_post_meta($post->ID, 'project-author', true); ?>
-          </div>
-          <?php echo the_content();
-          endwhile; // End of the loop. ?>
         </div>
-      </div>
 
-      <div class="related-posts">
-        <div class="related-posts-title">RELATED</div>
+        <div class="featured-project-container">
+          <div class="project-full-text-container">
+            <div class="featured-project-title">
+              <?php the_title(); ?>
+            </div>
+            <div class="author">
+              <?php echo get_post_meta($post->ID, 'project-author', true); ?>
+            </div>
+            <?php echo the_content();
+            endwhile; // End of the loop. ?>
+          </div>
+        </div>
+
+        <div class="related-posts">
           <?php $post_objects = get_field('related_links'); ?>
-          <?php if( $post_objects ): ?>
-            <!-- variable must be called $post -->
-            <?php foreach( $post_objects as $post): ?>
-            <?php setup_postdata($post); ?>
-            <a class="related-post" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-          <?php endforeach; ?>
-          <?php wp_reset_postdata(); ?>
-          <?php endif; ?>
-      </div>
+            <?php if( $post_objects ): ?>
+              <div class="related-posts-title">RELATED</div>
+              <!-- variable must be called $post -->
+              <?php foreach( $post_objects as $post): ?>
+              <?php setup_postdata($post); ?>
+              <a class="related-post" href="#<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            <?php endforeach; ?>
+            <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
+        </div>
 
-      <div class="tag-links">
-        <div class="tag-links-title">TAGS</div>
+        <div class="tag-links">
           <?php $terms = get_field('tags'); ?>
-          <?php foreach( $terms as $term ): ?>
-          <?php if( $term->name ): ?>
-            <a class="tag-link" href="#<?php echo get_term_link( $term );?>">
-              <span><?php echo $term->name; ?></span>
-            </a>
+          <?php if($terms): ?>
+            <div class="tag-links-title">TAGS</div>
+            <?php foreach( $terms as $term ): ?>
+            <?php if( $term->name ): ?>
+              <a class="tag-link" href="#<?php echo get_term_link( $term );?>">
+                <span><?php echo $term->name; ?></span>
+              </a>
+            <?php endif; ?>
+            <?php endforeach; ?>
           <?php endif; ?>
-        <?php endforeach; ?>
-      </div>
+        </div>
+
+      <?php endif; ?>
 
     </div>
   </main><!-- #main -->

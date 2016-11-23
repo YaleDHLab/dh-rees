@@ -11,16 +11,6 @@ var positionDivs = function() {
   ***/
   if (Modernizr.mq('(min-width: 1000px)')) {
 
-    var featuredImageHeight = windowWidth * .332;
-    $(".featured-project-image-container").css({
-      height: featuredImageHeight
-    });
-
-    var showcaseImageHeight = windowWidth * .1245;
-    $(".showcase-project-thumbnail").css({
-      height: showcaseImageHeight
-    });
-
     var parallelogramContainerHeight = windowWidth * .12;
     $(".parallelogram-container").css({
       height: parallelogramContainerHeight
