@@ -33,6 +33,31 @@ get_header(); ?>
         </div>
       </div>
 
+      <div class="related-posts">
+        <div class="related-posts-title">RELATED</div>
+          <?php $post_objects = get_field('related_links'); ?>
+          <?php if( $post_objects ): ?>
+            <!-- variable must be called $post -->
+            <?php foreach( $post_objects as $post): ?>
+            <?php setup_postdata($post); ?>
+            <a class="related-post" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+          <?php endforeach; ?>
+          <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
+      </div>
+
+      <div class="tag-links">
+        <div class="tag-links-title">TAGS</div>
+          <?php $terms = get_field('tags'); ?>
+          <?php foreach( $terms as $term ): ?>
+          <?php if( $term->name ): ?>
+            <a class="tag-link" href="#<?php echo get_term_link( $term );?>">
+              <span><?php echo $term->name; ?></span>
+            </a>
+          <?php endif; ?>
+        <?php endforeach; ?>
+      </div>
+
     </div>
   </main><!-- #main -->
 </div><!-- #primary -->

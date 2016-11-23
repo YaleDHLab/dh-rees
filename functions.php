@@ -140,8 +140,9 @@ function create_post_type() {
       ),
       'public' => true,
       'has_archive' => true,
-      'supports' => array( 'title', 'editor', 'thumbnail' ),
-      'show_in_nav_menus' => true
+      'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+      'show_in_nav_menus' => true,
+      'hierarchical' => true
     )
   );
   register_post_type( 'dhrees-event',
