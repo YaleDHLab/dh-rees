@@ -1644,7 +1644,8 @@ body {
 
 .showcase-project-container, 
 .upcoming-events-container,
-.projects-container {
+.projects-container,
+.project-cards-container {
   width: 100%;
   height: 100%;
   padding: 35px 25%;
@@ -1798,7 +1799,8 @@ body {
 
 /* Events gallery */
 
-.upcoming-events-container {
+.upcoming-events-container,
+.project-cards-container {
   padding: 35px 21% 0 21%;
 }
 
@@ -1812,7 +1814,8 @@ body {
   display: inline-block;
 }
 
-.event-image-container {
+.event-image-container,
+.project-card-image-container {
   float: right;
   text-decoration: none;
   width: 42%;
@@ -1822,7 +1825,6 @@ body {
 }
 
 .project-image-container {
-
   text-decoration: none;
   height: 100%;
   position: relative;
@@ -1841,13 +1843,15 @@ body {
   height: 100%;
 }
 
-.upcoming-event {
+.upcoming-event,
+.project-card {
   width: 93%;
   height: 12.8vw;
   margin-bottom: 40px;
 }
 
-.event-text-container {
+.event-text-container,
+.project-card-text-container {
   display: inline-block;
   width: 58%;
   height: 100%;
@@ -1858,17 +1862,21 @@ body {
   -webkit-transition: background .2s linear;
   transition: background .2s linear;
   overflow: hidden;
+  color: #00356B;
 }
 
-.upcoming-event:hover .event-text-container {
+.upcoming-event:hover .event-text-container,
+.project-card:hover .project-card-text-container {
   background: #F1E5D9;
 }
 
-.upcoming-event:hover .event-title {
+.upcoming-event:hover .event-title,
+.project-card:hover .project-card-title {
   color: #EF6362;
 }
 
-.event-hover-strip {
+.event-hover-strip,
+.project-card-hover-strip {
   position: absolute;
   left: 0;
   top: 0;
@@ -1876,11 +1884,13 @@ body {
   height: 100%;
 }
 
-.upcoming-event:hover .event-hover-strip {
+.upcoming-event:hover .event-hover-strip,
+.project-card:hover .project-card-hover-strip {
   background: #EF6362;
 }
 
-.event-title {
+.event-title,
+.project-card-title {
   font-size: 1.4em;
   font-family: YaleNew;
   line-height: 1.15em;
@@ -2008,6 +2018,10 @@ a.tag-link {
 a.tag-link:hover {
   background: #F1E5D9;
   color: #EF6362;
+}
+
+.project-card-text {
+  margin-top: 6px;
 }
 
 /***
