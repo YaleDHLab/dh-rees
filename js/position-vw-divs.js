@@ -29,12 +29,6 @@ var positionDivs = function() {
 
     var imageHeight = windowWidth * .54;
 
-    // adjust the featured project image
-    var featuredProject = $(".featured-project-image-container");
-    featuredProject.css({
-      height: imageHeight
-    });
-
     // adjust the showcase projects
     var showcaseProjects = $(".showcase-project-thumbnail");
     showcaseProjects.each(function() {

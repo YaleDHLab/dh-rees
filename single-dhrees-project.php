@@ -30,26 +30,11 @@ get_header(); ?>
       <?php $featured_item_type = 'featured-project';
         include(locate_template( 'template-parts/featured-item-carousel.php') ); ?>
 
-      <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-        <div class="project-cards-container">
-          <a href="<?php the_permalink() ?>" rel="bookmark">
-            <div class="project-card">
-              <div class="project-card-image-container">
-                <div class="showcase-project-thumbnail">
-                  <img src="<?php the_post_thumbnail_url('large'); ?>"/>
-                </div>
-              </div><!--.project-card-image-container-->
-              <div class="project-card-text-container">
-                <div class="project-card-hover-strip"></div>
-                <div class="project-card-title"><?php the_title(); ?></div>
-               <div class="project-card-text">
-                  <?php echo get_field('blurb'); ?>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      <?php endwhile; ?>
+      <div class="projects-container">
+        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+          <?php include(locate_template( 'template-parts/project-card.php') ); ?>
+        <?php endwhile; ?>
+      </div>
 
     <!-- Block for posts that have no children -->
     <?php else : ?>
@@ -102,6 +87,12 @@ get_header(); ?>
         </div>
 
       <?php endif; ?>
+
+      <!-- Parallelograms -->
+      <div class="clear-both"></div>
+      <div class="events-parallelograms">
+        <?php get_template_part( 'template-parts/contact-parallelograms', 'none' ); ?>
+      <div>
 
     </div>
   </main><!-- #main -->
