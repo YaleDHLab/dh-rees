@@ -31,7 +31,7 @@ get_header(); ?>
               <div class="subtitle">ALL PROJECTS</div>
             </div>
           </div>
-          <?php $query = new WP_Query( array( 'category_name' => 'project' ) );
+          <?php $query = new WP_Query( array( 'post_type' => 'dhrees-project' ) );
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
             <?php if (has_category('featured-project', $post)) {
