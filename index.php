@@ -18,7 +18,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
     <!-- Featured project carosel -->
-    <?php $featured_item_type = 'featured-project';
+    <?php $featured_item_type = 'project';
       include(locate_template( 'template-parts/featured-item-carousel.php') ); ?>
 
     <!-- Showcase project and event grid -->

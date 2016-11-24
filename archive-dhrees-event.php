@@ -18,7 +18,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
       <!-- Featured project carosel -->
-      <?php $featured_item_type = 'featured-event';
+      <?php $featured_item_type = 'event';
         include(locate_template( 'template-parts/featured-item-carousel.php') ); ?>
 
       <!-- Upcoming Events -->
