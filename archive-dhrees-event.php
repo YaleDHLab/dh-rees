@@ -18,39 +18,50 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
       <!-- Featured project carosel -->
-      <?php $featured_item_type = 'featured-event';
+      <?php $featured_item_type = 'event';
         include(locate_template( 'template-parts/featured-item-carousel.php') ); ?>
 
-      <!-- Upcoming Events column -->
-      <div class="upcoming-events-column">
-        <div class="upcoming-events-container">
-          <div class="upcoming-events-control-row">
-            <div class="subtitle-wrapper">
-              <div class="subtitle">UPCOMING EVENTS</div>
-            </div>
-          </div>
-          <?php $query = new WP_Query( array( 'post_type' => 'dhrees-event', 'posts_per_page' => -1 ) );
-            if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+      <!-- Upcoming Events -->
+      <?php $current_date = date('ymd');
+        $query = new WP_Query( array(
+        'post_type' => 'dhrees-event',
+        'posts_per_page' => -1,
+        'meta_key' => 'event_date',
+        'order' => 'DESC',
+        'meta_query'=> array(
+          array(
+            'key' => 'event_date',
+            'compare' => '>=',
+            'value' => $current_date,
+            'type' => 'DATE',
+          ) ),
+      ) );
+      if ( $query->have_posts() ) : ?>
+        <?php $event_label = "UPCOMING EVENTS" ?>
+        <?php include(locate_template('template-parts/event-cards.php')); ?>
+      <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
 
-            <div class="upcoming-event">
-              <a href="<?php the_permalink() ?>" rel="bookmark">
-                <?php get_template_part( 'template-parts/event-image', 'none' ); ?>
-                <div class="event-text-container">
-                  <div class="event-hover-strip"></div>
-                  <div class="event-title"><?php the_title(); ?></div>
-                  <div class="event-time-line">
-                    <?php echo get_field('event_time'); ?>
-                  </div>
-                  <div class="event-text">
-                    <?php echo get_field('blurb') ?>
-                  </div>
-                </div>
-              </a>
-            </div>
-          <?php endwhile; endif; ?>
-          <?php wp_reset_postdata(); ?>
-        </div>
-      </div>
+      <!-- Past Events -->
+      <?php
+        $query = new WP_Query( array(
+        'post_type' => 'dhrees-event',
+        'posts_per_page' => -1,
+        'meta_key' => 'event_date',
+        'order' => 'ASC',
+        'meta_query'=> array(
+          array(
+            'key' => 'event_date',
+            'compare' => '<',
+            'value' => $current_date,
+            'type' => 'DATE',
+          ) ),
+      ) );
+      if ( $query->have_posts() ) : ?>
+        <?php $event_label = "PAST EVENTS" ?>
+        <?php include(locate_template('template-parts/event-cards.php')); ?>
+      <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
 
       <!-- Parallelograms -->
       <div class="clear-both"></div>

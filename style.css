@@ -1261,7 +1261,8 @@ body {
   top: 9%;
   width: 33%;
   color: #00356B;
-  z-index: 2;
+  z-index: 4;
+  transition: opacity .15s;
 }
 
 .featured-project-text-container .subtitle {
@@ -1304,10 +1305,22 @@ body {
   }
 }
 
-.featured-project-image {
+.featured-project-image,
+.featured-project-background-image {
   flex-shrink: 0;
   min-width: 100%;
   min-height: 100%;
+  position: absolute;
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+.featured-project-image {
+  z-index: 2;
+}
+
+.featured-project-background-image {
+  z-index: 1;
 }
 
 .button {
@@ -1340,7 +1353,7 @@ body {
   transform: rotate(45deg);
   left: 0px;
   overflow: hidden;
-  z-index: 1;
+  z-index: 3;
 }
 
 .featured-image-stripe {
@@ -1363,7 +1376,7 @@ body {
 .event-stripe-text {
   color: #fff;
   position: absolute;
-  z-index: 1;
+  z-index: 4;
   margin: 1.1vw;
   font-family: acumin-pro;
 }
@@ -1576,6 +1589,7 @@ body {
   overflow: hidden;
   float: left;
   font-family: 'acumin-pro';
+  z-index: 10;
 }
 
 .about-text-stripe {
@@ -1672,7 +1686,7 @@ body {
 ***/
 
 .showcase-project-container, 
-.upcoming-events-container,
+.events-container,
 .projects-container {
   width: 100%;
   height: 100%;
@@ -1827,12 +1841,12 @@ body {
 
 /* Events gallery */
 
-.upcoming-events-control-row,
+.events-control-row,
 .projects-control-row {
   padding-bottom: 20px;
 }
 
-.upcoming-events-control-row .subtitle,
+.events-control-row .subtitle,
 .projects-control-row .subtitle {
   padding-left: 6.5%;
   display: inline-block;
@@ -1867,7 +1881,7 @@ body {
   height: 100%;
 }
 
-.upcoming-event,
+.event,
 .project-card {
   height: 12.8vw;
   width: 100%;
@@ -1889,12 +1903,12 @@ body {
   color: #00356B;
 }
 
-.upcoming-event:hover .event-text-container,
+.event:hover .event-text-container,
 .project-card:hover .project-card-text-container {
   background: #F1E5D9;
 }
 
-.upcoming-event:hover .event-title,
+.event:hover .event-title,
 .project-card:hover .project-card-title {
   color: #EF6362;
 }
@@ -1908,7 +1922,7 @@ body {
   height: 100%;
 }
 
-.upcoming-event:hover .event-hover-strip,
+.event:hover .event-hover-strip,
 .project-card:hover .project-card-hover-strip {
   background: #EF6362;
 }
@@ -2640,18 +2654,18 @@ a.tag-link:hover {
   * Events page
   ***/
 
-  .upcoming-events-container {
+  .events-container {
     padding: 20px 0;
   }
 
-  .upcoming-events-control-row .subtitle-wrapper {
+  .events-control-row .subtitle-wrapper {
     width: 250px;
     left: -48px;
     position: relative;
     top: 0;
   }
 
-  .upcoming-event {
+  .event {
     width: 90%;
     height: 45%;
     margin: 0 5%;
@@ -2665,7 +2679,7 @@ a.tag-link:hover {
     padding: 15px 0;
   }
 
-  .upcoming-event:hover .event-text-container {
+  .event:hover .event-text-container {
     background: none;
   }
 

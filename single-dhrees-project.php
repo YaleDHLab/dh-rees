@@ -27,7 +27,7 @@ get_header(); ?>
     <?php if ($loop->have_posts()) : ?>
 
       <!-- Featured project carosel -->
-      <?php $featured_item_type = 'featured-project';
+      <?php $featured_item_type = 'project';
         include(locate_template( 'template-parts/featured-item-carousel.php') ); ?>
 
       <div class="projects-container">
