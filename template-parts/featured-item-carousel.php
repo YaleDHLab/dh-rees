@@ -55,8 +55,8 @@
 
     <div class="featured-project-image-container">
     <div class="image-stripe featured-image-stripe"></div>
-      <img class="featured-project-image" />
-      <img class="featured-project-background-image" />
+      <div class="featured-project-image" ></div>
+      <div class="featured-project-background-image" /></div>
     </div>
     <div class="subtitle-wrapper mobile">
       <div class="subtitle"></div>
@@ -146,11 +146,11 @@
 
   var setFeaturedProject = function(projectIndex) {
     var imgSrc = $(".featured-project-image");
-    $(imgSrc).attr("src", query_results[projectIndex].thumbnail_url);
+    $(imgSrc).css({'background-image': 'url(' + query_results[projectIndex].thumbnail_url + ')'});
 
     var backgroundImgSrc = $(".featured-project-background-image");
     var backgroundImgIdx = (projectIndex + 1) % query_results.length;
-    $(backgroundImgSrc).attr("src", query_results[backgroundImgIdx].thumbnail_url);
+    $(backgroundImgSrc).css({'background-image': 'url(' + query_results[backgroundImgIdx].thumbnail_url + ')'});
   }
 
   /***
@@ -204,7 +204,7 @@
       // make the foreground identical to the background image
       setTimeout(function() {
         var imgSrc = $(".featured-project-image");
-        $(imgSrc).attr("src", query_results[projectIndex].thumbnail_url);
+        $(imgSrc).css({'background-image': 'url(' + query_results[projectIndex].thumbnail_url + ')'});
       }, 1200);
 
       // fade in the foreground image
@@ -216,7 +216,7 @@
       setTimeout(function() {
         var backgroundImgSrc = $(".featured-project-background-image");
         var nextProject = (projectIndex + 1) % query_results.length;
-        backgroundImgSrc.attr("src", query_results[nextProject].thumbnail_url);
+        backgroundImgSrc.css({'background-image': 'url(' + query_results[nextProject].thumbnail_url + ')'});
       }, 3000);
 
       // place another update on the event stack
