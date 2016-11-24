@@ -11,16 +11,6 @@ var positionDivs = function() {
   ***/
   if (Modernizr.mq('(min-width: 1000px)')) {
 
-    var featuredImageHeight = windowWidth * .332;
-    $(".featured-project-image-container").css({
-      height: featuredImageHeight
-    });
-
-    var showcaseImageHeight = windowWidth * .1245;
-    $(".showcase-project-thumbnail").css({
-      height: showcaseImageHeight
-    });
-
     var parallelogramContainerHeight = windowWidth * .12;
     $(".parallelogram-container").css({
       height: parallelogramContainerHeight
@@ -39,25 +29,11 @@ var positionDivs = function() {
 
     var imageHeight = windowWidth * .54;
 
-    // adjust the featured project image
-    var featuredProject = $(".featured-project-image-container");
-    featuredProject.css({
-      height: imageHeight
-    });
-
     // adjust the showcase projects
     var showcaseProjects = $(".showcase-project-thumbnail");
     showcaseProjects.each(function() {
       $(this).css({
         height: imageHeight
-      });
-    });
-
-    // adjust subtitles
-    var subtitles = $(".landing-page-subtitle");
-    subtitles.each(function() {
-      $(this).css({
-        top: imageHeight + 7
       });
     });
 

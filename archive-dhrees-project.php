@@ -31,34 +31,21 @@ get_header(); ?>
               <div class="subtitle">ALL PROJECTS</div>
             </div>
           </div>
-          <?php $query = new WP_Query( array( 'category_name' => 'project' ) );
+          <!-- posts_per_page argument of -1 returns all posts per page, rather than WP default 10 -->
+          <?php $query = new WP_Query( array( 'post_type' => 'dhrees-project', 'posts_per_page' => -1 ) );
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-            <?php if (has_category('featured-project', $post)) {
-              continue;
-             } ?>
+            <!-- Only show projects that have no parents -->
+            <!-- Block for posts with parents -->
+            <?php if ( $post->post_parent ) {
+              // pass
+            ?>
+            <!-- Block for posts without parents -->
+            <?php } else { ?>
 
-            <div class="project">
-              <div class="project-image-container">
-                <div class="project-thumbnail">
-                  <a href="<?php echo esc_url( get_permalink() ); ?>">
-                    <img src="<?php the_post_thumbnail_url('large'); ?>"/>
-                  </a>
-                </div>
-              </div>
-              <div class="project-text-container">
-                <div class="project-title">
-                  <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
-                </div>
-                <div class="author">
-                <?php  $author = get_post_meta($post->ID, 'project-author', true);
-                  if ($author) {echo $author;}
-                    else {echo '&nbsp;';}
-                ?>
-                </div>
-              </div>
-            </div>
+              <?php include(locate_template( 'template-parts/project-card.php') ); ?>
 
+            <?php } ?>
           <?php endwhile; endif; ?>
           <?php wp_reset_postdata(); ?>
         </div>

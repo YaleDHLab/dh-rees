@@ -111,12 +111,11 @@ function _s_scripts() {
   wp_enqueue_script( 'svg-background', get_template_directory_uri() . '/js/svg-background.js', array ( 'jquery' ), 1.1, false);
   wp_enqueue_script( 'join-the-mailing-list', get_template_directory_uri() . '/js/join-the-mailing-list.js', array ( 'jquery' ), 1.1, false);
   wp_enqueue_script( 'vertically-center-divs', get_template_directory_uri() . '/js/vertically-center-divs.js', array ( 'jquery' ), 1.1, false);
-  wp_enqueue_script( 'mobile-menu', get_template_directory_uri() . '/js/mobile-menu.js', array(), 1.1, true );
   wp_enqueue_script( 'position-vw-divs', get_template_directory_uri() . '/js/position-vw-divs.js', array(), 1.1, true );
+  wp_enqueue_script( 'mobile-menu', get_template_directory_uri() . '/js/mobile-menu.js', array(), 1.1, true );
   wp_enqueue_script( 'css-fallbacks', get_template_directory_uri() . '/js/css-fallbacks.js', array(), 1.1, true );
   wp_enqueue_script( 'links', get_template_directory_uri() . '/js/links.js', array(), 1.1, true );
   wp_enqueue_script( 'love-programming', get_template_directory_uri() . '/js/love-programming.js', array(), 1.1, true );
-
   wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
   wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -126,6 +125,40 @@ function _s_scripts() {
   }
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
+
+/***
+* Add custom project page type for DHREES
+***/
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  register_post_type( 'dhrees-project',
+    array(
+      'labels' => array(
+        'name' => __( 'Projects' ),
+        'singular_name' => __( 'Project' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+      'show_in_nav_menus' => true,
+      'hierarchical' => true
+    )
+  );
+  register_post_type( 'dhrees-event',
+    array(
+      'labels' => array(
+        'name' => __( 'Events' ),
+        'singular_name' => __( 'Event' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array( 'title', 'editor', 'thumbnail' ),
+      'show_in_nav_menus' => true
+    )
+  );
+}
+
 
 /**
  * Implement the Custom Header feature.

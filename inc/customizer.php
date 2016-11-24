@@ -31,22 +31,6 @@ function _s_customize_register( $wp_customize ) {
       'settings' => 'twitter',
   ) ) );
 
-  // Add a new section
-  $wp_customize->add_section( 'good-looking-cats-section' , array(
-    'title' => __( 'Good looking cats section', '_s' ),
-    'priority' => 30,
-    'description' => __( 'Enter the URL to your account for each service for the icon to appear in the header.', '_s' )
-  ) );
-
-  // Add new widgets for that section
-  $wp_customize->add_setting( 'good-looking-cats' , array( 'default', '' ));
-  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'good-looking-cats', array(
-      'label' => __( 'Good looking cats', '_s' ),
-      'section' => 'good-looking-cats-section',
-      'settings' => 'good-looking-cats',
-  ) ) );
-
-
 }
 add_action( 'customize_register', '_s_customize_register' );
 

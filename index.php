@@ -25,7 +25,7 @@ get_header(); ?>
     <div class="showcase-project-container">
 
       <!-- Showcase project -->
-      <?php $query = new WP_Query( array( 'category_name' => 'showcase-project' ) );
+      <?php $query = new WP_Query( array( 'post_type' => 'dhrees-project' ) );
         $project_count = 0;
         if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
         <?php $showcase_section_type = 'projects';
