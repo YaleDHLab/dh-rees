@@ -1252,6 +1252,7 @@ body {
   max-height: 30%;
   position: relative; 
   display: inline-block;
+  z-index: 10;
 }
 
 .featured-project-text-container {
