@@ -85,7 +85,7 @@
       var day = query_results[0]["event_date"].substring(6, 8);
       var month = query_results[0]["event_date"].substring(4, 6);
       switch (month) {
-        case "01": 
+        case "01":
           var monthString = "January";
           break;
 
@@ -97,7 +97,7 @@
           var monthString = "March";
           break;
 
-        case "04": 
+        case "04":
           var monthString = "April";
           break;
 
@@ -108,8 +108,8 @@
         case "06":
           var monthString = "June";
           break;
- 
-        case "07": 
+
+        case "07":
           var monthString = "July";
           break;
 
@@ -121,7 +121,7 @@
           var monthString = "September";
           break;
 
-        case "10": 
+        case "10":
           var monthString = "October";
           break;
 
