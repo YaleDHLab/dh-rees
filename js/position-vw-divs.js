@@ -37,14 +37,6 @@ var positionDivs = function() {
       });
     });
 
-    // adjust subtitles
-    var subtitles = $(".landing-page-subtitle");
-    subtitles.each(function() {
-      $(this).css({
-        top: imageHeight + 7
-      });
-    });
-
     // set the parallelogram height
     var parallelogramContainerHeight = windowWidth * .24;
     $(".parallelogram-container").css({

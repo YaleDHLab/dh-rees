@@ -96,34 +96,7 @@ var moveShapes = function() {
     $(".header-site-title").css({
       "top": siteTitleTop
     });
-
   };
-
-  /***
-  * Footer
-  ***/
-
-  var content = $(".site-content");
-  var contentMargin = parseInt( content.css("marginTop"), 10);
-  var contentPaddingT = parseInt( content.css("paddingTop"), 10);
-  var contentPaddingB = parseInt( content.css("paddingBottom"), 10);
-  var distanceToFooter = content.height() + contentMargin + contentPaddingT + contentPaddingB; 
-
-  // if the window is taller than the page content, push the footer all the way down
-  if (window.innerHeight - 200 > distanceToFooter) {
-    distanceToFooter = window.innerHeight - 200;
-  }
-
-  // dynamically set footer offset on viewport change
-  $(".footer-blue").css({
-    "top": distanceToFooter
-  });
-
-  // also update the footer's red triangle
-  $(".footer-red-triangle").css({
-    "top": distanceToFooter
-  });
-
 };
 
 // resize items on document load, window load
