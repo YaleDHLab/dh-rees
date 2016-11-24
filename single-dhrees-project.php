@@ -42,7 +42,7 @@ get_header(); ?>
 
         <div class="featured-project-container">
           <div class="featured-project-image-container">
-            <img class="featured-project-image" src="<?php the_post_thumbnail_url('original'); ?>" />
+            <div class="featured-project-image" style="background-image: url(<?php the_post_thumbnail_url('original'); ?>)" ></div>
           </div>
         </div>
 

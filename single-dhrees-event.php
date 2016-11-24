@@ -14,21 +14,33 @@ get_header(); ?>
   <main id="main" class="site-main" role="main">
 
     <?php while ( have_posts() ) : the_post(); ?>
+    <?php include_once 'template-parts/month-parser.php'; ?>
 
     <div class="featured-project-container">
-      <div class="featured-project-image-container">
-        <img class="featured-project-image" src="<?php the_post_thumbnail_url('original'); ?>" />
+      <div class="featured-project-image-container featured-event-image-container">
+        <div class="featured-event-text-container">
+          <div class="featured-event-text-wrap">
+            <div class="subtitle">EVENTS</div>
+            <div class="featured-event-title"><?php the_title(); ?></div>
+            <div class="featured-event-date">
+              <?php $event_date = get_field('event_date');
+                $event_month = substr($event_date, 4, 2);
+                $month_string = getMonthString($event_month);
+                $event_day = substr($event_date, 6, 2);
+                $event_time = get_field('event_time');
+                $event_location = get_field('event_location');
+                echo $month_string." ".$event_day." | ".$event_time." | ".$event_location;
+              ?>
+            </div>
+          </div>
+        </div>
+        <div class="featured-project-image featured-event-image"
+          style="background-image: url(<?php the_post_thumbnail_url('original'); ?>)" ></div>
       </div>
     </div>
 
     <div class="featured-project-container">
-      <div class="project-full-text-container">
-        <div class="featured-project-title">
-          <?php the_title(); ?>
-        </div>
-        <div class="author">
-          <?php echo get_post_meta($post->ID, 'project-author', true); ?>
-        </div>
+      <div class="event-full-text-container">
         <?php echo the_content();
         endwhile; // End of the loop. ?>
       </div>
