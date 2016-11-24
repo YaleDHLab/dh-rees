@@ -1,5 +1,9 @@
 <div class="featured-project-container page-lane">
-  <script>var query_results = [];</script>
+  <script>
+    var query_results = [];
+    var carousel_type = "<?php echo $featured_item_type ?>";
+  </script>
+
   <?php
   if ($featured_item_type == "project") {
     $query = new WP_Query( array(
@@ -15,7 +19,10 @@
 
   if ($featured_item_type == "event") {
     $query = new WP_Query( array(
-      'post_type' => "dhrees-event"
+      'post_type' => "dhrees-event",
+      'posts_per_page' => 1,
+      'meta_key' => 'event_date',
+      'order' => 'ASC'
     ) );
   };
 
@@ -28,6 +35,7 @@
         "title": "<?php echo the_title(); ?>",
         "blurb": "<?php echo get_field('blurb'); ?>",
         "post_url": "<?php echo esc_url( get_permalink() ); ?>",
+        "event_date": "<?php echo get_field('event_date') ?>"
       });
     </script>
   <?php endwhile; endif; ?>
@@ -36,7 +44,7 @@
   <a href="#" class="featured-project-link">
     <div class="featured-project-text-container">
       <div class="subtitle-wrapper desktop">
-        <div class="subtitle">Feature</div>
+        <div class="subtitle"></div>
       </div>
       <div class="featured-project-title desktop"></div>
       <div class="featured-project-blurb desktop"></div>
@@ -51,7 +59,7 @@
       <img class="featured-project-background-image" />
     </div>
     <div class="subtitle-wrapper mobile">
-      <div class="subtitle">Feature</div>
+      <div class="subtitle"></div>
     </div>
     <div class="featured-project-title mobile"></div>
     <div class="featured-project-blurb mobile"></div>
@@ -59,6 +67,78 @@
 
   <!-- Write the JSON target to the carousel -->
   <script>
+
+  /***
+  * Provide content for the subtitles
+  ***/
+
+  var updateSubtitles = function() {
+    // if this is a project carousel, the subtitle should say "Feature"
+    // if this is an event carousel, the subtitle should be a date
+    if (carousel_type == "project") {
+      $(".subtitle").each(function() {
+        $(this).text("Feature");
+      });
+    };
+
+    if (carousel_type == "event") {
+      var day = query_results[0]["event_date"].substring(6, 8);
+      var month = query_results[0]["event_date"].substring(4, 6);
+      switch (month) {
+        case "01": 
+          var monthString = "January";
+          break;
+
+        case "02":
+          var monthString = "February";
+          break;
+
+        case "03":
+          var monthString = "March";
+          break;
+
+        case "04": 
+          var monthString = "April";
+          break;
+
+        case "05":
+          var monthString = "May";
+          break;
+
+        case "06":
+          var monthString = "June";
+          break;
+ 
+        case "07": 
+          var monthString = "July";
+          break;
+
+        case "08":
+          var monthString = "August";
+          break;
+
+        case "09":
+          var monthString = "September";
+          break;
+
+        case "10": 
+          var monthString = "October";
+          break;
+
+        case "11":
+          var monthString = "November";
+          break;
+
+        case "12":
+          var monthString = "December";
+          break;
+      }
+
+      $(".subtitle").each(function() {
+        $(this).text(monthString + " " + day);
+      });
+    };
+  };
 
   /***
   * Use current state to update the featured project
@@ -144,9 +224,14 @@
     }, 5000);
   }
 
+  updateSubtitles();
   setFeaturedProject(projectIndex);
   updateText(projectIndex);
-  requestProjectUpdate();
+
+  // only flip through projects if there is more than one project
+  if (query_results.length > 1) {
+    requestProjectUpdate();
+  }
   </script>
 
 </div>

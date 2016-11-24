@@ -8,7 +8,7 @@
   if ($event_date) {
     // dates are stored in yymmdd format
     $event_month = substr($event_date, 4, 2);
-    $event_day = substr($event_date, 2, 2);
+    $event_day = substr($event_date, 6, 2);
 
     // convert the month integer to a string
     switch ($event_month) {
