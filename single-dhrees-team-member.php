@@ -16,16 +16,16 @@ get_header(); ?>
     <?php while ( have_posts() ) : the_post(); ?>
 
     <div class="featured-project-container">
-      <div class="featured-project-image-container featured-event-image-container">
-        <div class="featured-event-text-container">
-          <div class="featured-event-text-wrap">
+      <div class="featured-project-image-container featured-item-image-container">
+        <div class="featured-item-text-container">
+          <div class="featured-item-text-wrap">
             <div class="subtitle">PROFILE</div>
-            <div class="featured-event-title"><?php the_title(); ?></div>
+            <div class="featured-item-title"><?php the_title(); ?></div>
             <div class="featured-item-position"><?php echo get_field("position") ?></div>
           </div>
         </div>
       </div>
-      <div class="featured-project-image featured-event-image"
+      <div class="featured-project-image featured-item-image"
         style="background-image: url(<?php the_post_thumbnail_url('original'); ?>)" ></div>
       
     </div>

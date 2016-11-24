@@ -59,32 +59,8 @@ get_header(); ?>
           </div>
         </div>
 
-        <div class="related-posts">
-          <?php $post_objects = get_field('related_links'); ?>
-            <?php if( $post_objects ): ?>
-              <div class="related-posts-title">RELATED</div>
-              <!-- variable must be called $post -->
-              <?php foreach( $post_objects as $post): ?>
-              <?php setup_postdata($post); ?>
-              <a class="related-post" href="#<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            <?php endforeach; ?>
-            <?php wp_reset_postdata(); ?>
-            <?php endif; ?>
-        </div>
-
-        <div class="tag-links">
-          <?php $terms = get_field('tags'); ?>
-          <?php if($terms): ?>
-            <div class="tag-links-title">TAGS</div>
-            <?php foreach( $terms as $term ): ?>
-            <?php if( $term->name ): ?>
-              <a class="tag-link" href="#<?php echo get_term_link( $term );?>">
-                <span><?php echo $term->name; ?></span>
-              </a>
-            <?php endif; ?>
-            <?php endforeach; ?>
-          <?php endif; ?>
-        </div>
+        <?php include(locate_template( 'template-parts/related-links.php') ); ?>
+        <?php include(locate_template( 'template-parts/post-tags.php') ); ?>
 
       <?php endif; ?>
 

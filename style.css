@@ -1276,7 +1276,7 @@ a.featured-project-link {
 
 .featured-project-title,
 .featured-project-title.mobile,
-.featured-event-title {
+.featured-item-title {
   line-height: 1.1em;
   font-family: YaleNew;
   font-weight: 300;
@@ -1285,11 +1285,11 @@ a.featured-project-link {
 }
 
 .featured-project-title,
-.featured-event-title {
+.featured-item-title {
   font-size: 2.2em;
 }
 
-.featured-event-title.mobile {
+.featured-item-title.mobile {
   font-size: 1.6em;
 }
 
@@ -1411,18 +1411,18 @@ a.featured-project-link {
   letter-spacing: 1px;
 }
 
-.featured-event-text-container {
+.featured-item-text-container {
   width: 50%;
   height: 100%;
   position: absolute;
   left: 0;
 }
 
-.featured-event-image-container {
+.featured-item-image-container {
   height: 22vw;
 }
 
-.featured-event-image {
+.featured-item-image {
   width: 50%;
   min-width: 50%;
   display: inline-block;
@@ -2125,20 +2125,17 @@ a.tag-link:hover {
 * Single event page
 ***/
 
-.featured-event-text-wrap {
+.featured-item-text-wrap {
   height: 100%;
   width: auto;
   margin: 30px;
 }
 
-.featured-event-text-container .subtitle {
-}
-
-.featured-event-title {
+.featured-item-title {
   margin-top: 15px;
 }
 
-.featured-event-date {
+.featured-item-date {
   margin-top: 15px;
   color: #826F69;
   font-size: .95em;
