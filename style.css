@@ -1428,6 +1428,7 @@ a.featured-project-link {
   display: inline-block;
   position: absolute;
   right: 0;
+  top: 0;
 }
 
 /***
@@ -1633,6 +1634,7 @@ a.featured-project-link {
   top: -69%;
   background: rgba(255,255,255,0.4);
   overflow: hidden;
+  z-index: 1;
 }
 
 .about-text {
@@ -1671,6 +1673,10 @@ a.featured-project-link {
   width: 400px;
 }
 
+.team-member-cards-container a {
+  text-decoration: none;
+}
+
 .team-member-card {
   background: rgba(241,229,217,.93);
   margin-bottom: 30px;
@@ -1693,6 +1699,7 @@ a.featured-project-link {
   font-size: 1.475em;
   line-height: 1.15em;
   font-family: YaleNew;
+  color: #00356B;
 }
 
 .team-member-position {
@@ -1715,6 +1722,16 @@ a.featured-project-link {
 .team-member-card:hover .team-member-hover-stripe {
   background: #EF6362;
 }
+
+/***
+* Individual team member page
+***/
+
+.featured-item-position {
+  font-style: italic;
+  margin-top: 15px;
+}
+
 
 /***
 * Showcase Projects
