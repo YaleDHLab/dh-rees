@@ -2886,8 +2886,16 @@ a.tag-link:hover {
     box-shadow: 1px 2px 5px rgba(76,76,76,.5);
   }
 
-  .dhrees-event-page .featured-item-text-container {
+  .featured-project-container a {
+    text-decoration: none;
+  }
+
+  .featured-item-text-container {
     width: 100%;
+  }
+
+  .featured-item-text-container .subtitle {
+    display: none;
   }
 
   .dhrees-team-member-page .subtitle,
@@ -2911,9 +2919,13 @@ a.tag-link:hover {
     position: relative;
   }
 
-  .featured-item-text-wrap {
-    margin-bottom: 15px;
+  .dhrees-resources-page .featured-item-text-wrap,
+  .dhrees-news-page .featured-item-text-wrap {
+    padding: 40px;
     width: 100%;
+    background: #FFFDFA;
+    margin: 0px;
+    box-shadow: 1px 2px 5px rgba(76,76,76,.5);
   }
 
   .project-full-text-container,
