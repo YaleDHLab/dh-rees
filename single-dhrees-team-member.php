@@ -17,6 +17,8 @@ get_header(); ?>
 
     <div class="featured-project-container">
       <div class="featured-project-image-container featured-item-image-container">
+        <div class="featured-project-image featured-item-image"
+          style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)" ></div>
         <div class="featured-item-text-container">
           <div class="featured-item-text-wrap">
             <div class="subtitle">PROFILE</div>
@@ -25,9 +27,6 @@ get_header(); ?>
           </div>
         </div>
       </div>
-      <div class="featured-project-image featured-item-image"
-        style="background-image: url(<?php the_post_thumbnail_url('original'); ?>)" ></div>
-      
     </div>
 
     <div class="featured-project-container">
