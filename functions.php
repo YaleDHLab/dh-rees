@@ -169,6 +169,30 @@ function create_post_type() {
       'show_in_nav_menus' => true
     )
   );
+  register_post_type( 'dhrees-resource',
+    array(
+      'labels' => array(
+        'name' => __( 'Resources' ),
+        'singular_name' => __( 'Resource' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array( 'title', 'editor', 'thumbnail' ),
+      'show_in_nav_menus' => true
+    )
+  );
+  register_post_type( 'dhrees-news',
+    array(
+      'labels' => array(
+        'name' => __( 'News' ),
+        'singular_name' => __( 'News Item' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array( 'title', 'editor', 'thumbnail' ),
+      'show_in_nav_menus' => true
+    )
+  );
 }
 
 
