@@ -2492,7 +2492,8 @@ a.tag-link:hover {
     top: 100%;
     left: 0%;
     width: 100%;
-    margin-top: -60px;
+    margin-top: 10px;
+    position: relative;
   }
 
   .featured-project-text-container .subtitle-wrapper.desktop {
@@ -2538,6 +2539,7 @@ a.tag-link:hover {
 
   .featured-project-blurb {
     margin-top: 7px;
+    margin-bottom: 30px;
   }
 
   /***
@@ -2616,7 +2618,8 @@ a.tag-link:hover {
   }
 
   .parallelogram-container {
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 40px;
   }
 
   .events-parallelograms {
@@ -2790,7 +2793,7 @@ a.tag-link:hover {
   }
 
   .projects-container .subtitle-wrapper {
-    margin-left: -80px;
+    margin-left: -12%;
   }
 
   .project {
@@ -2825,9 +2828,72 @@ a.tag-link:hover {
   * Individual item pages
   ***/
 
+  .dhrees-team-member-page .featured-project-container,
+  .dhrees-project-page .project-full-text-container,
+  .dhrees-event-page .featured-project-container {
+    background: #FFFDFA;
+    box-shadow: 1px 2px 5px rgba(76,76,76,.5);
+  }
+
+  .dhrees-event-page .featured-item-text-container {
+    width: 100%;
+  }
+
+  .dhrees-team-member-page .subtitle,
+  .dhrees-event-page .subtitle {
+    display: none;
+  }
+
+  .dhrees-team-member-page .parallelogram-container {
+    margin-top: 50px;
+  }
+
+  .featured-item-image-container {
+    height: 60vw;
+  }
+
   .featured-item-image {
     width: 100%;
   }
+
+  .featured-item-text-container {
+    position: relative;
+  }
+
+  .featured-item-text-wrap {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .project-full-text-container,
+  .event-full-text-container {
+    box-shadow: none;
+    padding: 30px;
+    padding-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  /***
+  * Tags and related pages
+  ***/
+
+  .related-posts {
+    width: 100%;
+    margin: 20px;
+  }
+
+  .tag-links {
+    margin: 20px;
+    display: inline-block;
+    width: 100%;
+    float: none;
+  }
+
+  .tag-links-title,
+  .related-posts-title {
+    margin-bottom: 5px;
+  }
+
 }
 
 /* Larger cell styles */

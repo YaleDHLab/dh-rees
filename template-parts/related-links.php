@@ -5,7 +5,7 @@
     <!-- variable must be called $post -->
     <?php foreach( $post_objects as $post): ?>
       <?php setup_postdata($post); ?>
-      <a class="related-post" href="#
+      <a class="related-post" href="
         <?php echo get_post_permalink(); ?>
         ">
         <?php the_title(); ?>

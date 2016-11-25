@@ -42,7 +42,7 @@
 
   <!-- Generate carousel template -->
   <a href="#" class="featured-project-link">
-    <div class="featured-project-text-container">
+    <div class="featured-project-text-container desktop">
       <div class="subtitle-wrapper desktop">
         <div class="subtitle"></div>
       </div>
@@ -61,8 +61,10 @@
     <div class="subtitle-wrapper mobile">
       <div class="subtitle"></div>
     </div>
-    <div class="featured-project-title mobile"></div>
-    <div class="featured-project-blurb mobile"></div>
+      <div class="featured-project-text-container mobile">
+        <div class="featured-project-title mobile"></div>
+        <div class="featured-project-blurb mobile"></div>
+      </div>
   </a>
 
   <!-- Write the JSON target to the carousel -->

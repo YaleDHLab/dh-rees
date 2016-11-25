@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
   <div class="single-page single-project"></div>
-  <main id="main" class="site-main" role="main">
+  <main id="main" class="site-main dhrees-event-page" role="main">
 
     <?php while ( have_posts() ) : the_post(); ?>
     <?php include_once 'template-parts/month-parser.php'; ?>

@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
   <div class="single-page single-project"></div>
-  <main id="main" class="site-main" role="main">
+  <main id="main" class="site-main dhrees-team-member-page" role="main">
 
     <?php while ( have_posts() ) : the_post(); ?>
 
@@ -19,12 +19,12 @@ get_header(); ?>
       <div class="featured-project-image-container featured-item-image-container">
         <div class="featured-project-image featured-item-image"
           style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)" ></div>
-        <div class="featured-item-text-container">
-          <div class="featured-item-text-wrap">
-            <div class="subtitle">PROFILE</div>
-            <div class="featured-item-title"><?php the_title(); ?></div>
-            <div class="featured-item-position"><?php echo get_field("position") ?></div>
-          </div>
+      </div>
+      <div class="featured-item-text-container">
+        <div class="featured-item-text-wrap">
+          <div class="subtitle">PROFILE</div>
+          <div class="featured-item-title"><?php the_title(); ?></div>
+          <div class="featured-item-position"><?php echo get_field("position") ?></div>
         </div>
       </div>
     </div>
