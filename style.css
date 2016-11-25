@@ -1745,7 +1745,6 @@ a.featured-project-link {
   margin-top: 15px;
 }
 
-
 /***
 * Showcase Projects
 ***/
@@ -2220,6 +2219,10 @@ a.tag-link:hover {
   color: #826F69;
   font-family: Interstate;
   margin: 10px 0 15px 0;
+}
+
+.read-more-button {
+  margin-top: 15px;
 }
 
 /***
