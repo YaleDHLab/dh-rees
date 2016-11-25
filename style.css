@@ -2563,8 +2563,8 @@ a.tag-link:hover {
     overflow: visible;
   }
 
-  .image-stripe.event-stripe {
-    display: none;
+ .image-stripe-text {
+    margin: 5%;
   }
 
   .showcase-project-container a {
