@@ -1427,6 +1427,10 @@ a.featured-project-link {
   z-index: 1;
 }
 
+.featured-item-text-container .subtitle {
+  color: #00356B;
+}
+
 .featured-item-image-container {
   height: 24vw;
 }
@@ -2209,12 +2213,13 @@ a.tag-link:hover {
   font-family: YaleNew;
   font-size: 1.8em;
   color: #00356B;
+  line-height: 1.2em;
 }
 
 .text-results-blurb {
   color: #826F69;
   font-family: Interstate;
-  margin-bottom: 15px;
+  margin: 10px 0 15px 0;
 }
 
 /***
