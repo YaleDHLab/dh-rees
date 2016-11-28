@@ -2314,10 +2314,20 @@ a.tag-link:hover {
     display: none;
   }
 
+  #dpsp-floating-sidebar.dpsp-position-left.dpsp-shape-circle {
+    left: 14%;
+    position: absolute;
+    top: 300px !important;
+  }
+
 }
 
 /* Mobile view */
 @media (max-width: 999px) {
+
+  #dpsp-floating-sidebar.dpsp-position-left.dpsp-shape-circle {
+    display: none;
+  }
 
   .desktop {
     display: none;
@@ -2917,6 +2927,11 @@ a.tag-link:hover {
 
   .featured-item-text-container {
     position: relative;
+  }
+
+  .dhrees-resources-page .featured-item-title,
+  .dhrees-news-page .featured-item-title {
+    margin-top: 0px;
   }
 
   .dhrees-resources-page .featured-item-text-wrap,

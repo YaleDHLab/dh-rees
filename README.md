@@ -8,4 +8,8 @@ To log in to the admin portal of this WordPress site, please visit: http://ec2-5
 
 #### Adding Content
 
-Once logged in to the site, feel free to consult the [content model wiki](https://github.com/YaleDHLab/dh-rees/wiki/Content-Model) in this repo to read about the ways assigning categories and special fields to posts will influence the locations in which content is displayed on the site. 
+Once logged in to the site, feel free to consult the [content model wiki](https://github.com/YaleDHLab/dh-rees/wiki/Content-Model) in this repo to read about the ways assigning categories and special fields to posts will influence the locations in which content is displayed on the site.
+
+#### Development Instance
+
+The development instance for this theme is located [here](http://35.162.24.30/). 
