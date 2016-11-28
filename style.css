@@ -1276,7 +1276,7 @@ a.featured-project-link {
 
 .featured-project-title,
 .featured-project-title.mobile,
-.featured-event-title {
+.featured-item-title {
   line-height: 1.1em;
   font-family: YaleNew;
   font-weight: 300;
@@ -1285,11 +1285,11 @@ a.featured-project-link {
 }
 
 .featured-project-title,
-.featured-event-title {
+.featured-item-title {
   font-size: 2.2em;
 }
 
-.featured-event-title.mobile {
+.featured-item-title.mobile {
   font-size: 1.6em;
 }
 
@@ -1411,18 +1411,20 @@ a.featured-project-link {
   letter-spacing: 1px;
 }
 
-.featured-event-text-container {
+.featured-item-text-container {
   width: 50%;
   height: 100%;
   position: absolute;
   left: 0;
+  top: 0;
+  z-index: 1;
 }
 
-.featured-event-image-container {
+.featured-item-image-container {
   height: 22vw;
 }
 
-.featured-event-image {
+.featured-item-image {
   width: 50%;
   min-width: 50%;
   display: inline-block;
@@ -1743,7 +1745,8 @@ a.featured-project-link {
   width: 100%;
   height: 100%;
   padding: 35px 25%;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .showcase-project-container a,
@@ -2125,20 +2128,17 @@ a.tag-link:hover {
 * Single event page
 ***/
 
-.featured-event-text-wrap {
+.featured-item-text-wrap {
   height: 100%;
   width: auto;
   margin: 30px;
 }
 
-.featured-event-text-container .subtitle {
-}
-
-.featured-event-title {
+.featured-item-title {
   margin-top: 15px;
 }
 
-.featured-event-date {
+.featured-item-date {
   margin-top: 15px;
   color: #826F69;
   font-size: .95em;
@@ -2492,15 +2492,21 @@ a.tag-link:hover {
     top: 100%;
     left: 0%;
     width: 100%;
-    margin-top: -60px;
+    margin-top: 10px;
+    position: relative;
   }
 
   .featured-project-text-container .subtitle-wrapper.desktop {
     display: none;
   }
 
+  .featured-project-title,
+  .featured-item-title {
+    font-size: 1.6em;
+  }
+
   .featured-project-container .subtitle-wrapper.mobile {
-    margin-left: -100px;
+    margin-left: -12%;
     display: block;
   }
 
@@ -2533,6 +2539,7 @@ a.tag-link:hover {
 
   .featured-project-blurb {
     margin-top: 7px;
+    margin-bottom: 30px;
   }
 
   /***
@@ -2556,8 +2563,8 @@ a.tag-link:hover {
     overflow: visible;
   }
 
-  .image-stripe.event-stripe {
-    display: none;
+ .image-stripe-text {
+    margin: 5%;
   }
 
   .showcase-project-container a {
@@ -2571,7 +2578,7 @@ a.tag-link:hover {
   .showcase-project-container .subtitle-wrapper.mobile {
     position: absolute;
     z-index: 5;
-    left: -72px;
+    left: -12%;
     display: block;
   }
 
@@ -2611,7 +2618,8 @@ a.tag-link:hover {
   }
 
   .parallelogram-container {
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 40px;
   }
 
   .events-parallelograms {
@@ -2785,7 +2793,7 @@ a.tag-link:hover {
   }
 
   .projects-container .subtitle-wrapper {
-    margin-left: -80px;
+    margin-left: -12%;
   }
 
   .project {
@@ -2814,6 +2822,78 @@ a.tag-link:hover {
   .project-card-image-container {
     width: 100%;
   }
+
+
+  /***
+  * Individual item pages
+  ***/
+
+  .dhrees-team-member-page .featured-project-container,
+  .dhrees-project-page .project-full-text-container,
+  .dhrees-event-page .featured-project-container {
+    background: #FFFDFA;
+    box-shadow: 1px 2px 5px rgba(76,76,76,.5);
+  }
+
+  .dhrees-event-page .featured-item-text-container {
+    width: 100%;
+  }
+
+  .dhrees-team-member-page .subtitle,
+  .dhrees-event-page .subtitle {
+    display: none;
+  }
+
+  .dhrees-team-member-page .parallelogram-container {
+    margin-top: 50px;
+  }
+
+  .featured-item-image-container {
+    height: 60vw;
+  }
+
+  .featured-item-image {
+    width: 100%;
+  }
+
+  .featured-item-text-container {
+    position: relative;
+  }
+
+  .featured-item-text-wrap {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .project-full-text-container,
+  .event-full-text-container {
+    box-shadow: none;
+    padding: 30px;
+    padding-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  /***
+  * Tags and related pages
+  ***/
+
+  .related-posts {
+    width: 100%;
+    margin: 20px;
+  }
+
+  .tag-links {
+    margin: 20px;
+    display: inline-block;
+    width: 100%;
+    float: none;
+  }
+
+  .tag-links-title,
+  .related-posts-title {
+    margin-bottom: 5px;
+  }
+
 }
 
 /* Larger cell styles */
