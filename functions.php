@@ -157,6 +157,18 @@ function create_post_type() {
       'show_in_nav_menus' => true
     )
   );
+  register_post_type( 'dhrees-team-member',
+    array(
+      'labels' => array(
+        'name' => __( 'Team Members' ),
+        'singular_name' => __( 'Team Member' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array( 'title', 'editor', 'thumbnail' ),
+      'show_in_nav_menus' => true
+    )
+  );
 }
 
 
