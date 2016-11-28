@@ -8,7 +8,9 @@
   </div>
 
   <a href="<?php echo esc_url( get_permalink() ); ?>">
-    <?php get_template_part( 'template-parts/event-date', 'none' ); ?>
+    <div class="event-stripe-wrapper">
+      <?php get_template_part( 'template-parts/event-date', 'none' ); ?>
+    </div>
     <div class="showcase-project-thumbnail">
       <img src="<?php the_post_thumbnail_url('large'); ?>"/>
     </div>

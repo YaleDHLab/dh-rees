@@ -15,13 +15,13 @@ get_header(); ?>
 
     <?php while ( have_posts() ) : the_post(); ?>
 
-      <?php $subtitle = "PROFILE";
-        $bottom_left_text = get_field("position");
-        $bottom_left_class = "featured-item-position";
+      <?php $subtitle = "RESOURCE"; 
+        $bottom_left_text = "";
+        $bottom_left_class = "";
         include(locate_template( 'template-parts/split-hero.php') ); ?>
 
       <div class="featured-project-container">
-        <div class="item-full-text-container">
+        <div class="event-full-text-container">
           <?php echo the_content();
           endwhile; // End of the loop. ?>
         </div>
