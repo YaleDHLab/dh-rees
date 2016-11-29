@@ -1297,7 +1297,6 @@ a.featured-project-link {
   margin-top: 15px;
   width: 70%;
   line-height: 1.35em;
-  font-size: .9em;
   font-family: "acumin-pro";
   color: #00356B;
 }
@@ -1489,7 +1488,7 @@ a.featured-project-link {
 
 .baby-blue-parallelogram-text {
   transform: skewX(-45deg);
-  margin: 1.5vw 70px;
+  margin: 2.5vw 80px;
   z-index: 2;
   left: 8%;
   font-size: 1.3em;
@@ -2134,7 +2133,9 @@ a.tag-link:hover {
 }
 
 .project-card-text {
-  margin-top: 6px;
+  margin-top: 12px;
+  color: #555555;
+font-family: acumin-pro;	
 }
 
 /***
