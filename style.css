@@ -2054,7 +2054,7 @@ a.featured-project-link {
   display: inline-block;
   box-shadow: 1px 2px 5px rgba(76,76,76,.5);
   padding: 40px;
-  margin: -6px 0 0 0;
+  margin: -7px 0 0 0;
   margin-bottom: 40px;
 }
 
@@ -2117,8 +2117,7 @@ a.related-post {
 
 a.tag-link {
   text-decoration: none;
-  font-size: 1em;
-  text-transform: uppercase;
+  font-size: .85em;
   padding: 6px 10px;
   margin: 7px;
   background: #C9E7DD;
@@ -2126,6 +2125,7 @@ a.tag-link {
   display: inline-block;
   color: #00356B;
   transition: all .2s;
+  font-family: interstate;
 }
 
 a.tag-link:hover {
@@ -2134,7 +2134,7 @@ a.tag-link:hover {
 }
 
 .project-card-text {
-  margin-top: 6px;
+  margin-top: 12px;
 }
 
 /***
