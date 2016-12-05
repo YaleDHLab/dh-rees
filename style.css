@@ -2062,8 +2062,9 @@ a.featured-project-link {
 .event-full-text-container p,
 .item-full-text-container p {
   margin-top: 0;
-  line-height: 1.4em;
-  font-size: 1em;
+  line-height: 1.5em;
+  font-size: .95em;
+  color: #555555;
   font-family: "acumin-pro";
 }
 
