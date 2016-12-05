@@ -1209,7 +1209,7 @@ body {
 
 .menu {
   margin: 0;
-  padding: 0 2%;
+  padding: 0 3%;
   height: 100%;
   width: 100%;
   transform: skewX(45deg);
@@ -1218,7 +1218,7 @@ body {
 .menu-item {
   display: inline-block;
   text-transform: uppercase;
-  margin: 0 10px;
+  margin: 0 14px;
   line-height: 0px;
 }
 
@@ -1489,7 +1489,7 @@ a.featured-project-link {
 
 .baby-blue-parallelogram-text {
   transform: skewX(-45deg);
-  margin: 1.5vw 70px;
+  margin: 1.5vw 80px;
   z-index: 2;
   left: 8%;
   font-size: 1.3em;
@@ -1691,11 +1691,12 @@ a.featured-project-link {
 }
 
 .team-member-card {
-  background: rgba(241,229,217,.93);
+  background: #FFFDFA;
   margin-bottom: 30px;
   height: 150px;
   position: relative;
   overflow: hidden;
+  box-shadow: 1px 2px 5px rgba(76,76,76,.2);
 }
 
 .team-member-thumbnail {
@@ -1958,7 +1959,7 @@ a.featured-project-link {
   display: inline-block;
   width: 58%;
   height: 100%;
-  padding: 15px 35px 15px 7%;
+  padding: 15px 35px 15px 6.3%;
   position: relative;
   -moz-transition: background .2s linear;
   -o-transition: background .2s linear;
@@ -1970,7 +1971,7 @@ a.featured-project-link {
 
 .event:hover .event-text-container,
 .project-card:hover .project-card-text-container {
-  background: #F1E5D9;
+  background: #FFFDFA;
 }
 
 .event:hover .event-title,
@@ -2793,6 +2794,7 @@ a.tag-link:hover {
     margin-bottom: 35px;
     float: none;
     clear: both;
+    box-shadow: 1px 2px 5px rgba(76,76,76,.2);
   }
 
   .about-text-container {
