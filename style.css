@@ -1297,7 +1297,6 @@ a.featured-project-link {
   margin-top: 15px;
   width: 70%;
   line-height: 1.35em;
-  font-size: .9em;
   font-family: "acumin-pro";
   color: #00356B;
 }
@@ -2137,6 +2136,8 @@ a.tag-link:hover {
 
 .project-card-text {
   margin-top: 12px;
+  color: #555555;
+  font-family: acumin-pro;
 }
 
 /***
