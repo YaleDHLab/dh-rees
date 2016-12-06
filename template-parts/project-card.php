@@ -1,9 +1,7 @@
 <a href="<?php the_permalink() ?>" rel="bookmark">
   <div class="project-card">
     <div class="project-card-image-container">
-      <div class="showcase-project-thumbnail">
-        <img src="<?php the_post_thumbnail_url('large'); ?>"/>
-      </div>
+      <img src="<?php the_post_thumbnail_url('large'); ?>"/>
     </div><!--.project-card-image-container-->
     <div class="project-card-text-container">
       <div class="project-card-hover-strip"></div>

@@ -15,7 +15,7 @@ get_header(); ?>
 
     <?php while ( have_posts() ) : the_post(); ?>
 
-      <?php $subtitle = "RESOURCE"; 
+      <?php $subtitle = "NEWS";
         $bottom_left_text = "";
         $bottom_left_class = "";
         include(locate_template( 'template-parts/split-hero.php') ); ?>

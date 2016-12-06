@@ -16,7 +16,7 @@ get_header(); ?>
 
   <div id="primary" class="content-area">
     <div class="page-type-category-projects"></div>
-    <main id="main" class="site-main" role="main">
+    <main id="main" class="site-main dhrees-project-archive" role="main">
 
       <!-- Featured project carosel -->
       <?php $featured_item_type = 'project';
@@ -32,7 +32,15 @@ get_header(); ?>
             </div>
           </div>
           <!-- posts_per_page argument of -1 returns all posts per page, rather than WP default 10 -->
-          <?php $query = new WP_Query( array( 'post_type' => 'dhrees-project', 'posts_per_page' => -1 ) );
+          <?php $query = new WP_Query( array(
+              'post_type' => 'dhrees-project',
+              'posts_per_page' => -1,
+              'orderby' => array (
+                'parent' => 'ASC',
+                'Order' => 'ASC',
+              ),
+              'order' => 'ASC'
+            ));
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
             <!-- Only show projects that have no parents -->

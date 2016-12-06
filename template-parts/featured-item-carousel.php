@@ -170,9 +170,6 @@
     var mobileTitle = $(".featured-project-title.mobile");
     $(mobileTitle).text(query_results[projectIndex].title);
 
-    var blurb = $(".featured-project-blurb.desktop");
-    $(blurb).text(query_results[projectIndex].blurb);
-
     var mobileBlurb = $(".featured-project-blurb.mobile");
     $(mobileBlurb).text(query_results[projectIndex].blurb);
   }
