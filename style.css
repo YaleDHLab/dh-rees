@@ -1806,7 +1806,6 @@ a.featured-project-link {
 
 .showcase-project-thumbnail img {
   display: flex;
-  min-height: 100%;
 }
 
 .project-thumbnail img {
