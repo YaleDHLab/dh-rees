@@ -1523,7 +1523,7 @@ a.featured-project-link {
 .connect-text {
   width: 45.5%;
   display: inline-block;
-  font-size: 1em;
+  font-size: .95em;
   overflow: auto;
   font-family: acumin-pro;
 }
@@ -2021,14 +2021,16 @@ a.featured-project-link {
   letter-spacing: .5px;
   max-height: 21px;
   overflow: hidden;
+	
 }
 
 .event-text {
-  font-family: "acumin-pro";
   line-height: 1.5;
-  font-size: .9em;
+  font-size: .95em;
   max-height: 4.5em;
   overflow: hidden;
+  color: #555555;
+  margin-top: 8px;
 }
 
 .event-text p {
@@ -2135,6 +2137,7 @@ a.tag-link:hover {
   line-height: 1.4em;
   max-height: 5.6em;
   overflow: hidden;
+  font-size: .95em;
 }
 
 /***
@@ -2655,6 +2658,7 @@ a.tag-link:hover {
   .showcase-project-blurb {
     margin-top: 3px;
     margin-bottom: 20px;
+    font-size: .95em;
   }
 
   .showcase-project-container .showcase-project:nth-of-type(2n) {
