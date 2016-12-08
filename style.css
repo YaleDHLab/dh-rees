@@ -1794,7 +1794,6 @@ line-height: 1.5em;
   width: 44.9%;
   float: left;
   display: inline-block;
-  font-family: YaleNew;
 }
 
 .showcase-project-thumbnail {
@@ -2051,7 +2050,6 @@ line-height: 1.5em;
 .item-full-text-container p {
   margin-top: 0;
   line-height: 1.5em;
-  font-size: .95em;
   color: #555555;
   font-family: "acumin-pro";
 }
@@ -2125,7 +2123,6 @@ a.tag-link:hover {
 .project-card-text {
   margin-top: 12px;
   color: #555555;
-  font-family: acumin-pro;
   line-height: 1.4em;
   max-height: 5.6em;
   overflow: hidden;
