@@ -54,6 +54,7 @@ html {
 
 body {
 	margin: 0;
+
 }
 
 article,
@@ -266,7 +267,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'acumin-pro', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -1632,17 +1633,16 @@ a.featured-project-link {
 .about-text-column {
   width: 400px;
   padding: 80px 60px 50px 55px;
-  background: #F1E5D9;
+  background: #FFFDFA;
   line-height: 1.3em;
-  font-size: .87em;
   display: inline-block;
   margin-left: calc(50% - 420px);
   margin-bottom: 80px;
   position: relative;
   overflow: hidden;
   float: left;
-  font-family: 'acumin-pro';
   z-index: 10;
+  box-shadow: 1px 2px 5px rgba(76,76,76,.2)
 }
 
 .about-text-stripe {
@@ -1660,8 +1660,7 @@ a.featured-project-link {
 }
 
 .about-text-main {
-  font-size: 1.15em;
-  line-height: 1.5em;
+line-height: 1.5em;
 }
 
 .about-text p {
@@ -1825,8 +1824,6 @@ a.featured-project-link {
 
 .showcase-project-blurb {
   color: #00356B;
-  font-family: "acumin-pro";
-  font-size: .9em;
   margin-top: 10px;
 }
 
@@ -2023,9 +2020,7 @@ a.featured-project-link {
 }
 
 .event-text {
-  font-family: "acumin-pro";
   line-height: 1.5;
-  font-size: .9em;
   max-height: 4.5em;
   overflow: hidden;
 }
@@ -2280,7 +2275,7 @@ a.tag-link:hover {
 * Smaller viewpoerts *
 *********************/
 
-@media (max-width: 1160px) {
+@media (max-width: 1200px) {
   .event-text p {
     white-space: nowrap;
     overflow: hidden;
@@ -2718,7 +2713,6 @@ a.tag-link:hover {
     width: 100%;
     margin: 0;
     overflow: visible;
-    font-family: "acumin-pro";
   }
 
   .mission-text {
@@ -2729,10 +2723,6 @@ a.tag-link:hover {
     margin-bottom: 40px;
   }
 
-  .mission-text-content,
-  .connect-text-content {
-    font-size: .9em;
-  }
 
   .mission-and-connect-container .subtitle-wrapper {
     background: none;
@@ -2794,9 +2784,6 @@ a.tag-link:hover {
     box-shadow: 1px 2px 5px rgba(76,76,76,.2);
   }
 
-  .about-text-container {
-    font-family: "acumin-pro";
-  }
 
   /***
   * Events page
