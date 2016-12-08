@@ -1634,7 +1634,7 @@ a.featured-project-link {
   padding: 80px 60px 50px 55px;
   background: #F1E5D9;
   line-height: 1.3em;
-  font-size: .87em;
+  font-size: .95em;
   display: inline-block;
   margin-left: calc(50% - 420px);
   margin-bottom: 80px;
@@ -1660,8 +1660,8 @@ a.featured-project-link {
 }
 
 .about-text-main {
-  font-size: 1.15em;
-  line-height: 1.5em;
+ color: #404040;
+ line-height: 1.5em;
 }
 
 .about-text p {
@@ -1827,7 +1827,7 @@ a.featured-project-link {
 .showcase-project-blurb {
   color: #00356B;
   font-family: "acumin-pro";
-  font-size: .9em;
+  font-size: .95em;
   margin-top: 10px;
 }
 
