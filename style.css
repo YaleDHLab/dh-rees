@@ -2015,10 +2015,12 @@ line-height: 1.5em;
   letter-spacing: .5px;
   max-height: 21px;
   overflow: hidden;
+	
 }
 
 .event-text {
   line-height: 1.5;
+  font-size: .95em;
   max-height: 4.5em;
   overflow: hidden;
   color: #555555;
