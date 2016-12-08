@@ -1635,6 +1635,7 @@ a.featured-project-link {
   padding: 80px 60px 50px 55px;
   background: #FFFDFA;
   line-height: 1.3em;
+  font-size: .95em;
   display: inline-block;
   margin-left: calc(50% - 420px);
   margin-bottom: 80px;
@@ -1660,7 +1661,8 @@ a.featured-project-link {
 }
 
 .about-text-main {
-line-height: 1.5em;
+ color: #404040;
+ line-height: 1.5em;
 }
 
 .about-text p {
@@ -1823,6 +1825,8 @@ line-height: 1.5em;
 
 .showcase-project-blurb {
   color: #00356B;
+  font-family: "acumin-pro";
+  font-size: .95em;
   margin-top: 10px;
 }
 
