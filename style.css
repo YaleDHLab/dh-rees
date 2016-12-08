@@ -1795,7 +1795,6 @@ a.featured-project-link {
   width: 44.9%;
   float: left;
   display: inline-block;
-  font-family: YaleNew;
 }
 
 .showcase-project-thumbnail {
@@ -1826,8 +1825,6 @@ a.featured-project-link {
 
 .showcase-project-blurb {
   color: #00356B;
-  font-family: "acumin-pro";
-  font-size: .9em;
   margin-top: 10px;
 }
 
@@ -2024,9 +2021,7 @@ a.featured-project-link {
 }
 
 .event-text {
-  font-family: "acumin-pro";
   line-height: 1.5;
-  font-size: .9em;
   max-height: 4.5em;
   overflow: hidden;
 }
@@ -2057,7 +2052,6 @@ a.featured-project-link {
 .item-full-text-container p {
   margin-top: 0;
   line-height: 1.5em;
-  font-size: .95em;
   color: #555555;
   font-family: "acumin-pro";
 }
@@ -2131,7 +2125,6 @@ a.tag-link:hover {
 .project-card-text {
   margin-top: 12px;
   color: #555555;
-  font-family: acumin-pro;
   line-height: 1.4em;
   max-height: 5.6em;
   overflow: hidden;
