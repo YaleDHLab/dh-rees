@@ -296,6 +296,7 @@ blockquote {
 	margin: 0 1.5em;
 }
 
+
 address {
 	margin: 0 0 1.5em;
 }
@@ -2061,6 +2062,10 @@ a.featured-project-link {
   color: #555555;
   font-family: "acumin-pro";
 }
+
+.project-full-text-container blockquote p {
+    font-family: YaleNewItalic;
+    font-size: 1.3em;
 
 .project-full-text-container p:last-child,
 .event-full-text-container p:last-child,
