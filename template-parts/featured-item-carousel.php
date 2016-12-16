@@ -22,7 +22,7 @@
       'post_type' => "dhrees-event",
       'posts_per_page' => 1,
       'meta_key' => 'event_date',
-      'order' => 'ASC'
+      'order' => 'DESC'
     ) );
   };
 

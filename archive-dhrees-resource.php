@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
   <div class="single-page single-project"></div>
-  <main id="main" class="site-main dhrees-resource-page" role="main">
+  <main id="main" class="site-main dhrees-resources-page" role="main">
 
     <?php // pluck off the first resource for the hero
       $query = new WP_Query( array(

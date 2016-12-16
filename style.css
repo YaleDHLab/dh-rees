@@ -949,14 +949,12 @@ body {
 }
 
 @font-face {
-  font-family: YaleNew;
-  font-weight: bold;
+  font-family: YaleNewBold;
   src: url("fonts/YaleNew-Bold.otf") format("opentype");
 }
 
 @font-face {
-  font-family: YaleNew;
-  font-style: italic;
+  font-family: YaleNewItalic;
   src: url("fonts/YaleNew-Italic.otf") format("opentype");
 }
 
@@ -2313,10 +2311,11 @@ a.tag-link:hover {
     display: none;
   }
 
-  #dpsp-floating-sidebar.dpsp-position-left.dpsp-shape-circle {
-    left: 15%;
+  .single #dpsp-floating-sidebar.dpsp-position-left.dpsp-shape-circle {
+    left: 16.5%;
     position: absolute;
     top: 320px !important;
+    display: none;
   }
 
 }
@@ -2847,7 +2846,7 @@ a.tag-link:hover {
   }
 
   .projects-container .subtitle-wrapper {
-    margin-left: -12%;
+    margin-left: -10%;
   }
 
   .project {
@@ -2875,6 +2874,7 @@ a.tag-link:hover {
 
   .project-card-image-container {
     width: 100%;
+    height: 50vw;
   }
 
 
