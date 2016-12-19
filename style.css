@@ -54,7 +54,6 @@ html {
 
 body {
 	margin: 0;
-
 }
 
 article,
@@ -1655,8 +1654,8 @@ a.featured-project-link {
 }
 
 .about-text-main {
- color: #404040;
- line-height: 1.5em;
+  color: #404040;
+  line-height: 1.5em;
 }
 
 .about-text p {
@@ -2012,8 +2011,7 @@ a.featured-project-link {
   margin-top: 10px;
   letter-spacing: .5px;
   max-height: 21px;
-  overflow: hidden;
-	
+  overflow: hidden;	
 }
 
 .event-text {
