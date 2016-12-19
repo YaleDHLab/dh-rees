@@ -44,11 +44,11 @@
       </div>
 
       <!-- Mobile navigation -->
-      <div class="mobile-navigation-container">
+      <div class="mobile mobile-navigation-container">
 
         <!-- DHLab logo -->
-        <div class="mobile-navigation-brand-link"></div>
-        <div class="mobile-navigation-brand">
+        <div class="mobile mobile-navigation-brand-link"></div>
+        <div class="mobile mobile-navigation-brand">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="179 43 74.27 59">
             <defs>
               <filter id="path" x="189.659" y="60.6" width="63.611" height="41.4" filterUnits="userSpaceOnUse">
@@ -78,8 +78,8 @@
         </div><!--.mobile-navigation-brand -->
 
         <!-- DH-Rees title -->
-        <div class="mobile-site-title-link"></div>
-        <div class="mobile-site-title">
+        <div class="mobile mobile-site-title-link"></div>
+        <div class="mobile mobile-site-title">
           <object data="https://s3-us-west-2.amazonaws.com/dh-rees/images/dhrees-logo.svg" type="image/svg+xml">
             <img src="https://s3-us-west-2.amazonaws.com/dh-rees/images/dhrees-logo.png" />
           </object>
@@ -97,7 +97,7 @@
       </div>
 
       <!-- Mobile dropdown navigation -->
-      <div class="mobile-navigation-menu hidden animated slideOutRight">
+      <div class="mobile mobile-navigation-menu hidden animated slideOutRight">
         <div class="search-container">
           <?php get_template_part( 'template-parts/search-form', 'none' ); ?>
         </div>

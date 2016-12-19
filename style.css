@@ -266,7 +266,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'acumin-pro', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -906,7 +906,6 @@ html, body {
   position: relative;
 }
 
-
 body {
   background-image: url(https://s3-us-west-2.amazonaws.com/dh-rees/images/background.svg);
   background-size: cover;
@@ -948,14 +947,12 @@ body {
 }
 
 @font-face {
-  font-family: YaleNew;
-  font-weight: bold;
+  font-family: YaleNewBold;
   src: url("fonts/YaleNew-Bold.otf") format("opentype");
 }
 
 @font-face {
-  font-family: YaleNew;
-  font-style: italic;
+  font-family: YaleNewItalic;
   src: url("fonts/YaleNew-Italic.otf") format("opentype");
 }
 
@@ -1003,8 +1000,6 @@ body {
     font-size: 110%;
   }
 }
-
-
 
 /*************
 * Background *
@@ -1499,8 +1494,7 @@ a.featured-project-link {
   font-size: 1.3em;
   line-height: 1.3em;
   color: #00356B;
-  font-family: YaleNew;
-  font-style: italic;
+  font-family: YaleNewItalic;
 }
 
 .sign-up-button {
@@ -1523,7 +1517,7 @@ a.featured-project-link {
 .connect-text {
   width: 45.5%;
   display: inline-block;
-  font-size: 1em;
+  font-size: .95em;
   overflow: auto;
   font-family: acumin-pro;
 }
@@ -1632,17 +1626,17 @@ a.featured-project-link {
 .about-text-column {
   width: 400px;
   padding: 80px 60px 50px 55px;
-  background: #F1E5D9;
+  background: #FFFDFA;
   line-height: 1.3em;
-  font-size: .87em;
+  font-size: .95em;
   display: inline-block;
   margin-left: calc(50% - 420px);
   margin-bottom: 80px;
   position: relative;
   overflow: hidden;
   float: left;
-  font-family: 'acumin-pro';
   z-index: 10;
+  box-shadow: 1px 2px 5px rgba(76,76,76,.2)
 }
 
 .about-text-stripe {
@@ -1660,7 +1654,7 @@ a.featured-project-link {
 }
 
 .about-text-main {
-  font-size: 1.15em;
+  color: #404040;
   line-height: 1.5em;
 }
 
@@ -1795,7 +1789,6 @@ a.featured-project-link {
   width: 44.9%;
   float: left;
   display: inline-block;
-  font-family: YaleNew;
 }
 
 .showcase-project-thumbnail {
@@ -1806,7 +1799,6 @@ a.featured-project-link {
 
 .showcase-project-thumbnail img {
   display: flex;
-  min-height: 100%;
 }
 
 .project-thumbnail img {
@@ -1827,7 +1819,7 @@ a.featured-project-link {
 .showcase-project-blurb {
   color: #00356B;
   font-family: "acumin-pro";
-  font-size: .9em;
+  font-size: .95em;
   margin-top: 10px;
 }
 
@@ -2016,19 +2008,19 @@ a.featured-project-link {
 .event-time-line {
   font-family: Interstate;
   color: #826F69;
-  font-size: .9em;
   margin-top: 10px;
   letter-spacing: .5px;
   max-height: 21px;
-  overflow: hidden;
+  overflow: hidden;	
 }
 
 .event-text {
-  font-family: "acumin-pro";
   line-height: 1.5;
-  font-size: .9em;
+  font-size: .95em;
   max-height: 4.5em;
   overflow: hidden;
+  color: #555555;
+  margin-top: 8px;
 }
 
 .event-text p {
@@ -2057,9 +2049,13 @@ a.featured-project-link {
 .item-full-text-container p {
   margin-top: 0;
   line-height: 1.5em;
-  font-size: .95em;
   color: #555555;
   font-family: "acumin-pro";
+}
+
+.project-full-text-container blockquote p {
+    font-family: YaleNewItalic;
+    font-size: 1.3em;
 }
 
 .project-full-text-container p:last-child,
@@ -2131,10 +2127,10 @@ a.tag-link:hover {
 .project-card-text {
   margin-top: 12px;
   color: #555555;
-  font-family: acumin-pro;
   line-height: 1.4em;
   max-height: 5.6em;
   overflow: hidden;
+  font-size: .95em;
 }
 
 /***
@@ -2281,7 +2277,7 @@ a.tag-link:hover {
 * Smaller viewpoerts *
 *********************/
 
-@media (max-width: 1160px) {
+@media (max-width: 1200px) {
   .event-text p {
     white-space: nowrap;
     overflow: hidden;
@@ -2314,10 +2310,11 @@ a.tag-link:hover {
     display: none;
   }
 
-  #dpsp-floating-sidebar.dpsp-position-left.dpsp-shape-circle {
-    left: 15%;
+  .single #dpsp-floating-sidebar.dpsp-position-left.dpsp-shape-circle {
+    left: 16.5%;
     position: absolute;
     top: 320px !important;
+    display: none;
   }
 
 }
@@ -2655,6 +2652,7 @@ a.tag-link:hover {
   .showcase-project-blurb {
     margin-top: 3px;
     margin-bottom: 20px;
+    font-size: .95em;
   }
 
   .showcase-project-container .showcase-project:nth-of-type(2n) {
@@ -2719,7 +2717,6 @@ a.tag-link:hover {
     width: 100%;
     margin: 0;
     overflow: visible;
-    font-family: "acumin-pro";
   }
 
   .mission-text {
@@ -2728,11 +2725,6 @@ a.tag-link:hover {
 
   .connect-text {
     margin-bottom: 40px;
-  }
-
-  .mission-text-content,
-  .connect-text-content {
-    font-size: .9em;
   }
 
   .mission-and-connect-container .subtitle-wrapper {
@@ -2795,10 +2787,6 @@ a.tag-link:hover {
     box-shadow: 1px 2px 5px rgba(76,76,76,.2);
   }
 
-  .about-text-container {
-    font-family: "acumin-pro";
-  }
-
   /***
   * Events page
   ***/
@@ -2855,7 +2843,7 @@ a.tag-link:hover {
   }
 
   .projects-container .subtitle-wrapper {
-    margin-left: -12%;
+    margin-left: -10%;
   }
 
   .project {
@@ -2883,8 +2871,8 @@ a.tag-link:hover {
 
   .project-card-image-container {
     width: 100%;
+    height: 50vw;
   }
-
 
   /***
   * Individual item pages

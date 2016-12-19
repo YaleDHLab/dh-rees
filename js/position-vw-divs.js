@@ -29,14 +29,6 @@ var positionDivs = function() {
 
     var imageHeight = windowWidth * .54;
 
-    // adjust the showcase projects
-    var showcaseProjects = $(".showcase-project-thumbnail");
-    showcaseProjects.each(function() {
-      $(this).css({
-        height: imageHeight
-      });
-    });
-
     // set the parallelogram height
     var parallelogramContainerHeight = windowWidth * .24;
     $(".parallelogram-container").css({
