@@ -297,7 +297,6 @@ blockquote {
 	margin: 0 1.5em;
 }
 
-
 address {
 	margin: 0 0 1.5em;
 }
@@ -908,7 +907,6 @@ html, body {
   position: relative;
 }
 
-
 body {
   background-image: url(https://s3-us-west-2.amazonaws.com/dh-rees/images/background.svg);
   background-size: cover;
@@ -1003,8 +1001,6 @@ body {
     font-size: 110%;
   }
 }
-
-
 
 /*************
 * Background *
@@ -2062,6 +2058,7 @@ a.featured-project-link {
 .project-full-text-container blockquote p {
     font-family: YaleNewItalic;
     font-size: 1.3em;
+}
 
 .project-full-text-container p:last-child,
 .event-full-text-container p:last-child,
@@ -2732,7 +2729,6 @@ a.tag-link:hover {
     margin-bottom: 40px;
   }
 
-
   .mission-and-connect-container .subtitle-wrapper {
     background: none;
     display: block;
@@ -2792,7 +2788,6 @@ a.tag-link:hover {
     clear: both;
     box-shadow: 1px 2px 5px rgba(76,76,76,.2);
   }
-
 
   /***
   * Events page
@@ -2880,7 +2875,6 @@ a.tag-link:hover {
     width: 100%;
     height: 50vw;
   }
-
 
   /***
   * Individual item pages
