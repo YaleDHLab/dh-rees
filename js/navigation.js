@@ -5,10 +5,16 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, subMenus, i, len;
+	var container,
+      button,
+      menu,
+      links,
+      subMenus,
+      i,
+      len;
 
 	container = document.getElementById( 'site-navigation' );
-	if ( ! container ) {
+	if (!container) {
 		return;
 	}
 

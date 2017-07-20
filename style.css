@@ -1014,13 +1014,13 @@ body {
 }
 
 .header-blue {
-  height: 240px;
-  width: 240px;
+  height: 100vw;
+  width: 100vw;
   position: absolute;
   transform: rotate(45deg);
   background: #213556;
-  top: -120px;
-  left: -120px;
+  top: -50vw;
+  left: -101vw;
   z-index: 4;
 }
 
@@ -1036,14 +1036,23 @@ body {
 }
 
 .header-salmon-image {
-  height: 100%;
-  width: 100%;
+  height: 46vw;
+  width: 46vw;
   background: url(https://s3-us-west-2.amazonaws.com/dh-rees/images/soviet-background.png);
   transform: rotate(-90deg);
-  background-size: 125%;
+  background-size: 158%;
 }
 
 /* Site title svg */
+
+.header-site-title {
+  width: 30vw;
+  position: absolute;
+  z-index: 5;
+  left: 10.5vw;
+  pointer-events: none;
+}
+
 .header-site-title .cls-1 {
   fill: none;
 }
@@ -1056,38 +1065,13 @@ body {
   fill: #fff;
 }
 
-.header-site-title {
-  width: calc(250px + 13.5%);
-  position: absolute;
-  z-index: 5;
-  left: calc(-223px + 26%);
-}
-
-.header-site-title-link {
-  width: calc(1.4 * 7.5vw);
-  height: 20vw;
-  position: absolute;
-  z-index: 10;
-  transform: rotate(45deg);
-  margin-top: -4.6%;
-  cursor: pointer;
-}
-
 /***
 * Navigation
 ***/
 
 .navigation-trapezoid {
   position: absolute;
-  height: 37px;
-  top: 50px;
-  transform: skewX(-45deg);
-  box-shadow: 1px 2px 3px #2c2c2c;
-}
-
-.navigation-trapezoid {
-  position: absolute;
-  height: calc(35px + 1vw);
+  height: 3vw;
   top: 50px;
   transform: skewX(-45deg);
   box-shadow: 1px 2px 5px rgba(76,76,76,.5);
@@ -1095,9 +1079,16 @@ body {
 
 .navigation-brand {
   background: rgba(0,0,0,.3);
-  width: 9%;
+  width: 8vw;
   z-index: 4;
   box-shadow: none;
+  left: 6vw;
+}
+
+@media(max-width: 1220px) {
+  .navigation-brand {
+    left: 5vw;
+  }
 }
 
 .navigation-brand svg {
@@ -1126,9 +1117,21 @@ body {
 
 .navigation-blue {
   background: #00356B;
-  width: calc(46.04% + 100px);
-  left: 25%;
+  width: 56vw;
+  left: 27vw;
   z-index: 6;
+}
+
+@media(max-width: 1300px) {
+  .navigation-blue {
+    left: 26vw;
+  }
+}
+
+@media(min-width: 2100px) {
+  .navigation-blue {
+    left: 28vw;
+  }
 }
 
 .navigation-gray {
@@ -1185,6 +1188,17 @@ body {
   margin-top: 4%;
 }
 
+@media(max-width: 1000px) {
+  .header-blue,
+  .header-salmon,
+  .header-site-title,
+  .yale-logo,
+  .navigation-trapezoid,
+  .header-site-title-link {
+    display: none;
+  }
+}
+
 /***************
 * Page Content *
 ***************/
@@ -1208,13 +1222,16 @@ body {
   height: 100%;
   width: 100%;
   transform: skewX(45deg);
+  display: table;
 }
 
 .menu-item {
-  display: inline-block;
+  display: table-cell;
+  vertical-align: middle;
   text-transform: uppercase;
-  margin: 0 14px;
-  line-height: 0px;
+  line-height: 20px;
+  width: 80px;
+  text-align: center;
 }
 
 .menu-item a {
@@ -1864,17 +1881,36 @@ a.featured-project-link {
   height: 100%;
   width: 100%;
   position: fixed;
-  padding: 5% 15%;
+  padding: 5%;
   display: inline-block;
+  text-align: center;
+  overflow: scroll;
 }
 
 .mailing-list-modal {
   background: #fff;
   padding: 20px;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: left;
+  position: absolute;
+  width: 300px;
+  top: 50px;
+  left: 50%;
+  margin-left: -150px;
+  margin-bottom: 50px;
+}
+
+.mailing-list-modal * {
+  width: 100%
 }
 
 .mailing-list-modal p {
-  margin: 7px 25px;
+  margin: 7px 0;
+}
+
+.mailing-list-modal img.ajax-loader {
+  display: none;
 }
 
 /***
@@ -2354,15 +2390,6 @@ a.tag-link:hover {
   * Navigation
   ***/
 
-  .header-blue,
-  .header-salmon,
-  .header-site-title,
-  .yale-logo,
-  .navigation-trapezoid,
-  .header-site-title-link {
-    display: none;
-  }
-
   .mobile-navigation-container {
     display: block;
     width: 100%;
@@ -2521,6 +2548,7 @@ a.tag-link:hover {
     display: block;
     margin: 10px 0 20px 0;
     line-height: 1em;
+    text-align: left;
   }
 
   .menu-item a {

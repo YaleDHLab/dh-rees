@@ -117,12 +117,11 @@
       </div>
 
       <!-- Salmon stripe -->
-      <div class="header-salmon">
+      <a href='/#' class="header-salmon">
         <div class="header-salmon-image"></div>
-      </div>
+      </a>
 
       <!-- DH-Rees logo -->
-      <div class="header-site-title-link"></div>
       <div class="header-site-title">
         <object data="https://s3-us-west-2.amazonaws.com/dh-rees/images/dhrees-logo.svg" type="image/svg+xml">
           <img src="https://s3-us-west-2.amazonaws.com/dh-rees/images/dhrees-logo.png" />
@@ -130,7 +129,7 @@
       </div>
 
       <!-- DHLab logo -->
-      <div class="navigation-trapezoid navigation-brand">
+      <a href='http://web.library.yale.edu/dhlab' class="navigation-trapezoid navigation-brand">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="179 43 74.27 59">
           <defs>
             <filter id="path" x="189.659" y="60.6" width="63.611" height="41.4" filterUnits="userSpaceOnUse">
@@ -157,7 +156,7 @@
             </g>
           </g>
         </svg>
-      </div>
+      </a>
 
       <!-- Menu -->
       <div class="navigation-trapezoid navigation-blue">
