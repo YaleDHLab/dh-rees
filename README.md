@@ -1,3 +1,6 @@
+# Note: This repository has been archived
+This project was developed under a previous phase of the Yale Digital Humanities Lab. Now a part of Yale Library’s Computational Methods and Data department, the Lab no longer includes this project in its scope of work. As such, it will receive no further updates. There is a [live website that uses this code](http://dhrees.yale.edu/). When this website breaks, it will be removed from the web.
+
 ## About
 
 This repository houses the source code for a WordPress theme for the Digital Humanities and Russian and East European Studies website at Yale. The theme is built on the [_s theme](https://github.com/Automattic/_s).
